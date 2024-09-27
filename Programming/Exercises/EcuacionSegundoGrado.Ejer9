@@ -1,0 +1,41 @@
+Algoritmo EcuacionSegundoGrado
+	
+	//Bloque de instancias
+	Definir number1, number2, number3 Como Real
+	Definir resultado1, resultado2 Como Real
+	Definir radicando Como Real
+	Definir mensaje Como Caracter
+	
+	//Petición de datos
+	Escribir "Ingrese los valores de los dígitos"
+	Leer number1
+	Escribir "Ingrese los valores de los dígitos"
+	Leer number2
+	Escribir "Ingrese los valores de los dígitos"
+	Leer number3
+	
+	//Resolución del problema
+	
+	//1º Calculamos el radicando 
+	radicando = (b*b) - (4 * number1 * number2)
+	
+	//2º Respondemos ante las diferentes soluciones
+	Si number1 == 0 Entonces
+		mensaje = "Error: División entre 0" //Si el valor de a = 0 no se puede hacer
+	SiNo Si radicando < 0 Entonces
+			mensaje = "La solución son dos números complejos conjugados" //Si el radicando < 0 da números complejos
+		SiNo
+			
+			resultado1 = ((-b) + RC(raizResultado))/2 * number1
+			resultado2 = ((-b) - RC(raizResultado))/2 * number1
+			//Solución correcta del problema
+			Escribir "Las soluciones son :" resultado1 " y " resultado2 
+			
+		FinSi
+	FinSi
+	
+	//Solución de los errores
+	Escribir mensaje
+
+	
+FinAlgoritmo

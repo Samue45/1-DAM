@@ -1,0 +1,26 @@
+Algoritmo SumaOMulti
+	
+	//Bloque de instancias
+	Definir number1,number2 Como Real
+	Definir resultado Como Real
+	Definir mensaje Como Caracter
+	
+	//Petición de datos
+	Escribir "Ingresa el valor de a"
+	Leer number1
+	Escribir "Ingresa el valor de b"
+	Leer number2
+	
+	//Resolución del problema
+	Si number1 >= number2 Entonces
+		resultado = number1 + number2
+		mensaje = "A > B"
+	SiNo
+		resultado = number1 * number2
+		mensaje = "A < B"
+	FinSi
+	
+	
+	//Solución
+	Escribir "La solución es " resultado " porque " mensaje
+FinAlgoritmo

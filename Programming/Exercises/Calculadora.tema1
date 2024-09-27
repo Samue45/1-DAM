@@ -1,0 +1,41 @@
+Algoritmo Calculadora
+	
+	//Bloque de datos
+	Definir operador Como Caracter
+	Definir number1, number2 Como Entero
+	Definir solution Como Entero
+	
+	//Introducción de datos
+	Escribir "Introduce el 1º número"
+	Leer number1
+	
+	Escribir "Introduce el operador"
+	Leer operador
+	
+	Escribir "Introduce el 2º número"
+	Leer number2
+	
+	
+	//Intrucciones de la calculadora
+	Segun operador Hacer
+		"+":
+			solution = number1 + number2
+			Escribir "La suma es igual a = "
+			Escribir solution
+		"-":
+			olution = number1 - number2
+			Escribir "La resta es igual a = "
+			Escribir solution
+		"/":
+			olution = number1 / number2
+			Escribir "La división es igual a = "
+			Escribir solution
+		"*":
+			olution = number1 * number2
+			Escribir "La multi es igual a = "
+			Escribir solution
+		De Otro Modo:
+			Escribir "El dato introducido no es válido"
+	Fin Segun
+	
+FinAlgoritmo

@@ -1,0 +1,23 @@
+Algoritmo Pulsaciones
+	
+	//Bloque de instancias
+	Definir edad Como Entero
+	Definir numbPulsaciones Como Real
+	MAX_PULSACIONES = 220
+	TIME_PULSACIONES = 6
+	
+	
+	//Introducción de datos
+	Escribir "Introduce tu edad: "
+	Leer edad
+	
+	
+	//Procedimiento
+	Si edad > 0 Y edad < 99 Entonces
+		numbPulsaciones = (MAX_PULSACIONES - edad) / TIME_PULSACIONES
+		Escribir "Tu número de pulsaciones debe ser = " numbPulsaciones
+	SiNo
+		Escribir "El dato introducido no es válido"
+	FinSi
+	
+FinAlgoritmo

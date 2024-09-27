@@ -1,0 +1,40 @@
+Algoritmo JuegoDeAdivinanza
+	
+	//Bloque de datos
+	Definir respuesta Como Caracter
+	Definir solution Como Caracter
+	Definir contador Como Entero
+	solution1 = "Has acertado"
+	solution2 = "Has fallado"
+	//Instrucciones del juego
+	
+	Escribir "Escribe el nombre de la película"
+	Escribir "No eres un bonito y único copo de nieve, eres la misma materia orgánica en descomposición que todo lo demás, todos somos parte del mismo montón de estiércol?"
+	Leer respuesta
+	
+	Repetir
+		SI respuesta == "El Club de la Pelea" Entonces
+			contador = contador + 1
+		
+			Escribir solution1
+		Sino
+			Escribir solution2
+		FinSi
+	Hasta Que contador = 1
+	
+	
+	Escribir "Escribe el nombre de la película"
+	Escribir "Mantén cerca a tus amigos, pero más cerca a tus enemigos"
+	Leer respuesta
+		
+	SI respuesta == "El Padrino" Entonces
+		Escribir solution1
+		contador = contador + 1
+		
+		Escribir "El nombre de la peli es = " + solution
+	Sino
+		Escribir solution2
+	FinSi
+	
+
+FinAlgoritmo

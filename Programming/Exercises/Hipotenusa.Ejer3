@@ -1,0 +1,23 @@
+Algoritmo Hipotenusa
+	
+	//Bloque de instancias
+	Definir cat1, cat2 Como Real
+	Definir hipo Como Real
+	
+	
+	//Entrada
+	Escribir "Introduzca el 1º cateto"
+	Leer cat1
+	
+	Escribir "Introduzca el 2º cateto"
+	Leer cat2
+	
+	//Procedimiento
+	hipo = RC(cat1^2 + cat2^2)
+	
+
+	//Salida
+	Escribir "La hipotenusa del triángulo es = "
+	Escribir hipo
+	
+FinAlgoritmo

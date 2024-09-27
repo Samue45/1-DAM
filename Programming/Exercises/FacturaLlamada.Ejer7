@@ -1,0 +1,26 @@
+Algoritmo FacturaLlamada
+	
+	//Bloque de instacias
+	Definir tiempoLlamada, tiempoExtra Como Real
+	Definir costeLlamada Como Real
+	costeLlamada = 0
+	PRECIO_1 = 10
+	PRECIO_2 = 5
+	
+	
+	//Petición de datos
+	Escribir "Ingrese la cantidad de minutos de la llamada"
+	Leer tiempoLlamada
+	
+	//Resolución del problema
+	Si tiempoLlamada > 0 Entonces
+		costeLlamada = PRECIO_1
+		Si tiempoLlamada > 3 Entonces
+			costeLlamada = PRECIO_1 + (tiempoLlamada - 3) * PRECIO_2			
+		FinSi
+	FinSi
+	
+	//Solución
+	Escribir "Su saldo a cobrar por la llamada es:" costeLlamada " centimos"
+	
+FinAlgoritmo
