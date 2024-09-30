@@ -13,9 +13,6 @@
         <mxCell id="BYih-mlSwQ1MUp8AWNJi-69" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="BYih-mlSwQ1MUp8AWNJi-3" target="BYih-mlSwQ1MUp8AWNJi-54">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BYih-mlSwQ1MUp8AWNJi-74" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="BYih-mlSwQ1MUp8AWNJi-3" target="BYih-mlSwQ1MUp8AWNJi-46">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="BYih-mlSwQ1MUp8AWNJi-3" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;SOCIO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="140" y="71" width="120" height="60" as="geometry" />
         </mxCell>
@@ -99,15 +96,6 @@
             <mxPoint x="221.70999999999998" y="71" as="sourcePoint" />
             <mxPoint x="221.70999999999998" y="33" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="BYih-mlSwQ1MUp8AWNJi-75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="BYih-mlSwQ1MUp8AWNJi-46" target="BYih-mlSwQ1MUp8AWNJi-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="BYih-mlSwQ1MUp8AWNJi-46" value="Tiene" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="358" y="61" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="BYih-mlSwQ1MUp8AWNJi-49" value="1:N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="368" y="148" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="BYih-mlSwQ1MUp8AWNJi-72" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="BYih-mlSwQ1MUp8AWNJi-50" target="BYih-mlSwQ1MUp8AWNJi-4">
           <mxGeometry relative="1" as="geometry" />
