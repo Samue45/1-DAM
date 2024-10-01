@@ -7,23 +7,28 @@ public class Ejercicio14 {
 
         //Bloque de instancias
         Scanner input = new Scanner(System.in);
-        String message;
+        String message ="";
         double timeWork, salary = 0;
 
         //Petición de datos
-        System.out.println("Indique cuantas horas ha trabajado:");
+        System.err.println("Indique cuantas horas ha trabajado:");
         timeWork = input.nextDouble();
 
         //Intrucciones
         if (timeWork <= 0){
             message = "ERROR: Datos no válidos ";
-        } else {
-            if (timeWork <= 40){
-                salary += 16;
-                if (timeWork > 40){
-
-                }
-            }
         }
+        if (timeWork <= 40){
+            salary += 16;
+            message = "Su salario es = " + salary;
+        }
+        if (timeWork > 40){
+            salary = (timeWork - 40) * 20;
+            message = "Su salario es = " + salary;
+        }
+
+        //Solución
+        System.out.println(message);
+
     }
 }
