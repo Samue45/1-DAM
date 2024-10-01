@@ -1,6 +1,5 @@
-package Programming.Exercises;
+package Programming.Theme1Exercises;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Ejercicio13 {

@@ -1,4 +1,4 @@
-package Programming.Exercises;
+package Programming.Theme1Exercises;
 
 import java.util.Scanner;
 
