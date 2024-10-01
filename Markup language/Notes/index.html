@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -29,13 +30,42 @@
      <img>,<a ></a><!--Son en LÍNEAS-->
 
      <!--TABLAS-->
-     <table> <!--Toda la tabla entera-->
-        <tr><!--Columnas-->
-            <td></td><!--Filas-->
-            <td></td>
+     <!--Colspan aumenta el ancho de de la columna-->
+     <!--Rowsapn aumenta el alto de de la fila-->
+     <table>
+        <tr><!--Filas-->
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td><!--Columna-->
         </tr>
-        <tr></tr>
-     </table>
+        <tr>
+            <td colspan="3" rowspan="2">1</td>
+            <td>4</td>
+            <td colspan="2">5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="3">5</td>
+            <td>6</td><!--Columna-->
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>6</td><!--Columna-->
+        </tr>
+        <tr>
+            <td colspan="3">1</td>
+            <td>4</td>
+            <td>6</td><!--Columna-->
+        </tr>
+        
+
+    </table>
 
 </body>
 </html>
