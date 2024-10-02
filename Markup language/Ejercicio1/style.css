@@ -1,14 +1,5 @@
-table{
+table,td{
     border: 1px, solid, black;
-    width: 90%;
-    height: 900px;
-    margin: auto;
-}
-tr{
-    width: 100px;
-    height: 80px;
-}
-
-td{
-    border: 1px, solid, black;
+    width: 400px;
+    height: 100px;
 }
