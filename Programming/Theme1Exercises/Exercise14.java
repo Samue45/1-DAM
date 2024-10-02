@@ -2,32 +2,32 @@ package Programming.Theme1Exercises;
 
 import java.util.Scanner;
 
-public class Ejercicio14 {
+public class Exercise14 {
     public static void main(String[] args) {
 
-        //Bloque de instancias
+        //Instance block
         Scanner input = new Scanner(System.in);
         String message ="";
         double timeWork, salary = 0;
 
-        //Petición de datos
-        System.err.println("Indique cuantas horas ha trabajado:");
+        //Users data
+        System.err.println("Write how much time have you been working:");
         timeWork = input.nextDouble();
 
-        //Intrucciones
+        //Algorithm instructions
         if (timeWork <= 0){
-            message = "ERROR: Datos no válidos ";
+            message = "ERROR: Invalid data ";
         }
         if (timeWork <= 40){
             salary += 16;
-            message = "Su salario es = " + salary;
+            message = "Your salary is = " + salary;
         }
         if (timeWork > 40){
             salary = (timeWork - 40) * 20;
-            message = "Su salario es = " + salary;
+            message = "Your salary is= " + salary;
         }
 
-        //Solución
+        //Solution
         System.out.println(message);
 
     }

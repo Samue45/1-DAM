@@ -2,32 +2,32 @@ package Programming.Theme1Exercises;
 
 import java.util.Scanner;
 
-public class Ejercicio8 {
+public class Exercise8 {
     public static void main(String[] args) {
 
-        //Bloque de instancias
+        //Instance block
         Scanner input = new Scanner(System.in);
         String message;
         float number1, number2, solution = 0F;
 
-        //Petición de datos al usuario
-        System.out.println("Ingrese el valor de A:");
+        //Users data
+        System.out.println("Give the A value:");
         number1 = input.nextFloat();
-        System.out.println("Ingrese el valor de B:");
+        System.out.println("Give the B value:");
         number2 = input.nextFloat();
 
         //Intrucciones del algortimo
         if (number1 > number2 ){
             solution = number1 + number2;
-            message = "La solución es " + solution + "(A > B)";
+            message = "The solution is " + solution + ", because (A > B)";
         }else if (number1 < number2){
             solution = number1 * number2;
-            message = "La solución es " + solution + "(A < B)";
+            message = "The solution is" + solution + "(A < B)";
         }else {
-            message ="Ambos números son iguales por lo que no se cumple ninguna condición";
+            message= "ERROR: Both numbers are the same";
         }
 
-        //Solución
+        //Solution
         System.out.println(message);
     }
 }
