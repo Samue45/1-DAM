@@ -1,21 +1,43 @@
 package Programming.Theme2Exercises;
 
-import java.util.Random;
+
 import java.util.Scanner;
 
 public class Exercise14 {
     public static void main(String[] args) {
 
-        //Instance block
+        //INSTANCE BLOCK
         Scanner input = new Scanner(System.in);
         String message;
-        int number,randomNumber, counter;
+        int number, counter = 0;
+        double randomNumber;
 
-        //User data
-        System.out.println("WELCOME to the enigma game \n You have 5 opportunities to can guess the number");
-        number = input.nextInt();
+        //PRESENTATION
+        System.out.println("----WELCOME to the enigma game---- \nYou have 5 opportunities to can guess the number");
 
-        //Instructions
-        randomNumber = (int) Math.random();
+        do {
+            //USER DATA
+            System.out.println(" Write a number:");
+            number = input.nextInt();
+
+            //INSTRUCTIONS
+            randomNumber = Math.random();
+
+            if(number > randomNumber){
+                message = "The enigma number is less {:-/}";
+            } else if (number < randomNumber) {
+                message = "The enigma number is bigger {:|}";
+            }else {
+                message = "CONGRATULATION!! You win the game {:)}";
+            }
+
+            //We increment the value of the counter to can finish the buckle
+            counter++;
+
+            //SOLUTION
+            System.out.println(message + "\n Your attempts was = " + counter);
+
+        }while (counter < 5 && !message.equals("CONGRATULATION!! You win the game {:)}"));
+
     }
 }
