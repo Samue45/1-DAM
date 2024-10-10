@@ -7,8 +7,8 @@ public class Exercise16 {
 
         //BLOCK INSTANCE
         Scanner input = new Scanner(System.in);
-        String message="";
-        int number;
+        String message1, message2="";
+        int number, sum = 0;
 
         //INTRODUCTION
         System.out.println("Introduce a number to know its divisors");
@@ -24,11 +24,24 @@ public class Exercise16 {
 
             if ((number % i) == 0){
 
-                message = i + " is divisor of " + number;
+                message1 = i + " is divisor of " + number;
+
+                //We calculate if the number is perfect
+                sum+=i;
 
                 //SOLUTION
-                System.out.println(message);
+                System.out.println(message1);
             }
         }
+
+        //If it happens, we will show a special message
+        if (number == sum){
+            message2 = number + " is a perfect number";
+        }else {
+            message2 = number + " isn't a perfect number";
+        }
+
+        //SOLUTION
+        System.out.println(message2);
     }
 }
