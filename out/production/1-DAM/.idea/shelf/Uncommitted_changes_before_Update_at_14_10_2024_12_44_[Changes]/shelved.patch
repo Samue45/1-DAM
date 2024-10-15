@@ -1,0 +1,626 @@
+Index: Programming/Notes.java
+===================================================================
+diff --git a/Programming/Notes.java b/Programming/Notes.java
+deleted file mode 100644
+--- a/Programming/Notes.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ /dev/null	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
+@@ -1,12 +0,0 @@
+-package Programming;
+-
+-
+-public class Notes {
+-    public static void main(String[] args) {
+-
+-        //Si escribimos System.err.println se mostrará el mesaje en rojo por la consola
+-        System.err.println("Hola");
+-        //Para mostrar una ventana que pida datos podemos usar la Clase JOptionPane
+-
+-    }
+-}
+Index: Programming/Theme2Exercises/Exercise5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise5.java b/Programming/Theme1/Exercises2/Exercise5.java
+rename from Programming/Theme2Exercises/Exercise5.java
+rename to Programming/Theme1/Exercises2/Exercise5.java
+--- a/Programming/Theme2Exercises/Exercise5.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise5.java	(date 1728900618682)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise17.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise17.java b/Programming/Theme1/Exercises1/Exercise17.java
+rename from Programming/Theme1Exercises/Exercise17.java
+rename to Programming/Theme1/Exercises1/Exercise17.java
+--- a/Programming/Theme1Exercises/Exercise17.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise17.java	(date 1728900618563)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise6.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise6.java b/Programming/Theme1/Exercises2/Exercise6.java
+rename from Programming/Theme2Exercises/Exercise6.java
+rename to Programming/Theme1/Exercises2/Exercise6.java
+--- a/Programming/Theme2Exercises/Exercise6.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise6.java	(date 1728900618834)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise15.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise15.java b/Programming/Theme1/Exercises2/Exercise15.java
+rename from Programming/Theme2Exercises/Exercise15.java
+rename to Programming/Theme1/Exercises2/Exercise15.java
+--- a/Programming/Theme2Exercises/Exercise15.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise15.java	(date 1728900618578)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise16.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise16.java b/Programming/Theme1/Exercises2/Exercise16.java
+rename from Programming/Theme2Exercises/Exercise16.java
+rename to Programming/Theme1/Exercises2/Exercise16.java
+--- a/Programming/Theme2Exercises/Exercise16.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise16.java	(date 1728900618783)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+@@ -20,21 +20,22 @@
+ 
+ 
+         //INSTRUCTIONS
+-        for (int i=1; i < number; i++){
++        for (int counter=1; counter < number; counter++){
+ 
+-            if ((number % i) == 0){
++            //We calculate divisors of the number
++            if ((number % counter) == 0){
+ 
+-                message1 = i + " is divisor of " + number;
++                message1 = counter + " is divisor of " + number;
+ 
+                 //We calculate if the number is perfect
+-                sum+=i;
++                sum+=counter;
+ 
+                 //SOLUTION
+                 System.out.println(message1);
+             }
+         }
+ 
+-        //If it happens, we will show a special message
++        //If the number is perfect, we will show a special message
+         if (number == sum){
+             message2 = number + " is a perfect number";
+         }else {
+Index: Programming/Theme2Exercises/Exercise7.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise7.java b/Programming/Theme1/Exercises2/Exercise7.java
+rename from Programming/Theme2Exercises/Exercise7.java
+rename to Programming/Theme1/Exercises2/Exercise7.java
+--- a/Programming/Theme2Exercises/Exercise7.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise7.java	(date 1728900618689)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise1.java b/Programming/Theme1/Exercises1/Exercise1.java
+rename from Programming/Theme1Exercises/Exercise1.java
+rename to Programming/Theme1/Exercises1/Exercise1.java
+--- a/Programming/Theme1Exercises/Exercise1.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise1.java	(date 1728900618721)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise1.java b/Programming/Theme1/Exercises2/Exercise1.java
+rename from Programming/Theme2Exercises/Exercise1.java
+rename to Programming/Theme1/Exercises2/Exercise1.java
+--- a/Programming/Theme2Exercises/Exercise1.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise1.java	(date 1728900618787)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ 
+ public class Exercise1 {
+Index: Programming/Theme1Exercises/Exercise11.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise11.java b/Programming/Theme1/Exercises1/Exercise11.java
+rename from Programming/Theme1Exercises/Exercise11.java
+rename to Programming/Theme1/Exercises1/Exercise11.java
+--- a/Programming/Theme1Exercises/Exercise11.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise11.java	(date 1728900618625)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise10.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise10.java b/Programming/Theme1/Exercises1/Exercise10.java
+rename from Programming/Theme1Exercises/Exercise10.java
+rename to Programming/Theme1/Exercises1/Exercise10.java
+--- a/Programming/Theme1Exercises/Exercise10.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise10.java	(date 1728900618610)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ import java.util.Scanner;
+ 
+ public class Exercise10 {
+Index: Programming/Theme1Exercises/Exercise2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise2.java b/Programming/Theme1/Exercises1/Exercise2.java
+rename from Programming/Theme1Exercises/Exercise2.java
+rename to Programming/Theme1/Exercises1/Exercise2.java
+--- a/Programming/Theme1Exercises/Exercise2.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise2.java	(date 1728900618736)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise12.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise12.java b/Programming/Theme1/Exercises1/Exercise12.java
+rename from Programming/Theme1Exercises/Exercise12.java
+rename to Programming/Theme1/Exercises1/Exercise12.java
+--- a/Programming/Theme1Exercises/Exercise12.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise12.java	(date 1728900618563)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise4.java b/Programming/Theme1/Exercises1/Exercise4.java
+rename from Programming/Theme1Exercises/Exercise4.java
+rename to Programming/Theme1/Exercises1/Exercise4.java
+--- a/Programming/Theme1Exercises/Exercise4.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise4.java	(date 1728900618670)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise3.java b/Programming/Theme1/Exercises1/Exercise3.java
+rename from Programming/Theme1Exercises/Exercise3.java
+rename to Programming/Theme1/Exercises1/Exercise3.java
+--- a/Programming/Theme1Exercises/Exercise3.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise3.java	(date 1728900618594)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise6.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise6.java b/Programming/Theme1/Exercises1/Exercise6.java
+rename from Programming/Theme1Exercises/Exercise6.java
+rename to Programming/Theme1/Exercises1/Exercise6.java
+--- a/Programming/Theme1Exercises/Exercise6.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise6.java	(date 1728900618803)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise5.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise5.java b/Programming/Theme1/Exercises1/Exercise5.java
+rename from Programming/Theme1Exercises/Exercise5.java
+rename to Programming/Theme1/Exercises1/Exercise5.java
+--- a/Programming/Theme1Exercises/Exercise5.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise5.java	(date 1728900618752)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise8.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise8.java b/Programming/Theme1/Exercises1/Exercise8.java
+rename from Programming/Theme1Exercises/Exercise8.java
+rename to Programming/Theme1/Exercises1/Exercise8.java
+--- a/Programming/Theme1Exercises/Exercise8.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise8.java	(date 1728900618721)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise7.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise7.java b/Programming/Theme1/Exercises1/Exercise7.java
+rename from Programming/Theme1Exercises/Exercise7.java
+rename to Programming/Theme1/Exercises1/Exercise7.java
+--- a/Programming/Theme1Exercises/Exercise7.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise7.java	(date 1728900618767)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise9.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise9.java b/Programming/Theme1/Exercises1/Exercise9.java
+rename from Programming/Theme1Exercises/Exercise9.java
+rename to Programming/Theme1/Exercises1/Exercise9.java
+--- a/Programming/Theme1Exercises/Exercise9.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise9.java	(date 1728900618803)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise9.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise9.java b/Programming/Theme1/Exercises2/Exercise9.java
+rename from Programming/Theme2Exercises/Exercise9.java
+rename to Programming/Theme1/Exercises2/Exercise9.java
+--- a/Programming/Theme2Exercises/Exercise9.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise9.java	(date 1728900618641)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise8.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise8.java b/Programming/Theme1/Exercises2/Exercise8.java
+rename from Programming/Theme2Exercises/Exercise8.java
+rename to Programming/Theme1/Exercises2/Exercise8.java
+--- a/Programming/Theme2Exercises/Exercise8.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise8.java	(date 1728900618578)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise14.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise14.java b/Programming/Theme1/Exercises1/Exercise14.java
+rename from Programming/Theme1Exercises/Exercise14.java
+rename to Programming/Theme1/Exercises1/Exercise14.java
+--- a/Programming/Theme1Exercises/Exercise14.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise14.java	(date 1728900618787)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise11.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise11.java b/Programming/Theme1/Exercises2/Exercise11.java
+rename from Programming/Theme2Exercises/Exercise11.java
+rename to Programming/Theme1/Exercises2/Exercise11.java
+--- a/Programming/Theme2Exercises/Exercise11.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise11.java	(date 1728900618736)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise10.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise10.java b/Programming/Theme1/Exercises2/Exercise10.java
+rename from Programming/Theme2Exercises/Exercise10.java
+rename to Programming/Theme1/Exercises2/Exercise10.java
+--- a/Programming/Theme2Exercises/Exercise10.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise10.java	(date 1728900618594)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise14.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise14.java b/Programming/Theme1/Exercises2/Exercise14.java
+rename from Programming/Theme2Exercises/Exercise14.java
+rename to Programming/Theme1/Exercises2/Exercise14.java
+--- a/Programming/Theme2Exercises/Exercise14.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise14.java	(date 1728900618819)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ 
+ import java.util.Scanner;
+Index: Programming/Theme2Exercises/Exercise12.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise12.java b/Programming/Theme1/Exercises2/Exercise12.java
+rename from Programming/Theme2Exercises/Exercise12.java
+rename to Programming/Theme1/Exercises2/Exercise12.java
+--- a/Programming/Theme2Exercises/Exercise12.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise12.java	(date 1728900618705)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise13.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise13.java b/Programming/Theme1/Exercises2/Exercise13.java
+rename from Programming/Theme2Exercises/Exercise13.java
+rename to Programming/Theme1/Exercises2/Exercise13.java
+--- a/Programming/Theme2Exercises/Exercise13.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise13.java	(date 1728900618767)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise2.java b/Programming/Theme1/Exercises2/Exercise2.java
+rename from Programming/Theme2Exercises/Exercise2.java
+rename to Programming/Theme1/Exercises2/Exercise2.java
+--- a/Programming/Theme2Exercises/Exercise2.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise2.java	(date 1728900618705)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2/NestedLoops/Exercise1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2/NestedLoops/Exercise1.java b/Programming/Theme2/NestedLoops/Exercise1.java
+new file mode 100644
+--- /dev/null	(date 1728902667108)
++++ b/Programming/Theme2/NestedLoops/Exercise1.java	(date 1728902667108)
+@@ -0,0 +1,41 @@
++package Programming.Theme2.NestedLoops;
++
++import java.util.Scanner;
++
++public class Exercise1 {
++    public static void main(String[] args) {
++
++        //Instance block
++        Scanner input = new Scanner(System.in);
++        String message, errorMessage;
++        final int NUMBERSUTENDTS = 10;
++        String name;
++        String[] subjects= {"Maths, Language, English, Physic, History"};
++        float  notes[] = new float[5];
++
++        //User data
++        for (int student = 1; student < NUMBERSUTENDTS; student++){
++
++            //We save the name of the student
++            System.out.println("Introduce the student's name:");
++            name = input.nextLine();
++
++            //We do different operations with his notes
++            for (int counterSubject = 0; counterSubject < subjects.length; counterSubject++){
++
++                //The user give us his note
++                System.out.println("Introduce the note of " + subjects[counterSubject]);
++                notes[counterSubject] = input.nextFloat();
++
++                //ERRORS
++                if (notes[counterSubject] < 0){
++                    errorMessage = "ERROR :/ Your note can't be less than 0";
++                }
++
++
++
++            }//Final of NotesLoop
++
++        }// Final of StudentsLoop
++    }
++}
+Index: Programming/Theme2Exercises/Exercise3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise3.java b/Programming/Theme1/Exercises2/Exercise3.java
+rename from Programming/Theme2Exercises/Exercise3.java
+rename to Programming/Theme1/Exercises2/Exercise3.java
+--- a/Programming/Theme2Exercises/Exercise3.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise3.java	(date 1728900618721)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise15.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise15.java b/Programming/Theme1/Exercises1/Exercise15.java
+rename from Programming/Theme1Exercises/Exercise15.java
+rename to Programming/Theme1/Exercises1/Exercise15.java
+--- a/Programming/Theme1Exercises/Exercise15.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise15.java	(date 1728900618610)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme2Exercises/Exercise4.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme2Exercises/Exercise4.java b/Programming/Theme1/Exercises2/Exercise4.java
+rename from Programming/Theme2Exercises/Exercise4.java
+rename to Programming/Theme1/Exercises2/Exercise4.java
+--- a/Programming/Theme2Exercises/Exercise4.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises2/Exercise4.java	(date 1728900618752)
+@@ -1,4 +1,4 @@
+-package Programming.Theme2Exercises;
++package Programming.Theme1.Exercises2;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise16.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise16.java b/Programming/Theme1/Exercises1/Exercise16.java
+rename from Programming/Theme1Exercises/Exercise16.java
+rename to Programming/Theme1/Exercises1/Exercise16.java
+--- a/Programming/Theme1Exercises/Exercise16.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise16.java	(date 1728900618625)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 
+Index: Programming/Theme1Exercises/Exercise13.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Programming/Theme1Exercises/Exercise13.java b/Programming/Theme1/Exercises1/Exercise13.java
+rename from Programming/Theme1Exercises/Exercise13.java
+rename to Programming/Theme1/Exercises1/Exercise13.java
+--- a/Programming/Theme1Exercises/Exercise13.java	(revision 4d36f9f06e51fdef93aed63a1e37a56a4b3af2c3)
++++ b/Programming/Theme1/Exercises1/Exercise13.java	(date 1728900618834)
+@@ -1,4 +1,4 @@
+-package Programming.Theme1Exercises;
++package Programming.Theme1.Exercises1;
+ 
+ import java.util.Scanner;
+ 

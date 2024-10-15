@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1629135-13ef-41c1-9338-9618a7c469e5" name="Changes" comment="Exercise16">
+      <change beforePath="$PROJECT_DIR$/Programming/Theme2/NestedLoops/Exercise1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Theme2/NestedLoops/Exercise1.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Samue45&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Samue45/1-DAM.git&quot;,
+    &quot;accountId&quot;: &quot;46d6a02c-1c79-46b1-bbbf-187c9e14e771&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2mmM5Wn1JiCCsk0g5MERdBEgXlx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Ejercicio1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio14.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio16.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio17.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Ejercicio2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise10.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise11.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise14.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise16.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise4.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise5.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise6.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise9.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Notes.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dam/IdeaProjects/1-DAM/Programming/Theme1&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Exercise1">
+    <configuration name="Exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Theme2.NestedLoops.Exercise1" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Theme2.NestedLoops.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Theme1.Exercises1.Exercises2.Exercise13" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Theme1.Exercises1.Exercises2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Theme1.Exercises1.Exercises2.Exercise14" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Theme1.Exercises1.Exercises2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Theme1.Exercises1.Exercises2.Exercise15" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Theme1.Exercises1.Exercises2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exercise16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Theme1.Exercises1.Exercises2.Exercise16" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Theme1.Exercises1.Exercises2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Exercise1" />
+        <item itemvalue="Application.Exercise16" />
+        <item itemvalue="Application.Exercise15" />
+        <item itemvalue="Application.Exercise14" />
+        <item itemvalue="Application.Exercise13" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1629135-13ef-41c1-9338-9618a7c469e5" name="Changes" comment="" />
+      <created>1727677114267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727677114267</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Finalización del ejercicio12">
+      <option name="closed" value="true" />
+      <created>1727691002347</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727691002347</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Finalización del ejercicio14">
+      <option name="closed" value="true" />
+      <created>1727692985435</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727692985435</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Finalización del ejercicio14">
+      <option name="closed" value="true" />
+      <created>1727693026020</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727693026020</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finalización del ejercicio15,ejercicio16,ejercicio17">
+      <option name="closed" value="true" />
+      <created>1727782168567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727782168567</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Finalización del ejercicio15,ejercicio16,ejercicio17">
+      <option name="closed" value="true" />
+      <created>1727782210471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727782210471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Comienzo del tema 2">
+      <option name="closed" value="true" />
+      <created>1727782746894</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727782746894</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Review and translate all exercise">
+      <option name="closed" value="true" />
+      <created>1727859781131</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727859781131</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Exercise1,2,3 and 4">
+      <option name="closed" value="true" />
+      <created>1728032908825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728032908825</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728032943254</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728032943254</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728298312095</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728298312095</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728298348795</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728298348795</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728388047795</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728388047795</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728388075767</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728388075767</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728463190376</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728463190376</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728463203427</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728463203427</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728544372563</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728544372563</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Things">
+      <option name="closed" value="true" />
+      <created>1728544397971</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728544397971</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Exercise16">
+      <option name="closed" value="true" />
+      <created>1728559004718</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1728559004718</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Exercise16">
+      <option name="closed" value="true" />
+      <created>1728559138013</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1728559138013</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Exercise16">
+      <option name="closed" value="true" />
+      <created>1728902669898</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1728902669898</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Exercise16">
+      <option name="closed" value="true" />
+      <created>1728902710781</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1728902710781</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finalización del ejercicio12" />
+    <MESSAGE value="Finalización del ejercicio14" />
+    <MESSAGE value="Finalización del ejercicio15,ejercicio16,ejercicio17" />
+    <MESSAGE value="Comienzo del tema 2" />
+    <MESSAGE value="Review and translate all exercise" />
+    <MESSAGE value="Exercise1,2,3 and 4" />
+    <MESSAGE value="Things" />
+    <MESSAGE value="Exercise1-Theme2" />
+    <MESSAGE value="Exercise16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise16" />
+  </component>
+</project>
