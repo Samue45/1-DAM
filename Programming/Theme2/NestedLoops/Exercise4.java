@@ -8,11 +8,12 @@ public class Exercise4 {
 
         //Block instance
         Scanner input = new Scanner(System.in);
-        int number, sumTotal = 0, mediaTotal, sum= 0, media, counter = 0;
-        String message;
+        int number, sumTotal = 0, mediaTotal, sum= 0, media= 0, counter = 0;
+
 
 
         //START
+        System.out.println("To exit introduce the number 0");
         do {
 
             System.out.println("Introduce a number:");
@@ -38,9 +39,14 @@ public class Exercise4 {
                 media = sum /2;
             }
 
+            //SOLUTION
+
+            System.out.println("The sum of all number is = " + mediaTotal);
+
             if (number == 0){
-                System.err.println("ERROR: Invalid data :/");
-                System.out.println();
+                System.err.println("The program finish");
+                System.out.println("The number of sum that are bigger than 100 is = " + counter);
+                System.out.println("The media of number less than 10 is = " + media);
             }
 
         }while(number != 0);
