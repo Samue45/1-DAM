@@ -40,7 +40,7 @@ public class Exercise6 {
                     dni = input.nextLine();
                     System.out.print("Introduce the salary" );
                     salary = input.nextInt();
-                    System.out.print("Introduce the number of children" );
+                    System.out.print("Introduce the number of children:" );
                     numberSons = input.nextInt();
 
 
