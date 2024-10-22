@@ -1,7 +1,8 @@
+package Programming.Theme2.Project.src;
 
 public class Main {
-    public static void main(String[] args) {
+    public static <Student> void main(String[] args) {
 
-        Student student1 = new Student("Samuel", 19,"Jerez");
+        System.out.println(Maths.factorization(12));
     }
 }
