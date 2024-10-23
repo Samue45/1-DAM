@@ -33,4 +33,9 @@ public class Student {
     public void setTown(String town) {
         this.town = town;
     }
+
+    @Override
+    public String toString() {
+        return "Student:\nName = "+ name +"\nAge = "+ age +"\nTown = "+ town;
+    }
 }
