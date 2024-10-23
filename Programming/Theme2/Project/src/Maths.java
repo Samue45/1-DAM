@@ -1,3 +1,5 @@
+package Programming.Theme2.Project.src;
+
 public class Maths {
 
 
@@ -52,11 +54,14 @@ public class Maths {
     }
 
     public static String factorization(int number) {
+        //We save the initial value of the number to can create a special message
+        int firstValue = number;
+
         if (number < 2) {
             return "Number must be greater than 1.";
         }
 
-        String factorization = "";
+        String factorization = "", message;
 
         while (number > 1) {
             int factor = getFirstPrimeFactor(number);
@@ -70,6 +75,8 @@ public class Maths {
             factorization = factorization.substring(0, factorization.length() - 1); // Remove last '*'
         }
 
-        return factorization;
+        //Finally we show a special message that show the final solution
+        message = "The factorization of " + firstValue + " is = " + factorization;
+        return message;
     }
 }

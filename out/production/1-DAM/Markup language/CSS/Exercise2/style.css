@@ -1,0 +1,64 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+}
+
+#important{
+    color: blueviolet;
+    text-decoration: dotted;
+}
+
+span{
+    font-size: 70PX;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+fieldset {
+    width: 280px;
+    border: 1px solid #0bdfaa;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;}
+legend {
+    background-color: #10cf10e8;
+    border: 1px solid #76ddbbd3;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+
+}
+
+button:hover{
+    color: royalblue;
+    background-color: rgb(208, 223, 10);
+}
+button{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 2px solid coral;
+}
+
+input{
+    margin-bottom: 10px;
+}
