@@ -60,11 +60,11 @@ public class Hour {
     }
     //ToString
     public String toString(){
-        return setNormalFormat(hour) + ":" + setNormalFormat(minutes) + ":" + setNormalFormat(seconds);
+        return setNormalFormat(hour) + "h:" + setNormalFormat(minutes) + "min:" + setNormalFormat(seconds)+ "s";
     }
 
     //Set the common format
-    public String setNormalFormat(int number){
+    private String setNormalFormat(int number){
         if (number < 10){
             return "0" + number;
         }
@@ -74,5 +74,15 @@ public class Hour {
     //Review format of the total hour
     public boolean correctFormat(int hour, int minutes, int seconds){
         return hour >=0 && hour <= 23 && minutes >=0 && minutes <= 59 && seconds >=0 && seconds <= 59;
+    }
+
+    //Method to return the time spend until now in seconds
+    public String returnAllSeconds(){
+        int hourToSeconds = getHour() * 3600;
+        int minutesToSeconds = getMinutes() * 60;
+
+        int solution = hourToSeconds + minutesToSeconds + getSeconds();
+
+        return "Have been spend " + solution + " seconds since 00:00";
     }
 }
