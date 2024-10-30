@@ -49,8 +49,9 @@ public class Character {
     }
 
     public void setAge(int age) {
-        if (!validData()){
-            System.err.println("ERROR: The age can't be less than 0");;
+        if (age <= 0) {
+            System.err.println("ERROR: Age must be greater than 0.");
+            return; // Evitar establecer un valor no válido
         }
         this.age = age;
     }
@@ -60,11 +61,9 @@ public class Character {
     }
 
     public void setLife(int life) {
-        if (!validData()){
-            System.err.println("ERROR: The life can't be less than 0");;
-        }
-        if (!validatePointsOfHealth(life)){
-            System.err.println("Sorry :(, but your character is dead");
+        if (life < 0) {
+            System.err.println("ERROR: Life can't be less than 0.");
+            return; // Evitar establecer un valor no válido
         }
         this.life = life;
     }
@@ -78,10 +77,7 @@ public class Character {
                 "\n Life = " + life;
     }
 
-    //Method to test the format of the value of the age and life
-    private boolean validData(){
-        return age > 0 && life > 0;
-    }
+
 
     //Method to know if the character is dead
     private boolean validatePointsOfHealth(int number){
