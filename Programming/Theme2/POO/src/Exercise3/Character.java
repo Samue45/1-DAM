@@ -49,10 +49,6 @@ public class Character {
     }
 
     public void setAge(int age) {
-        if (age <= 0) {
-            System.err.println("ERROR: Age must be greater than 0.");
-            return; // Evitar establecer un valor no válido
-        }
         this.age = age;
     }
 
@@ -61,10 +57,6 @@ public class Character {
     }
 
     public void setLife(int life) {
-        if (life < 0) {
-            System.err.println("ERROR: Life can't be less than 0.");
-            return; // Evitar establecer un valor no válido
-        }
         this.life = life;
     }
 
@@ -78,9 +70,10 @@ public class Character {
     }
 
 
-
     //Method to know if the character is dead
     private boolean validatePointsOfHealth(int number){
         return number > 0;
     }
+
+
 }
