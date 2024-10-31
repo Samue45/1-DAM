@@ -3,40 +3,31 @@ package Exercise5;
 public class LIE {
 
     //PROPERTIES
-    SocialProfile socialProfile;
-    int solution;
+    private ProfilePicture profilePicture;
+    private Activity activity;
+    private Profile profile;
+
 
     //CONSTRUCTOR
+
+    public LIE(ProfilePicture profilePicture, Profile profile, Activity activity) {
+        this.profilePicture = profilePicture;
+        this.activity = activity;
+        this.profile = profile;
+    }
+
     public LIE(){}
 
     //METHODS
-    public void calculateProbablyFalse(){
-        switch (socialProfile.getProfilePicture()){
-            case GENERIC -> {
-                solution += 40 ;
-            }
-            case LITTLE_CLARE -> {
-                solution += 30;
-            }
-            case SUSPICIOUS -> {
-                solution += 50;
-            }
-            case NATURAL -> {
-                solution += 10;
-            }
-        }
+    public int calculateProbablyFalse(){
+        int probability;
+        probability = validatePercentage(profilePicture.getPortage() + profile.getPortage() + activity.getPortage());
+        return probability;
+    }
 
-        switch (socialProfile.getProfile()){
-            case INCOMPLETE -> {
-                solution += 40;
-            }
-            case UNCONSCIOUS -> {
-                solution += 50;
-            }
-        }
-
-        switch (socialProfile.getActivity()){}
-
+    private int validatePercentage(int probability){
+        if (probability > 100) probability = 100;
+        return probability;
     }
 
 
