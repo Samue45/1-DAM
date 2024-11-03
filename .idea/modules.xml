@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/1-DAM.iml" filepath="$PROJECT_DIR$/.idea/1-DAM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/PractiseExercises/GameRiddle/GameRiddle.iml" filepath="$PROJECT_DIR$/Programming/PractiseExercises/GameRiddle/GameRiddle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" filepath="$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" filepath="$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" />
     </modules>
   </component>
 </project>

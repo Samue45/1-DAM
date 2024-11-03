@@ -46,6 +46,9 @@ public class Exercise6 {
 
                 }//FINISH 3º BUCKLE
 
+                //SOLUTION 3
+
+
             }//FINISH 2º BUCKLE
 
 
