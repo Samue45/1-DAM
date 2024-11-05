@@ -1,5 +1,5 @@
 
-public class Vectors {
+public class Exercise1 {
 
     //Method to calculate the media note
     public static float mediaNotes(float notes[]){
@@ -32,5 +32,30 @@ public class Vectors {
             allNotes.append(notes[i]).append("/");
         }
         return allNotes;
+    }
+
+    //Method to calculate the number approved
+    public static int numberOfApproved(float [] notes){
+        int counter = 0;
+
+        for (int i=0; i < notes.length; i++){
+            if (notes[i] > 5){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    //Method to change the order of notes
+    public static float [] changeOrderNotes(float[] notes){
+        float[] copyOfNotes = new float[notes.length];
+        int counter = 0;
+
+        for (int i= notes.length - 1; i >= 0; i--){
+            copyOfNotes[counter] += notes[i];
+            counter++;
+        }
+
+        return copyOfNotes;
     }
 }
