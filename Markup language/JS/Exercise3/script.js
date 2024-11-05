@@ -17,7 +17,7 @@ function main(){
 //Methods
 function calculateMedia(){
     //Show the solution
-    myParagrahp.textContent = String((parseInt(input1.value) + parseInt(input2.value)) / 2);
+    myParagrahp.innerHTML = String((parseInt(input1.value) + parseInt(input2.value)) / 2);
 }
 
 
