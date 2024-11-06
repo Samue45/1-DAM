@@ -2,6 +2,7 @@ public class Actions {
 
     private Character character;
 
+
     public static void attack(Character character1, Character character2){
 
         // Obtener el daño de cada personaje basado en sus habilidades
