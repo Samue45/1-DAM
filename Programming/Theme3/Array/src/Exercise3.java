@@ -14,19 +14,21 @@ public class Exercise3 {
     }
 
     public void saveNumbers(int[] numbers){
-        int position = 0,number;
+        int number;
 
-        do {
+        for (int i=0; i < numbers.length; i++){
             System.out.println("Introduce a number:");
             number = input.nextInt();
-            numbers[position] = number;
-            position++;
-        }while (position-1 < numbers.length && numbers[--position] != 0  );
+            numbers[i] = number;
+
+            if (numbers[i] == 0){
+                break;
+            }
+        }
     }
 
     public String changeNumber(int [] numbers){
         int number, newNumber,counter= 0;
-
 
         System.out.println("Indicate a number to change");
         number = input.nextInt();
