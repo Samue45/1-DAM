@@ -1,13 +1,11 @@
-
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
+    Exercise5 exercise5 = new Exercise5();
 
-        Exercise3 exercise3 = new Exercise3();
-        int[] numbers = new int[5];
-
-        exercise3.numberArray(numbers);
+        System.out.println(Arrays.toString(exercise5.numberArray()));
 
 
 
