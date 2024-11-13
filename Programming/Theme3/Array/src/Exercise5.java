@@ -7,17 +7,22 @@ public class Exercise5 {
     public int[] numberArray(){
 
         int[] numbers =new int[10];
-        int number, newNumber ,counter = 0;
+        int number, counter = 0, saveNumber;
 
+        //Create a method to save values inside on the Array
         do {
             System.out.println("Introduce a number:");
             number = input.nextInt();
-            numbers[0] = number;
+            numbers[counter] = number;
             counter++;
-        }while (--counter < numbers.length && number != 0);
+        }while ( counter-1 < numbers.length && number != 0);
 
         for (int i = 0; i < numbers.length; i++){
-            //Use better two Array to solve this exercise
+
+            saveNumber = numbers[i];
+            i++;
+            numbers[i-1] = numbers[i];
+            numbers[i] = saveNumber;
         }
 
         return numbers;
