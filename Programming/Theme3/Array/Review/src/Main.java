@@ -1,20 +1,17 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String [] args){
 
-        Review1 review1 = new Review1(5);
+        Review2 review2 = new Review2();
 
-        System.out.println("All products");
-        review1.lookProducts();
+        int[][] numberMatrix = new int[3][3];
+        review2.saveNumbers(numberMatrix);
 
-        System.out.println("Increase 10 %");
-        review1.increasePrice();
-        review1.lookProducts();
-
-        System.out.println("Sum of all products");
-        System.out.println(review1.totalPrice());
-
-
+        review2.sumRows(numberMatrix);
+        review2.showMatrix(numberMatrix);
+        System.out.println(review2.sumAllRows(numberMatrix));
 
     }
 
