@@ -4,18 +4,13 @@ public class Exercise5 {
 
     Scanner input = new Scanner(System.in);
 
-    public int[] numberArray(){
+    public int[] changeFirstToSecondPosition(){
 
         int[] numbers =new int[10];
-        int number, counter = 0, saveNumber;
+        int saveNumber;
 
-        //Create a method to save values inside on the Array
-        do {
-            System.out.println("Introduce a number:");
-            number = input.nextInt();
-            numbers[counter] = number;
-            counter++;
-        }while ( counter-1 < numbers.length && number != 0);
+        //1º We save values inside on the Array
+        saveValues();
 
         for (int i = 0; i < numbers.length; i++){
 
@@ -26,5 +21,18 @@ public class Exercise5 {
         }
 
         return numbers;
+    }
+
+    public int[] saveValues(){
+        int[] listNumbers =new int[10];
+        int number, counter = 0;
+
+        do {
+            System.out.println("Introduce a number:");
+            number = input.nextInt();
+            listNumbers[counter] = number;
+            counter++;
+        }while ( --counter < listNumbers.length && number != 0);
+        return listNumbers;
     }
 }

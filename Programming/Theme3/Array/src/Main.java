@@ -5,8 +5,8 @@ public class Main {
 
     Exercise5 exercise5 = new Exercise5();
 
-    exercise5.numberArray();
-        System.out.println(Arrays.toString(exercise5.numberArray()));
+    exercise5.changeFirstToSecondPosition();
+        System.out.println(Arrays.toString(exercise5.changeFirstToSecondPosition()));
 
 
 
