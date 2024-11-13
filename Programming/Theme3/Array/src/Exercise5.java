@@ -4,38 +4,27 @@ public class Exercise5 {
 
     Scanner input = new Scanner(System.in);
 
-    public int [] changePositionsArray(int[] listNumbers){
-        int firstNumber;
+    public int[] numberArray(){
 
-        //1º We save different values inside on Array
-        saveNumbers(listNumbers);
+        int[] numbers =new int[10];
+        int number, counter = 0, saveNumber;
 
-        //2º We change the positions of numbers
-        for (int i = 0; i < listNumbers.length -1 ; i+= 2) {
+        //Create a method to save values inside on the Array
+        do {
+            System.out.println("Introduce a number:");
+            number = input.nextInt();
+            numbers[counter] = number;
+            counter++;
+        }while ( counter-1 < numbers.length && number != 0);
 
-            //We save the first value
-            firstNumber = listNumbers[i];
-            listNumbers[i] = listNumbers[i+1];
-            listNumbers[i + 1] = firstNumber;
+        for (int i = 0; i < numbers.length; i++){
 
+            saveNumber = numbers[i];
+            i++;
+            numbers[i-1] = numbers[i];
+            numbers[i] = saveNumber;
         }
 
-        return listNumbers;
+        return numbers;
     }
-
-    public void saveNumbers(int [] listNumbers){
-        int answer;
-
-        for (int i = 0; i < listNumbers.length; i++) {
-            System.out.println("Introduce a number");
-            answer = input.nextInt();
-
-            listNumbers[i] = answer;
-
-            if (answer == 0){
-                break;
-            }
-        }
-    }
-
 }

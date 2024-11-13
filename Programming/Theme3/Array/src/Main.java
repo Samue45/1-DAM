@@ -3,11 +3,11 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-    Exercise6 exercise6 = new Exercise6();
+    Exercise5 exercise5 = new Exercise5();
 
-        int[] numbers = {1,2,3,4,5};
+    exercise5.changeFirstToSecondPosition();
+        System.out.println(Arrays.toString(exercise5.changeFirstToSecondPosition()));
 
-        System.out.println(Arrays.toString(exercise6.invertOrder(numbers)));
 
 
 
