@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/1-DAM.iml" filepath="$PROJECT_DIR$/.idea/1-DAM.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Array.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Exams/ExamsReview/ExamsReview.iml" filepath="$PROJECT_DIR$/Programming/Exams/ExamsReview/ExamsReview.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programming/PractiseExercises/GameRiddle/GameRiddle.iml" filepath="$PROJECT_DIR$/Programming/PractiseExercises/GameRiddle/GameRiddle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Matrices/Matrices.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Matrices/Matrices.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" filepath="$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" filepath="$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Review/Review.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Review/Review.iml" />
