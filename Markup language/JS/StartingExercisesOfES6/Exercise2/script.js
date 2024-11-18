@@ -29,8 +29,8 @@ function createLiteralObject(){
         profession: profession.value
     }
 
-    //We save all values inside of a paragraph
-    result.innerHTML = "[Name: " + student.name + " Age: " +  student.age + " Profession: " +  student.profession + " ]";
+    //We save all values inside of a paragraph using a literal template
+    result.innerHTML = `Name: ${student.name} Age: ${student.age} Profession: ${student.profession} `;
 }
 
 
