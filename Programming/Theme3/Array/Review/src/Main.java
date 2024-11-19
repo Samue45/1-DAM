@@ -1,11 +1,15 @@
-import java.util.Arrays;
+
 
 public class Main {
 
     public static void main(String [] args){
 
-        Review3 review3 = new Review3();
-        review3.sumMatrix();
+        Review4 review4 = new Review4();
+        int[][] aMatrix = review4.createAMatrix();
+        review4.transpositionMatrix(aMatrix);
+
+
+
 
     }
 

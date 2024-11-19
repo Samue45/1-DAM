@@ -9,7 +9,7 @@ public class Review3 {
         int rowsA,columnsA, rowsB,columnsB, sum = 0, number;
 
         //Ask user about the size
-        System.out.println("Introduce the size of matrix B");
+        System.out.println("Introduce the size of matrix A");
         System.out.println("Rows:");
         rowsA = input.nextInt();
         System.out.println("Columns:");
@@ -27,17 +27,16 @@ public class Review3 {
 
         //Work with the matrix
         for (int i = 0; i < matrixA.length; i++) {
-            System.out.println("Introduce the numbers of the matrix A");
-            number = input.nextInt();
-            for (int j = 0; j < i; j++) {
-
+            for (int j = 0; j < matrixA[i].length; j++) {
+                System.out.println("Introduce the numbers of the matrix A");
+                number = input.nextInt();
                 matrixA[i][j] = number;
                 sum += number;
             }
         }
 
         for (int i = 0; i < matrixB.length; i++) {
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < matrixB[i].length; j++) {
                 System.out.println("Introduce the numbers of the matrix B");
                 number = input.nextInt();
                 matrixB[i][j] = number;
