@@ -33,7 +33,13 @@ function main(){
 function createTable(){
 
     //Create a String variable to save all contend of the table and another to save the media of the all notes
-    let information = `<tr> <th>Student</th> <th>Note 1</th> <th>Note 2</th> <th>Note 3</th> <th>Media</th></tr>`;
+    let information = `<tr>
+                            <th>Student</th> 
+                            <th>Note 1</th> 
+                            <th>Note 2</th> 
+                            <th>Note 3</th> 
+                            <th>Media</th>
+                        </tr>`;
     let media = 0;
 
     for(let i=0; i < studentArray.length; i++){
