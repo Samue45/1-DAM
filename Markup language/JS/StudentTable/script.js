@@ -40,7 +40,13 @@ function createTable(){
         //Calculate the media of each student
         media = (studentArray[i].note1 + studentArray[i].note2 + studentArray[i].note2) / 3;
         //Create the rest of the table and concatenate with the information variable .
-        information += `<tr> <td>${studentArray[i].name}</td> <td>${studentArray[i].note1}</td></td> <td>${studentArray[i].note2}</td> <td>${studentArray[i].note3}</td> <td>${media}</td></tr>`;
+        information += `<tr> 
+                            <td>${studentArray[i].name}</td> 
+                            <td>${studentArray[i].note1}</td>
+                            <td>${studentArray[i].note2}</td> 
+                            <td>${studentArray[i].note3}</td> 
+                            <td>${media}</td>
+                        </tr>`;
     }
 
     //Save all the information inside on the table
