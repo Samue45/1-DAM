@@ -1,0 +1,19 @@
+#table{
+    background-color: bisque;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.tr,th{
+    background-color: rgb(194, 83, 83);
+    text-align: center;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.tr,td{
+    text-align: center;
+    border: 1px solid black;
+    padding: 15px;
+}
