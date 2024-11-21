@@ -44,7 +44,7 @@ function createTable(){
     }
 
     //Save all the information inside on the table
-    table.innerHTML += information;
+    table.innerHTML = information;
 }
 
 
