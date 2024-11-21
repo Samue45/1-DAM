@@ -1,3 +1,7 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #table{
     background-color: bisque;
     border-collapse: collapse;
@@ -17,3 +21,35 @@
     border: 1px solid black;
     padding: 15px;
 }
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 57%;
+    display: flow;
+    margin:auto;
+    margin-top: 10%;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+    background-color: #e0ad20;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
