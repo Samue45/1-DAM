@@ -3,7 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/1-DAM.iml" filepath="$PROJECT_DIR$/.idea/1-DAM.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/Project/Math/Math.iml" filepath="$PROJECT_DIR$/Programming/Theme2/Project/Math/Math.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Array.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Exams/ExamsReview/ExamsReview.iml" filepath="$PROJECT_DIR$/Programming/Exams/ExamsReview/ExamsReview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Exams/ExamsReview/src/Theme1/Exercise1/GameRiddle/GameRiddle.iml" filepath="$PROJECT_DIR$/Programming/Exams/ExamsReview/src/Theme1/Exercise1/GameRiddle/GameRiddle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Matrices/Matrices.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Matrices/Matrices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" filepath="$PROJECT_DIR$/Programming/Theme2/POO/POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" filepath="$PROJECT_DIR$/Programming/Theme2/Project/Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/Review/Review.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/Review/Review.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimonGame/SimonGame.iml" filepath="$PROJECT_DIR$/SimonGame/SimonGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/Array/SimonSay/SimonSay.iml" filepath="$PROJECT_DIR$/Programming/Theme3/Array/SimonSay/SimonSay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming/Theme3/TheBattleForTheSevenKingdons/TheBattleForTheSevenKingdons.iml" filepath="$PROJECT_DIR$/Programming/Theme3/TheBattleForTheSevenKingdons/TheBattleForTheSevenKingdons.iml" />
     </modules>
   </component>
 </project>
