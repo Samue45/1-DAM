@@ -33,18 +33,30 @@ function main(){
 function createTable(){
 
     //Create a String variable to save all contend of the table and another to save the media of the all notes
-    let information = `<tr> <th>Student</th> <th>Note 1</th> <th>Note 2</th> <th>Note 3</th> <th>Media</th></tr>`;
+    let information = `<tr>
+                            <th>Student</th> 
+                            <th>Note 1</th> 
+                            <th>Note 2</th> 
+                            <th>Note 3</th> 
+                            <th>Media</th>
+                        </tr>`;
     let media = 0;
 
     for(let i=0; i < studentArray.length; i++){
         //Calculate the media of each student
         media = (studentArray[i].note1 + studentArray[i].note2 + studentArray[i].note2) / 3;
         //Create the rest of the table and concatenate with the information variable .
-        information += `<tr> <td>${studentArray[i].name}</td> <td>${studentArray[i].note1}</td></td> <td>${studentArray[i].note2}</td> <td>${studentArray[i].note3}</td> <td>${media}</td></tr>`;
+        information += `<tr> 
+                            <td>${studentArray[i].name}</td> 
+                            <td>${studentArray[i].note1}</td>
+                            <td>${studentArray[i].note2}</td> 
+                            <td>${studentArray[i].note3}</td> 
+                            <td>${media}</td>
+                        </tr>`;
     }
 
     //Save all the information inside on the table
-    table.innerHTML += information;
+    table.innerHTML = information;
 }
 
 
