@@ -1,6 +1,4 @@
-package Programming.PracticeExercises.Exam;
-
-import java.util.Arrays;
+package Programming.PracticeExercises.Exam1;
 
 public class Main {
 
