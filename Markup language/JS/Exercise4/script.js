@@ -23,91 +23,91 @@ limpieza = [
         suavizante: {
             marca : 'FreshClothe',
             precio : 4.00,
-            descripcion : 'Dejrá tu ropa fresca y con olor a rosas'
+            descripcion : 'Dejará tu ropa fresca y con olor a rosas'
         }
     }
 ]
  //Producto de la categoría lacteos
  lacteos = [
     {
-        balletas: {
-            marca : 'Ball',
-            precio : 2.40,
-            descripcion : 'Las mejores balletas para limpiar'
+        leche: {
+            marca : 'Hacendado',
+            precio : 4.40,
+            descripcion : 'La mejor leche hecha por Asturias'
 
         },
-        friegaSuelos: {
-            marca : 'CleanFloor',
+        yogur: {
+            marca : 'Danone',
             precio : 3.40,
-            descripcion : 'Deja tu suelo como los choros de oro'
+            descripcion : 'El mejor sabor y textura que podrás encontrar en un yogur'
         },
-        suavizante: {
-            marca : 'FreshClothe',
-            precio : 4.00,
-            descripcion : 'Dejrá tu ropa fresca y con olor a rosas'
+        queso: {
+            marca : 'Villajos',
+            precio : 7.00,
+            descripcion : 'Sabor intenso y con aroma a almendras'
         }
     }
 ]
  //Producto de la categoría reposteria
  reposteria = [
     {
-        balletas: {
-            marca : 'Ball',
-            precio : 2.40,
-            descripcion : 'Las mejores balletas para limpiar'
+        galletas: {
+            marca : 'María',
+            precio : 3.10,
+            descripcion : 'Crujiente y con aroma a vainilla'
 
         },
-        friegaSuelos: {
-            marca : 'CleanFloor',
-            precio : 3.40,
-            descripcion : 'Deja tu suelo como los choros de oro'
+        tartas: {
+            marca : 'Azucren',
+            precio : 5.00,
+            descripcion : 'Una tarta jugosa y cremosa para los más dulceros'
         },
-        suavizante: {
-            marca : 'FreshClothe',
-            precio : 4.00,
-            descripcion : 'Dejrá tu ropa fresca y con olor a rosas'
+        cupcakes: {
+            marca : 'Empire Cake',
+            precio : 2.30,
+            descripcion : 'Pequeño pero altamente delicioso'
         }
     }
 ]
  //Producto de la categoría vegetales
  vegetales = [
     {
-        balletas: {
-            marca : 'Ball',
-            precio : 2.40,
-            descripcion : 'Las mejores balletas para limpiar'
+        lechuga: {
+            marca : 'Eva',
+            precio : 0.90,
+            descripcion : 'Verde y fresca, recien recogida de la huerta'
 
         },
-        friegaSuelos: {
-            marca : 'CleanFloor',
-            precio : 3.40,
-            descripcion : 'Deja tu suelo como los choros de oro'
+        zanahorias: {
+            marca : 'Bonanza',
+            precio : 1.40,
+            descripcion : 'Las zanahorias favoritos de los conejos'
         },
-        suavizante: {
-            marca : 'FreshClothe',
-            precio : 4.00,
-            descripcion : 'Dejrá tu ropa fresca y con olor a rosas'
+        cebollas: {
+            marca : 'MarChite',
+            precio : 2.40,
+            descripcion : 'Te hará llorar como a un bebé'
         }
     }
 ]
  //Producto de la categoría carnes
  carnes = [
     {
-        balletas: {
-            marca : 'Ball',
-            precio : 2.40,
-            descripcion : 'Las mejores balletas para limpiar'
+        pollo: {
+            marca : 'Jupe',
+            precio : 5.30,
+            descripcion : 'Las carne más fresca y jugosa que podrás encontrar'
 
         },
-        friegaSuelos: {
-            marca : 'CleanFloor',
-            precio : 3.40,
-            descripcion : 'Deja tu suelo como los choros de oro'
+        vacuno: {
+            marca : 'Jupe',
+            precio : 7.80,
+            descripcion : 'Las carne más fresca y jugosa que podrás encontrar'
         },
-        suavizante: {
-            marca : 'FreshClothe',
-            precio : 4.00,
-            descripcion : 'Dejrá tu ropa fresca y con olor a rosas'
+        cordero: {
+            marca : 'Jupe',
+            precio : 5.40,
+            descripcion : 'Las carne más fresca y jugosa que podrás encontrar'
         }
     }
 ]
