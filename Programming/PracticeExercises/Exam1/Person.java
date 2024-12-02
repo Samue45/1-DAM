@@ -1,4 +1,4 @@
-package Programming.PracticeExercises.Exam;
+package Programming.PracticeExercises.Exam1;
 
 import java.util.Random;
 
