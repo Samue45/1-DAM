@@ -20,14 +20,17 @@ public class HangedGame {
 
     }
 
-    //Generate a random word to can play
-    private String randomWord(){
+    //Generate a random word to can play and return an Array with all its letters
+    private char[] randomWord(){
         String word;
+        char[] letters;
         int randNumber = random.nextInt(0,4);
 
         word = secretWord[randNumber];
+        word = word.toUpperCase();
+        letters = word.toCharArray();
 
-        return word;
+        return letters;
     }
 
     //Ask user a letter
