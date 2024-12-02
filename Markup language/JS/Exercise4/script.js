@@ -1,4 +1,4 @@
-let input, productsBoard, cadena;
+let classes, productsBoard, chain;
 let arrayProducts = [
     {
         name: 'Table',
@@ -18,23 +18,35 @@ let arrayProducts = [
 function main(){
 
     //We look for the HTMLElement in the DOM
-    input = document.getElementById('input');
+    classes = document.getElementById('classes');
     productsBoard = document.getElementById('products-board');
+    chain = "";
 
     document.getElementById('apply-filter').addEventListener('click', applyFilter);
 
 
     //By defect we show all available products
-
-    cadena = `<ul>`;
-    arrayProducts.forEach((elem)=>{ cadena += `<li> Name: ${elem.name}, Price:${elem.price} </li>`})
-    cadena += `</ul>`;
-
-    productsBoard.innerHTML = cadena;
+    arrayProducts.forEach((elem)=>{ chain += `<ul><li> Name: ${elem.name}, Price:${elem.price} </li></ul>`})
+    
+    productsBoard.innerHTML = chain;
  
 }
 
 function applyFilter(){
+
+    //We clean the board
+    chain = "";
+
+    //Now we show the product but using the filter
+    arrayProducts.forEach((elem)=>{ 
+        
+        if(classes.value === elem.class){
+            chain += `<ul><li> Name: ${elem.name}, Price:${elem.price} </li></ul>`
+        }
+        })
+
+    //Finally we show all products that pass the filter
+    productsBoard.innerHTML = chain;
 
 }
 
