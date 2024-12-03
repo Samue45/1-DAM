@@ -16,7 +16,7 @@ function main(){
     //Add keydown event
     document.addEventListener('keydown',(event) =>{
         
-        //1º Create a variable to can modify the style of our character
+        //1º Create a variable to can obtain the style of our character
         let styles = window.getComputedStyle(character);
 
         //2º Obtain value of his position
