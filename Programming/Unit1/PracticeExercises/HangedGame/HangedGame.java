@@ -69,12 +69,23 @@ public class HangedGame {
 
         //2º The letter there's not in the random word
         if (!equals){
-            //We draw a part pf the Hanged
+            //We draw a part of the Hanged
         }
     }
 
     //Draw the Hanged
-    private void drawHanged(){}
+    private void drawHanged(){
+        // Hangman stages, each string represents a different stage of the hangman figure
+        String[] hangmanStages = {
+                "",               // Stage 0: No body drawn yet
+                " O",             // Stage 1: Head
+                " O\n |",          // Stage 2: Head + Body
+                " O\n/|",          // Stage 3: Head + Body + Left Arm
+                " O\n/|\\",        // Stage 4: Head + Body + Arms
+                " O\n/|\\\n/",     // Stage 5: Head + Body + Arms + Left Leg
+                " O\n/|\\\n/ \\"   // Stage 6: Complete Hangman (Head, Body, Arms, Legs)
+        };
+    }
 
     //Check if the random word have the letter that user give us
     private boolean equalsLetters(char[] randomLetter, char answerUser){
