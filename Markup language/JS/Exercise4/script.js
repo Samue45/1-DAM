@@ -41,8 +41,6 @@ function applyFilter(){
         
         if(classes.value === elem.class){
             chain += `<ul><li> Name: ${elem.name},  Price:${elem.price} </li></ul>`
-        }else{
-            chain = "We don't have this product, sorry :(";
         }
         })
 
