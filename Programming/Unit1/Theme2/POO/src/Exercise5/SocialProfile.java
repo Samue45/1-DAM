@@ -1,5 +1,7 @@
 package Programming.Unit1.Theme2.POO.src.Exercise5;
 
+import Exercise5.Activity;
+
 public class SocialProfile {
 
     //PROPERTIES
