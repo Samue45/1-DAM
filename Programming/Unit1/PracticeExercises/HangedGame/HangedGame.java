@@ -1,6 +1,5 @@
 package Programming.Unit1.PracticeExercises.HangedGame;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,21 +9,14 @@ public class HangedGame {
     Random random = new Random();
     Scanner input = new Scanner(System.in);
     String [] secretWord = {"Tortilla","Quebrantahuesos","Zaino","Zonzo","Melifluo"};
-    char[]  solution;
 
 
     public void play(){
-       char[] randomLetters;
-       char answerUser;
 
-        //1º Generate a random word
-        randomLetters = randomWord();
 
-        //2º Allow to user write a letter
-        answerUser = answerUser();
 
-        //3º Work with the word and the letter
-        workLetter(answerUser,randomLetters);
+
+
 
     }
 
@@ -55,15 +47,11 @@ public class HangedGame {
     }
 
     //Work with the results
-    private void workLetter (char answerUser, char[] randomWord){
+    private void workLetter (char [] randomLetters, char answerUser){
         //Array to the results
-        solution = new char[randomWord.length];
-        String drawing = "";
+        char[]  solution = new char[randomLetters.length];
 
-        //We set lines to can watch better how many letters have our word
-        Arrays.fill(solution, '_');
-
-        boolean equals = equalsLetters(randomWord,answerUser);
+        boolean equals = equalsLetters(randomLetters,answerUser);
 
         //We can have 2 results:
         //1º The letter of the user there is in the random word
@@ -71,31 +59,22 @@ public class HangedGame {
             //Now we need to know if the user had already said that letter
             for (int i = 0; i < solution.length; i++) {
                 // 1º Case: It's a new letter
-                if (randomWord[i] == answerUser){
-                    //We need to know in what position there is the letter and then save into our new Array
-                    solution[i] = answerUser;
-
-                }
+                if (solution[i] != answerUser) solution[i] = answerUser;
 
                 //2º Case: It's not new
-                if (solution[i] == answerUser) {
-                    System.out.println("The letter had already said");
-                    drawing = drawHanged();
-                }
+                if (solution[i] == answerUser) System.out.println("The letter had already said , try again");
+                //Allow to user another chance
             }
         }
 
         //2º The letter there's not in the random word
         if (!equals){
             //We draw a part of the Hanged
-            drawing =drawHanged();
         }
-
-        System.out.println(drawing);
     }
 
     //Draw the Hanged
-    private String drawHanged(){
+    private void drawHanged(){
         // Hangman stages, each string represents a different stage of the hangman figure
         String[] hangmanStages = {
                 "",               // Stage 0: No body drawn yet
@@ -106,13 +85,6 @@ public class HangedGame {
                 " O\n/|\\\n/",     // Stage 5: Head + Body + Arms + Left Leg
                 " O\n/|\\\n/ \\"   // Stage 6: Complete Hangman (Head, Body, Arms, Legs)
         };
-
-        //We draw a part of the Hanged
-        int counter = 0;
-        String draw = "";
-        hangmanStages[counter] += draw;
-
-        return draw;
     }
 
     //Check if the random word have the letter that user give us
@@ -124,7 +96,6 @@ public class HangedGame {
         }
         return equals;
     }
-
 
 
 }
