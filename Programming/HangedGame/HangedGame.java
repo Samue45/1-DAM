@@ -1,4 +1,4 @@
-package Programming.PracticeExercises.HangedGame;
+package Programming.HangedGame;
 
 import java.util.Arrays;
 import java.util.Random;

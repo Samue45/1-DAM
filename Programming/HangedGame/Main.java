@@ -1,4 +1,4 @@
-package Programming.PracticeExercises.HangedGame;
+package Programming.HangedGame;
 
 public class Main {
     public static void main(String[] args) {
