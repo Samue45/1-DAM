@@ -6,5 +6,58 @@
     position: absolute; /* We need this propertie to can move our character */
     top: 100px;
     left: 100px;
+    
 }
+
+#bird {
+    width: 150px;
+    height: auto;
+    animation: moving-bird 10s linear infinite;
+}
+
+@keyframes moving-bird {
+    0% {
+        transform: translateX(0px); /* Starting position */
+    }
+    30% {
+        transform: translateX(150px); /* Slight movement */
+    }
+    50% {
+        transform: translateX(300px); /* Mid position (faster) */
+    }
+    70% {
+        transform: translateX(500px); /* Mid position */
+    }
+    100% {
+        transform: translateX(1000px); /* Final position */
+    }
+}
+
+
+#duck{
+    width: 150px;
+    height: auto;
+    animation: moving-duck 10s linear infinite;
+    margin-top: 600px;
+}
+
+@keyframes moving-duck {
+    0% {
+        transform: translateX(0px); /* Starting position */
+    }
+    30% {
+        transform: translateX(150px); /* Slight movement */
+    }
+    50% {
+        transform: translateX(300px); /* Mid position (faster) */
+    }
+    70% {
+        transform: translateX(500px); /* Mid position */
+    }
+    100% {
+        transform: translateX(1000px); /* Final position */
+    }
+}
+
+
 
