@@ -1,6 +1,6 @@
 public interface IWordle {
 
-    public void wordle(); // m�todo principal d�nde se juega
+    public void Playwordle(); // m�todo principal d�nde se juega
     public String generarPalabraSecreta();// obtiene una palabra aleatoria
     public TiposWordle letraPertenece(String palabraSecreta, char letra, int pos);
     // Retorno si est� dentro la letra y si est� en la posici�n
