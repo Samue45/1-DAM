@@ -21,8 +21,11 @@ function primeNumbers(){
         allNumbers[i] = i + 1;
         //Check if the number is prime
         if(isPrime(allNumbers[i])){
-            list += `<li> ${allNumbers[i]} </li>`;
+            if(i % 2 == 0){list += `<li class='blue-decoration' > ${allNumbers[i]} </li>`}
+            else{list += `<li class='red-decoration' > ${allNumbers[i]} </li>`};  
         }
+
+
     }
     //Close the list
     list += `</ul>`;
@@ -31,18 +34,15 @@ function primeNumbers(){
 }
 
 
-//Check if the number is prime
-function isPrime(number){
-    if (number < 2) return false; // Numbers less than 2 are not prime
-    for (let i = 2; i <= Math.sqrt(number); i++) {
-        if (number % i === 0) {
-            return false; // Number is divisible by another number, so it's not prime
-        }
+//Calculate multiples numbers
+function obtenerMultiplos(numero, cantidad) {
+    let multiplos = [];
+    for (let i = 1; i <= cantidad; i++) {
+      multiplos.push(numero * i);
     }
-    return true; // If no divisors are found, the number is prime
-}
+    return multiplos;
+  }
 
-//Create a method to change into the style of the <li> depends on if it's even or odd
 
 window.addEventListener('load', main);
 
