@@ -43,6 +43,10 @@ function isPrime(number){
 }
 
 //Create a method to change into the style of the <li> depends on if it's even or odd
+function setStyle(elemnt){
+    
+
+}
 
 window.addEventListener('load', main);
 
