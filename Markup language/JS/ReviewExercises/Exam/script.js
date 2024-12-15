@@ -21,7 +21,26 @@ let arrayStudents = [{
     nota3: 5
 }]
 
+//Exercise 3
+let paragrahp;
 
+//Exercise 4
+let arrayProducts = [
+    {
+        name: "Banana",
+        category: "fruit",
+        price : 3.40
+    }
+    ,{
+        name: "Apple",
+        category: "fruit",
+        price : 2.40
+    }
+    ,{
+        name: "Burguer",
+        category: "Meat",
+        price : 6.40
+    }]
 window.addEventListener('load',main);
 
 function main(){
@@ -69,5 +88,25 @@ function main(){
 
      table.innerHTML = solution;
 
+     //Exercise 3
 
+     paragrahp = document.getElementById('paragrahp')
+     paragrahp.addEventListener('mouseover', changeStyle)
+     paragrahp.addEventListener('mousedown', darkStyle)
+
+     function changeStyle(){
+        paragrahp.classList.add('special-style');
+     }
+     function darkStyle(){
+        paragrahp.classList.add('dark-style');
+     }
+
+     //Exercise 4
+     let list = "";
+     let arrayFilter = arrayProducts.filter((element) => {return element.category === "fruit"});
+     arrayFilter.forEach(element => {
+        
+        list += `<li>Name:${element.name}, <br> Price:${element.price}</li>`
+     })
+     document.getElementById('list').innerHTML = list;
 }
