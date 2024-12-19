@@ -47,8 +47,7 @@ function applyFilter(){
     //Finally we show all products that pass the filter
     productsBoard.innerHTML = chain;
 
-    ////We can also use the filter method of the Array class to save the products that pass the filter into a new Array and finally display the new Array
-
+  
 }
 
 
