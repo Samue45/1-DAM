@@ -1,0 +1,17 @@
+.defect-style{
+    font-size: medium;
+    color: aquamarine;
+    text-decoration:line-through
+}
+
+.special-style{
+    font-size: xx-large;
+    color: brown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.dark-style{
+    font-size: 50px;
+    color: rgb(44, 44, 44);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
