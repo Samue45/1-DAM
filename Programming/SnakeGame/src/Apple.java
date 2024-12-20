@@ -3,8 +3,8 @@ import java.util.Random;
 public class Apple {
 
     //Properties
-    private int positionX;
-    private int positionY;
+    private int positionX = 18;
+    private int positionY = 16;
     private String color;
     private int score = 0;
     private int bestScore = 0;
@@ -85,7 +85,7 @@ public class Apple {
     //Methods of Apple class
 
     //The snake eats the apple
-    public boolean isEat(Apple apple, Snake snake){
+    /*public boolean isEat(Apple apple, Snake snake){
         //Apple positions
         int positionXApple = apple.getPositionX();
         int positionYApple = apple.getPositionY();
@@ -112,7 +112,7 @@ public class Apple {
         }
 
         return isEat;
-    }
+    }*/
 
     //The apple appear in a new position
     public void appear(){

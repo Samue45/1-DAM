@@ -3,58 +3,32 @@ import java.util.ArrayList;
 public class Snake {
 
     //Properties
-    private int positionX;
-    private int positionY;
-    private String color;
+    private Head head;
+    private Body body;
     // The snake is similar a Matrix with one row and dynamic columns
-    private ArrayList<ArrayList<String>> size;
+    private ArrayList<ArrayList<Body>> size;
     private Map map;
 
 
     //Constructor
-
-
-    public Snake(int positionX, int positionY, String color, ArrayList<ArrayList<String>> size, Map map) {
-        this.positionX = positionX;
-        this.positionY = positionY;
-        this.color = color;
+    public Snake(ArrayList<ArrayList<Body>> size, Map map) {
         this.size = size;
         this.map = map;
+    }
+
+    public Snake(Head head, Body body) {
+        this.head = head;
+        this.body = body;
     }
 
     public Snake() {}
 
     //Getter and Setter
-
-    public int getPositionX() {
-        return positionX;
-    }
-
-    public void setPositionX(int positionX) {
-        this.positionX = positionX;
-    }
-
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public void setPositionY(int positionY) {
-        this.positionY = positionY;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public ArrayList<ArrayList<String>> getSize() {
+    public ArrayList<ArrayList<Body>> getSize() {
         return size;
     }
 
-    public void setSize(ArrayList<ArrayList<String>> size) {
+    public void setSize(ArrayList<ArrayList<Body>> size) {
         this.size = size;
     }
 
@@ -79,7 +53,12 @@ public class Snake {
 
         //2º We need to increase the number of columns of the ArrayList and set the green color
         for (int i = 0; i < 1.225; i++) {
-            size.get(i).add(Color.verde); // Add a new elements to column
+            if (i == 0){
+                Head head = new Head(18,18,Color.verde);
+                size.get(i).add(new Body(head));// Add the head of the snake
+            }else {
+                size.get(i).add(new Body(head.getPositionX(), head.getPositionY() + 1, Color.verde));// Add a new elements to column
+            }
         }
     }
 
@@ -90,7 +69,8 @@ public class Snake {
         boolean isDead = false;
 
         //Position of its head
-        positionX = getSize().indexOf(getSize().getFirst());
+        int positionX = head.getPositionX();
+        int positionY = head.getPositionY();
 
         //if (snake.getPositionX() == getPositionY() || ){}
 
