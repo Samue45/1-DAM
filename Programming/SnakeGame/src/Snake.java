@@ -7,13 +7,11 @@ public class Snake {
     private Body body;
     // The snake is similar a Matrix with one row and dynamic columns
     private ArrayList<ArrayList<Body>> size;
-    private Map map;
 
 
     //Constructor
-    public Snake(ArrayList<ArrayList<Body>> size, Map map) {
+    public Snake(ArrayList<ArrayList<Body>> size) {
         this.size = size;
-        this.map = map;
     }
 
     public Snake(Head head, Body body) {
@@ -32,13 +30,6 @@ public class Snake {
         this.size = size;
     }
 
-    public Map getMap() {
-        return map;
-    }
-
-    public void setMap(Map map) {
-        this.map = map;
-    }
 
     //Methods of Snake class
 
@@ -65,7 +56,7 @@ public class Snake {
     //The snake dead when its head crashes with the limit of the map or with its body
     //Its head is the first column of our matrix, if the head position is equal to another like his body or is bigger than limits of the map
     // it means that it's dead
-    public boolean dead(Snake snake, Map map){
+    public boolean dead(Snake snake){
         boolean isDead = false;
 
         //Position of its head

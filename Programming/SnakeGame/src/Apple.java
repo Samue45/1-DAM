@@ -5,7 +5,7 @@ public class Apple {
     //Properties
     private int positionX = 18;
     private int positionY = 16;
-    private String color;
+    private String color = Color.rojo;
     private int score = 0;
     private int bestScore = 0;
     private Snake snake;
