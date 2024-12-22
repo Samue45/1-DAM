@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Random;
 
 public class Apple {
@@ -5,14 +6,14 @@ public class Apple {
     //Properties
     private int positionX = 18;
     private int positionY = 16;
-    private String color = Color.rojo;
+    private Color color = Color.RED;
     private int score = 0;
     private int bestScore = 0;
     private Snake snake;
     private Random random;
 
     //Constructor
-    public Apple(int positionX, int positionY, String color, int score, int bestScore, Snake snake) {
+    public Apple(int positionX, int positionY, Color color, int score, int bestScore, Snake snake) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.color = color;
@@ -21,12 +22,18 @@ public class Apple {
         this.snake = snake;
     }
 
-    public Apple(int positionX, int bestScore, int score, String color, int positionY) {
+    public Apple(int positionX, int bestScore, int score, Color color, int positionY) {
         this.positionX = positionX;
         this.bestScore = bestScore;
         this.score = score;
         this.color = color;
         this.positionY = positionY;
+    }
+
+    public Apple(int positionX, int positionY, Color color) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+        this.color = color;
     }
 
     public Apple() {
@@ -49,11 +56,11 @@ public class Apple {
         this.positionY = positionY;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -120,13 +127,13 @@ public class Apple {
         setPositionX(random.nextInt(0,35));
         setPositionY(random.nextInt(0,35));
         //2º Set a red color
-        setColor(Color.rojo);
+        setColor(Color.RED);
     }
 
     //The apple disappear from the map
     public void disappear(){
         //Set the apple color to black, so it simulates that disappear
-        setColor(Color.negro);
+        setColor(Color.black);
     }
 
     // Save the best score of the player

@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Snake {
@@ -45,10 +46,10 @@ public class Snake {
         //2º We need to increase the number of columns of the ArrayList and set the green color
         for (int i = 0; i < 1.225; i++) {
             if (i == 0){
-                Head head = new Head(18,18,Color.verde);
+                Head head = new Head(18,18, Color.green);
                 size.get(i).add(new Body(head));// Add the head of the snake
             }else {
-                size.get(i).add(new Body(head.getPositionX(), head.getPositionY() + 1, Color.verde));// Add a new elements to column
+                size.get(i).add(new Body(head.getPositionX(), head.getPositionY() + 1, Color.green));// Add a new elements to column
             }
         }
     }

@@ -1,12 +1,14 @@
+import java.awt.*;
+
 public class Head {
 
     //Properties
     private int positionX;
     private int positionY;
-    private String color;
+    private Color color;
 
     //Constructor
-    public Head(int positionX, int positionY, String color) {
+    public Head(int positionX, int positionY, Color color) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.color = color;
@@ -29,11 +31,11 @@ public class Head {
         this.positionY = positionY;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }

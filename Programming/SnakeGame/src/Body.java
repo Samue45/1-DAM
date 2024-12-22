@@ -1,13 +1,15 @@
+import java.awt.*;
+
 public class Body {
 
     //Properties
     private int positionX;
     private int positionY ;
-    private String color;
+    private Color color;
     private Head head;
 
     //Constructor
-    public Body(int positionX, int positionY, String color) {
+    public Body(int positionX, int positionY, Color color) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.color = color;
@@ -34,11 +36,11 @@ public class Body {
         this.positionY = positionY;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }
