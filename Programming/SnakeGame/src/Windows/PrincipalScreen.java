@@ -1,6 +1,6 @@
 package Windows;
 
-import Apple.Apple;
+import Apple.*;
 import Snake.Snake;
 
 import javax.swing.*;
