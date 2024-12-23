@@ -1,5 +1,5 @@
-import Apple.Apple;
-import Snake.Snake;
+import Apple.*;
+import Snake.*;
 import Windows.PrincipalScreen;
 
 import java.awt.*;
