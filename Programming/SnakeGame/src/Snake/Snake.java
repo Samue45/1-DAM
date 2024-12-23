@@ -1,73 +1,78 @@
 package Snake;
 
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Snake {
 
     //Properties
-    private Head head;
-    private Body body;
-    // The snake is similar a Matrix with one row and dynamic columns
-    private ArrayList<ArrayList<Body>> size;
+    private LinkedList<int[]> body;
+    private int positionX;
+    private int positionY;
+    private Color color;
+
+
 
 
     //Constructor
-    public Snake(ArrayList<ArrayList<Body>> size) {
-        this.size = size;
+    public Snake(int startX, int startY) {
+        body = new LinkedList<>();
+        body.add(new int[] { startX, startY }); // Cabeza de la serpiente
     }
 
-    public Snake(Head head, Body body) {
-        this.head = head;
-        this.body = body;
+    public Snake(int positionX, int positionY, Color color) {
+        this.positionX = positionX;
+        this.positionY = positionY;
+        this.color = color;
     }
 
     public Snake() {}
 
     //Getter and Setter
-    public ArrayList<ArrayList<Body>> getSize() {
-        return size;
+    public LinkedList<int[]> getBody() {
+        return body;}
+
+    public int getPositionX() {
+        return positionX;
     }
 
-    public void setSize(ArrayList<ArrayList<Body>> size) {
-        this.size = size;
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
     }
 
-
-    //Methods of Snake.Snake class
-
-    //The snake increase its size when eats the apple
-    public void grown(){
-        //Its maximum size is 1.225, because is the size of the map (35x35)
-
-        //1º We need to create the columns
-        for (int i = 0; i < 1.225; i++) {
-            size.add(new ArrayList<>());
-        }
-
-        //2º We need to increase the number of columns of the ArrayList and set the green color
-        for (int i = 0; i < 1.225; i++) {
-            if (i == 0){
-                Head head = new Head(18,18, Color.green);
-                size.get(i).add(new Body(head));// Add the head of the snake
-            }else {
-                size.get(i).add(new Body(head.getPositionX(), head.getPositionY() + 1, Color.green));// Add a new elements to column
-            }
-        }
+    public int getPositionY() {
+        return positionY;
     }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+
+    //Methods of Snake class
+   // The snake increase its size when eats the apple
+    /*
+    public void mover(int nuevaX, int nuevaY) {
+            body.addFirst(new int[] { nuevaX, nuevaY }); // Añade nueva posición como cabeza
+            body.removeLast(); // Quita la última posición (simula movimiento)
+    }
+
+    public void crecer() {
+            // No elimines la última posición (simula el crecimiento de la serpiente)
+            body.addLast(body.getLast());
+    }*/
+
 
     //The snake dead when its head crashes with the limit of the map or with its body
     //Its head is the first column of our matrix, if the head position is equal to another like his body or is bigger than limits of the map
     // it means that it's dead
-    public boolean dead(Snake snake){
+   /* public boolean dead(Snake snake){
         boolean isDead = false;
 
         //Position of its head
-        int positionX = head.getPositionX();
-        int positionY = head.getPositionY();
+
 
         //if (snake.getPositionX() == getPositionY() || ){}
 
         return isDead;
-    }
+    }*/
 }

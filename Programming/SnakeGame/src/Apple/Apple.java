@@ -1,6 +1,7 @@
 package Apple;
 
 import java.awt.*;
+import Snake.Snake;
 import java.util.Random;
 
 public class Apple {

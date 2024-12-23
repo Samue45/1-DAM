@@ -8,7 +8,6 @@ public class Body {
     private int positionX;
     private int positionY ;
     private Color color;
-    private Head head;
 
     //Constructor
     public Body(int positionX, int positionY, Color color) {
@@ -17,9 +16,6 @@ public class Body {
         this.color = color;
     }
 
-    public Body(Head head) {
-        this.head = head;
-    }
 
     //Getter and Setter
     public int getPositionX() {

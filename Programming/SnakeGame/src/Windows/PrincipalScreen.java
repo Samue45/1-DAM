@@ -1,7 +1,7 @@
 package Windows;
 
 import Apple.*;
-import Snake.Snake;
+import Snake.*;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -25,6 +25,10 @@ public class PrincipalScreen {
         //Add the apple to the table
         table.setDefaultRenderer(Object.class, new AppleCellRenderer());
         table.setValueAt("🍎", apple.getPositionX(), apple.getPositionY());
+
+        //Add the snake to the table
+        table.setDefaultRenderer(Object.class, new SnakeCellRenderer());
+        table.setValueAt("🟩", snake.getPositionX(), snake.getPositionY());
 
 
 
