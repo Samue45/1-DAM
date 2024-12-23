@@ -1,3 +1,7 @@
+import Apple.Apple;
+import Snake.Snake;
+import Windows.PrincipalScreen;
+
 import java.awt.*;
 
 public class Main {

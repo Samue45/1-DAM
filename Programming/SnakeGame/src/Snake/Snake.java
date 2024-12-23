@@ -1,3 +1,5 @@
+package Snake;
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -32,7 +34,7 @@ public class Snake {
     }
 
 
-    //Methods of Snake class
+    //Methods of Snake.Snake class
 
     //The snake increase its size when eats the apple
     public void grown(){

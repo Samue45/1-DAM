@@ -1,3 +1,5 @@
+package Apple;
+
 import java.awt.*;
 import java.util.Random;
 
@@ -89,15 +91,15 @@ public class Apple {
     }
 
 
-    //Methods of Apple class
+    //Methods of Apple.Apple class
 
     //The snake eats the apple
-    /*public boolean isEat(Apple apple, Snake snake){
-        //Apple positions
+    /*public boolean isEat(Apple.Apple apple, Snake.Snake snake){
+        //Apple.Apple positions
         int positionXApple = apple.getPositionX();
         int positionYApple = apple.getPositionY();
 
-        //Snake positions
+        //Snake.Snake positions
         int positionXSnake = snake.getPositionX();
         int positionYSnake = snake.getPositionY();
 

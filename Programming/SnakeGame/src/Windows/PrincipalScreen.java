@@ -1,3 +1,8 @@
+package Windows;
+
+import Apple.Apple;
+import Snake.Snake;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -60,7 +65,7 @@ public class PrincipalScreen {
 
 
         //Create the window
-        JFrame window = new JFrame("Snake Game");
+        JFrame window = new JFrame("Snake.Snake Game");
         //Size of the window
         window.setSize(600, 600);
         window.setLayout(new BorderLayout());
