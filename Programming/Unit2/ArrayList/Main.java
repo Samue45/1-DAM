@@ -16,8 +16,8 @@ public class Main {
 
         Recursividad.sumarRec(lista, lista.size()-1);
 
-        Random random = new Random();
+        Recursividad.generarTiradas();
 
-        Recursividad.generarTiradas(random.nextInt(0,6));
+
     }
 }

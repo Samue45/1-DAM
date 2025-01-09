@@ -1,7 +1,7 @@
 package Programming.Unit2.ArrayList;
 
 import java.util.ArrayList;
-import java.util.Random;
+
 
 public class Recursividad {
 
@@ -54,17 +54,14 @@ public class Recursividad {
 
     }
 
-    //N entre 0 y 6
-    //Devolver ArrayList cuando salga el 0
+    //
+    public static ArrayList<Integer> generarTiradas (){
+        int random = (int) (Math.random() * 6.99);
 
-    public static ArrayList<Integer> generarTiradas (int number){
-        ArrayList<Integer> lista;
-        if (number == 0){
-            lista= new ArrayList<Integer>();
-            lista.add(number);
-            return lista;
+        if (random == 0){
+            return new ArrayList<Integer>();
         } else {
-            return generarTiradas(number);
+            return generarTiradas();
         }
     }
 }
