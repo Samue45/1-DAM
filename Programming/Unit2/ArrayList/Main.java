@@ -1,6 +1,7 @@
 package Programming.Unit2.ArrayList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
 
@@ -14,5 +15,9 @@ public class Main {
         lista.add(5);
 
         Recursividad.sumarRec(lista, lista.size()-1);
+
+        Random random = new Random();
+
+        Recursividad.generarTiradas(random.nextInt(0,6));
     }
 }

@@ -1,6 +1,7 @@
 package Programming.Unit2.ArrayList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Recursividad {
 
@@ -40,6 +41,30 @@ public class Recursividad {
         }
         else{
             return a * potenciaRec(a, b-1);
+        }
+    }
+    public static int contarPositivos(ArrayList<Integer> lista, int indice){
+        if( indice == lista.size()) {
+            return 0;
+        }else if ( lista.get(indice) > 0){
+            return 1 + contarPositivos(lista, indice + 1);
+        }else {
+            return contarPositivos(lista, indice + 1);
+        }
+
+    }
+
+    //N entre 0 y 6
+    //Devolver ArrayList cuando salga el 0
+
+    public static ArrayList<Integer> generarTiradas (int number){
+        ArrayList<Integer> lista;
+        if (number == 0){
+            lista= new ArrayList<Integer>();
+            lista.add(number);
+            return lista;
+        } else {
+            return generarTiradas(number);
         }
     }
 }
