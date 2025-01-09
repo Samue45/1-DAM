@@ -54,14 +54,23 @@ public class Recursividad {
 
     }
 
-    //
+
     public static ArrayList<Integer> generarTiradas (){
         int random = (int) (Math.random() * 6.99);
 
         if (random == 0){
             return new ArrayList<Integer>();
         } else {
-            return generarTiradas();
+            //Cada vez que se hace la llamada recursiva se queda parado esperando y cuando finalmente random es 0 a la variable lista se le asigna la instancia de un ArrayList
+            ArrayList<Integer> lista = generarTiradas();
+            //Cuanto vaya hacia atrás se ejecutará esta parte del código, debido a que ya no se queda colgado
+            lista.add(random);
+            return lista;
         }
+    }
+
+    public static int sustituirRec(ArrayList lista , int viejo, int nuevo){
+        return  0;
+
     }
 }
