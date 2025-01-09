@@ -1,6 +1,7 @@
 package Programming.Unit2.ArrayList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class Recursividad {
@@ -69,8 +70,24 @@ public class Recursividad {
         }
     }
 
-    public static int sustituirRec(ArrayList lista , int viejo, int nuevo){
-        return  0;
+    public static int sustituirRec(ArrayList<Integer>  lista, int indice , int viejo, int nuevo){
+        if( indice == lista.size()) {
+            return nuevo;
+        }else if ( lista.get(indice) == viejo){
+            int number = sustituirRec(lista, indice + 1, viejo, nuevo);
+            return lista.set(indice,number);
+        }else {
+            return sustituirRec(lista, indice + 1, viejo, nuevo);
+        }
 
+    }
+
+    //Versión iterativa de un método que sustituye valores viejos por nuevos
+    public static ArrayList<Integer> sustituirIter(ArrayList<Integer>  lista, int viejo, int nuevo){
+
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i) == viejo) lista.set(i,nuevo);
+        }
+        return lista;
     }
 }
