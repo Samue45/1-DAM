@@ -17,8 +17,13 @@ public class Main {
             cont++;
         }while (cont < 10);
 
-        System.out.println(enteros);
-        System.out.println( Recursividad.existenConsecutivos(enteros,9));
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+
+        System.out.println("Lista" + numbers + "\nMedia = " + Recursividad.media(numbers,0,0));
 
 
     }

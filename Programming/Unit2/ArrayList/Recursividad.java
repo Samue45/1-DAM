@@ -54,8 +54,6 @@ public class Recursividad {
         }
 
     }
-
-
     public static ArrayList<Integer> generarTiradas (){
         int random = (int) (Math.random() * 6.99);
 
@@ -99,6 +97,18 @@ public class Recursividad {
             return true;
         }else {
            return pertenece(lista,indice + 1,number);
+        }
+    }
+
+    //Método que haga la media de una lista de números
+    public static float media(ArrayList<Integer> lista , int indice, int suma){
+        if (indice == lista.size()) {
+            // Una vez que hemos procesado toda la lista, devolvemos la media
+            return (float) suma / lista.size();
+        } else {
+            // Sumamos el valor actual y continuamos con la recursión
+            suma += lista.get(indice);
+            return media(lista, indice + 1, suma);
         }
     }
 
