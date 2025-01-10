@@ -18,8 +18,8 @@ public class Main {
         }while (cont < 10);
 
         System.out.println(enteros);
-        Recursividad.sustituirIter(enteros,2,3);
-        System.out.println(enteros);
+        System.out.println( Recursividad.existenConsecutivos(enteros,9));
+
 
     }
 }

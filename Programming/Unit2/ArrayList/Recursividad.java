@@ -70,24 +70,36 @@ public class Recursividad {
         }
     }
 
-    public static int sustituirRec(ArrayList<Integer>  lista, int indice , int viejo, int nuevo){
-        if( indice == lista.size()) {
-            return nuevo;
-        }else if ( lista.get(indice) == viejo){
-            int number = sustituirRec(lista, indice + 1, viejo, nuevo);
-            return lista.set(indice,number);
-        }else {
-            return sustituirRec(lista, indice + 1, viejo, nuevo);
-        }
-
-    }
-
     //Versión iterativa de un método que sustituye valores viejos por nuevos
-    public static ArrayList<Integer> sustituirIter(ArrayList<Integer>  lista, int viejo, int nuevo){
+    public static void sustituirIter(ArrayList<Integer>  lista, int viejo, int nuevo) {
 
         for (int i = 0; i < lista.size(); i++) {
-            if (lista.get(i) == viejo) lista.set(i,nuevo);
+            if (lista.get(i) == viejo) lista.set(i, nuevo);
         }
-        return lista;
     }
+
+    //Método que retorne un boolean que compruebe si hay dos números consecutivos
+    public static boolean existenConsecutivos(ArrayList<Integer> lista , int indice){
+        if (lista.size() == indice){
+            //Si lo recorre entero y no hay dos números iguales consecutivos devuelve false y termina
+            return false;
+        } else if (pertenece(lista,indice, lista.get(indice))){
+            //Si lo recorre entero y  hay dos números iguales consecutivos devuelve true y termina
+            return true;
+        }else {
+            // Avanza hasta que termine de recorrer el ArraList o se cumpla la condición
+           return existenConsecutivos(lista,indice + 1);
+        }
+    }
+
+    private static boolean pertenece(ArrayList<Integer> lista, int indice, int number){
+        if (lista.size() == indice){
+            return false;
+        } else if (lista.get(indice) == number) {
+            return true;
+        }else {
+           return pertenece(lista,indice + 1,number);
+        }
+    }
+
 }
