@@ -2,11 +2,16 @@
 let table;
 let studentArray = new Array();
 
+
 function main(){
     //Look for the elements in the DOM
     table = document.createElement('table');
     document.getElementById('button').addEventListener('click', createTable);
+    
 
+    //Create headers for the table
+    headers = ["Students","Note 1","Note 2","Note 3","Media"];
+    
     //Create the literal objects
     studentArray =[student1 = {
         name : "Paco",
@@ -32,33 +37,50 @@ function main(){
 //Method to create the student table
 function createTable(){
 
-    //Create a String variable to save all contend of the table and another to save the media of the all notes
-    let tr = document.createElement('tr');
-    let th = document.createElement('th');
-    th.textContent("Student");
-    th.textContent("Note 1");
-    th.textContent("Note 2");
-    th.textContent("Note 3");
-    th.textContent("Media");
+    //Create the header of the table
+    let tr1 = document.createElement('tr');
+    for(let i= 0; i < headers.length; i++){
+        // We create the elements th and add to the element tr
+        let th = document.createElement('th');
+        th.textContent = headers[i];
+        tr1.appendChild(th);
+    }
+    // We add the header to the table
+    table.appendChild(tr1);
 
-    
+    //Create rest of the table
     let media = 0;
-
+    let tr2;
     for(let i=0; i < studentArray.length; i++){
+        tr2 = document.createElement('tr');
         //Calculate the media of each student
-        media = (studentArray[i].note1 + studentArray[i].note2 + studentArray[i].note2) / 3;
+        media =(studentArray[i].note1 + studentArray[i].note2 + studentArray[i].note2) / 3;
+    
         //Create the rest of the table and concatenate with the information variable .
-        information += `<tr> 
-                            <td>${studentArray[i].name}</td> 
-                            <td>${studentArray[i].note1}</td>
-                            <td>${studentArray[i].note2}</td> 
-                            <td>${studentArray[i].note3}</td> 
-                            <td>${media}</td>
-                        </tr>`;
+        let td1 = document.createElement('td');
+        let td2 = document.createElement('td');
+        let td3 = document.createElement('td');
+        let td4 = document.createElement('td');
+        let td5 = document.createElement('td');
+
+        td1.textContent = studentArray[i].name;
+        td2.textContent = studentArray[i].note1;
+        td3.textContent = studentArray[i].note2;
+        td4.textContent = studentArray[i].note3;
+        td5.textContent = media;
+
+        tr2.appendChild(td1);
+        tr2.appendChild(td2);
+        tr2.appendChild(td3);
+        tr2.appendChild(td4);
+        tr2.appendChild(td5);
+
+        //Save all the information inside on the table
+        table.appendChild(tr2);
+
     }
 
-    //Save all the information inside on the table
-    table.appendChild(information);
+    //Finally add the table to the body
     document.body.appendChild(table);
 }
 
