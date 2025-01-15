@@ -1,4 +1,4 @@
-package Programming.Unit2.Herencia;
+package Programming.Unit2.Herencia.Animal;
 
 public abstract class Reptil extends Animal {
 

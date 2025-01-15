@@ -1,6 +1,6 @@
-package Programming.Unit2.Herencia;
+package Programming.Unit2.Herencia.Animal;
 
-public abstract class Mamifero extends Animal{
+public abstract class Mamifero extends Animal {
     // Propiedades (atributos) de la clase Mamífero
     private int edad;
     private boolean tienePelo;
@@ -58,6 +58,25 @@ public abstract class Mamifero extends Animal{
 
     public void setEsViviparo(boolean esViviparo) {
         this.esViviparo = esViviparo;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Mamifero{" +
+                "nombre='" + nombre + '\'' +
+                ", especie='" + especie + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", esViviparo=" + esViviparo +
+                ", tieneGlándulasMamarias=" + tieneGlándulasMamarias +
+                ", tienePelo=" + tienePelo +
+                ", edad=" + edad +
+                '}';
+    }
+
+    @Override
+    public Atractivo Atractivo() {
+        return null;
     }
 
 }

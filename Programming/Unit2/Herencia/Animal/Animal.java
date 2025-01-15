@@ -1,4 +1,4 @@
-package Programming.Unit2.Herencia;
+package Programming.Unit2.Herencia.Animal;
 
 public abstract class Animal {
 
@@ -46,5 +46,14 @@ public abstract class Animal {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "nombre='" + nombre + '\'' +
+                ", especie='" + especie + '\'' +
+                ", sexo='" + sexo + '\'' +
+                '}';
     }
 }
