@@ -2,28 +2,18 @@ package Programming.Unit2.ArrayList;
 
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
-
-        Random random = new Random();
-        ArrayList<Integer> enteros = new ArrayList<>();
-        int cont = 0;
-        do {
-            enteros.add(random.nextInt(0,5));
-            cont++;
-        }while (cont < 10);
-
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(5);
-        numbers.add(5);
-        numbers.add(5);
-        numbers.add(5);
-
-        System.out.println("Lista" + numbers + "\nMedia = " + Recursividad.media(numbers,0,0));
+        ArrayList<Integer> listaNumbers1 = new ArrayList<>();
+        ArrayList<Integer> listaNumbers2 = new ArrayList<>();
+        Exercises.rellenarArrayList(listaNumbers1,10);
+        Exercises.rellenarArrayList(listaNumbers2,10);
+        System.out.println(listaNumbers1);
+        System.out.println(listaNumbers2);
+        System.out.println(Exercises.valoresIguales(listaNumbers1,listaNumbers2));
 
 
     }
