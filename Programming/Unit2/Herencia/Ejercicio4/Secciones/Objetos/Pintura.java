@@ -11,8 +11,10 @@ public class Pintura extends Obras {
     private String soporte;
 
     //Constructor
-    public Pintura(String tematica, String titulo, int numeroInventario, Artista artista, Date fechaCreacion, Dimensiones dimensiones, String soporte) {
-        super(tematica, titulo, numeroInventario, artista, fechaCreacion);
+
+
+    public Pintura(String titulo, int numeroInventario, Artista artista, Date fechaCreacion, Dimensiones dimensiones, String soporte) {
+        super(titulo, numeroInventario, artista, fechaCreacion);
         this.dimensiones = dimensiones;
         this.soporte = soporte;
     }
@@ -34,8 +36,5 @@ public class Pintura extends Obras {
         this.soporte = soporte;
     }
 
-    @Override
-    public String muestra() {
-        return "";
-    }
+
 }

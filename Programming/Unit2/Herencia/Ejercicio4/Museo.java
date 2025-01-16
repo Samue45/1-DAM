@@ -28,4 +28,6 @@ public abstract class Museo {
     public void setLocalizacion(String localizacion) {
         this.localizacion = localizacion;
     }
+
+
 }

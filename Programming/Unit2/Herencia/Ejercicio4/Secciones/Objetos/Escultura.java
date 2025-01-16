@@ -11,8 +11,9 @@ public class Escultura extends Obras {
     private double altura;
 
     //Constructor
-    public Escultura(String tematica, String titulo, int numeroInventario, Artista artista, Date fechaCreacion, String material, double altura) {
-        super(tematica, titulo, numeroInventario, artista, fechaCreacion);
+
+    public Escultura(String titulo, int numeroInventario, Artista artista, Date fechaCreacion, String material, double altura) {
+        super(titulo, numeroInventario, artista, fechaCreacion);
         this.material = material;
         this.altura = altura;
     }
@@ -34,8 +35,4 @@ public class Escultura extends Obras {
         this.altura = altura;
     }
 
-    @Override
-    public String muestra() {
-        return "";
-    }
 }

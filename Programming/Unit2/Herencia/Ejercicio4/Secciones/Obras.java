@@ -3,7 +3,7 @@ package Programming.Unit2.Herencia.Ejercicio4.Secciones;
 import java.util.Date;
 import java.util.Objects;
 
-public abstract class Obras extends Sala {
+public  class Obras extends CatalogoMuseo {
 
     private String titulo;
     private int numeroInventario;
@@ -11,8 +11,8 @@ public abstract class Obras extends Sala {
     private Date fechaCreacion;
 
     //Constructor
-    public Obras(String tematica, String titulo, int numeroInventario, Artista artista, Date fechaCreacion) {
-        super(tematica);
+
+    public Obras(String titulo, int numeroInventario, Artista artista, Date fechaCreacion) {
         this.titulo = titulo;
         this.numeroInventario = numeroInventario;
         this.artista = artista;

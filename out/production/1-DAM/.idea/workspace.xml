@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64a04295-5f15-40b2-be28-6888793594aa" name="Changes" comment="Herencia">
+      <change afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/1-DAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1-DAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Atractivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Atractivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Cocodrilo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Cocodrilo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Delfin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Delfin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Mamifero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Mamifero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Reptil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Reptil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Enum" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Samue45&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Samue45/1-DAM.git&quot;,
+    &quot;accountId&quot;: &quot;46d6a02c-1c79-46b1-bbbf-187c9e14e771&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rL1xqwONysXzTI3XQ7ni4QDAMk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.Programming.Unit2.Herencia.Animal.Main.executor": "Run",
+    "Application.Programming.Unit2.Herencia.Main.executor": "Run",
+    "Application.Programming.Unit2.Recursividad.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Programming.Unit2.Herencia.Animal.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Unit2.ArrayList.Main" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Unit2.ArrayList.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Programming.Unit2.Herencia.Animal.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Unit2.Herencia.Animal.Main" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Unit2.Herencia.Animal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Programming.Unit2.Recursividad.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Unit2.Recursividad.Main" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Unit2.Recursividad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Programming.Unit2.Herencia.Animal.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Programming.Unit2.Recursividad.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64a04295-5f15-40b2-be28-6888793594aa" name="Changes" comment="" />
+      <created>1736323793415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736323793415</updated>
+      <workItem from="1736323795065" duration="711000" />
+      <workItem from="1736324858810" duration="2720000" />
+      <workItem from="1736333731685" duration="411000" />
+      <workItem from="1736407559413" duration="3258000" />
+      <workItem from="1736423490106" duration="2901000" />
+      <workItem from="1736500565442" duration="1160000" />
+      <workItem from="1736501977175" duration="1915000" />
+      <workItem from="1736506228025" duration="135000" />
+      <workItem from="1736510480788" duration="643000" />
+      <workItem from="1736513196673" duration="1786000" />
+      <workItem from="1736515269620" duration="644000" />
+      <workItem from="1736516203008" duration="318000" />
+      <workItem from="1736765673798" duration="3474000" />
+      <workItem from="1736925696328" duration="1704000" />
+      <workItem from="1736927634518" duration="353000" />
+    </task>
+    <task id="LOCAL-00001" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736333764225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736333764225</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736410179632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736410179632</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736410837629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736410837629</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736426730765</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736426730765</updated>
+    </task>
+    <task id="LOCAL-00005" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736506240275</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736506240275</updated>
+    </task>
+    <task id="LOCAL-00006" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736511120008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736511120008</updated>
+    </task>
+    <task id="LOCAL-00007" summary="changes">
+      <option name="closed" value="true" />
+      <created>1736516515115</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736516515115</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Herencia">
+      <option name="closed" value="true" />
+      <created>1736769164856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736769164856</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changes" />
+    <MESSAGE value="Herencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Herencia" />
+  </component>
+</project>
