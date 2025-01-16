@@ -1,17 +1,16 @@
 package Programming.Unit2.Herencia.Ejercicio4.Secciones;
 
 
-import java.util.Date;
 
 public class Artista {
 
     private String nombre;
     private String ciudadOrigen;
-    private Date nacimiento;
-    private Date fallecimiento;
+    private int nacimiento;
+    private int fallecimiento;
 
     //Constructor
-    public Artista(String nombre, String ciudadOrigen, Date nacimiento, Date fallecimiento) {
+    public Artista(String nombre, String ciudadOrigen, int nacimiento, int fallecimiento) {
         this.nombre = nombre;
         this.ciudadOrigen = ciudadOrigen;
         this.nacimiento = nacimiento;
@@ -35,19 +34,19 @@ public class Artista {
         this.ciudadOrigen = ciudadOrigen;
     }
 
-    public Date getNacimiento() {
+    public int getNacimiento() {
         return nacimiento;
     }
 
-    public void setNacimiento(Date nacimiento) {
+    public void setNacimiento(int nacimiento) {
         this.nacimiento = nacimiento;
     }
 
-    public Date getFallecimiento() {
+    public int getFallecimiento() {
         return fallecimiento;
     }
 
-    public void setFallecimiento(Date fallecimiento) {
+    public void setFallecimiento(int fallecimiento) {
         this.fallecimiento = fallecimiento;
     }
 }

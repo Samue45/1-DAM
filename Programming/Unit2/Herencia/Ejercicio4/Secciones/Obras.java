@@ -1,5 +1,7 @@
 package Programming.Unit2.Herencia.Ejercicio4.Secciones;
 
+import Programming.Unit2.Herencia.Ejercicio4.CatalogoMuseo;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -13,6 +15,7 @@ public  class Obras extends CatalogoMuseo {
     //Constructor
 
     public Obras(String titulo, int numeroInventario, Artista artista, Date fechaCreacion) {
+        super();
         this.titulo = titulo;
         this.numeroInventario = numeroInventario;
         this.artista = artista;

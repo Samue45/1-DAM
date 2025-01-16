@@ -1,20 +1,21 @@
-package Programming.Unit2.Herencia.Ejercicio4.Secciones;
+package Programming.Unit2.Herencia.Ejercicio4;
 
-import Programming.Unit2.Herencia.Ejercicio4.Museo;
+import Programming.Unit2.Herencia.Ejercicio4.Secciones.Objetos.Escultura;
 import Programming.Unit2.Herencia.Ejercicio4.Secciones.Objetos.Pintura;
+import Programming.Unit2.Herencia.Ejercicio4.Secciones.Obras;
 
 import java.util.ArrayList;
 
-public abstract class CatalogoMuseo extends Museo {
+public  class CatalogoMuseo {
 
     private ArrayList<Obras> listaObras;
 
-    public CatalogoMuseo(String tematica) {
-        this.listaObras = new ArrayList<>();
+    public CatalogoMuseo(ArrayList<Obras> listaObras) {
+        this.listaObras = listaObras;
     }
 
-    public CatalogoMuseo(){}
-
+    public CatalogoMuseo() {
+    }
 
     public ArrayList<Obras> getListaObras() {
         return listaObras;
@@ -49,7 +50,7 @@ public abstract class CatalogoMuseo extends Museo {
         String mensaje = "";
 
         for (int i = listaObras.size() - 1; i > 0 ; i--) {
-            if (listaObras.get(i) == obra ){
+            if (listaObras.get(i).equals(obra)){
                 listaObras.remove(i);
                 mensaje = "Se ha eliminado la obra (" + obra.getTitulo()  + ") con éxito";
             }else {
@@ -70,18 +71,36 @@ public abstract class CatalogoMuseo extends Museo {
     }
 
     public int calcularSuperficiePinturas(){
-        int sum = 0;
-        Pintura pintura;
-
-        for (int i = 0; i < listaObras.size(); i++) {
+        int sumaSuperficie = 0;
+        for (Obras obra : listaObras){
             //Necesito acceder al método dimensiones de cada pintura del museo
-            if(listaObras.get(i) instanceof Pintura){
-
+            if(obra instanceof Pintura pintura){
+                sumaSuperficie += pintura.getDimensiones().getAltura() * pintura.getDimensiones().getAnchura() ;
             }
-            
         }
-        
-        return 0;
+        return sumaSuperficie;
+    }
+
+    public int buscarEsculturaMasAlta(){
+        int indentificador = 0;
+
+        for (Obras obra : listaObras){
+            //Necesito acceder a la altura de cada escultura
+            if(obra instanceof Escultura escultura){
+                double altura = 0;
+                if (escultura.getAltura() > altura){
+                    //Se guarda la altura mayor
+                    altura = escultura.getAltura();
+
+                    if (escultura.getAltura() == altura){
+                        //Guardamos el identificador de la escultura más alta
+                        indentificador = escultura.getNumeroInventario();
+                    }
+                }
+            }
+        }
+        return indentificador;
+
     }
 
 
