@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a04295-5f15-40b2-be28-6888793594aa" name="Changes" comment="Herencia">
-      <change afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/1-DAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1-DAM.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Atractivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Atractivo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Cocodrilo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Cocodrilo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Delfin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Delfin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Mamifero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Mamifero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Reptil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Animal/Reptil.java" afterDir="false" />
+    <list default="true" id="64a04295-5f15-40b2-be28-6888793594aa" name="Changes" comment="Ejercicio 4">
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Museo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Artista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/CatalogoMuseo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Obras.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Obras.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +19,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -55,30 +50,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.Programming.Unit2.Herencia.Animal.Main.executor": "Run",
-    "Application.Programming.Unit2.Herencia.Main.executor": "Run",
-    "Application.Programming.Unit2.Recursividad.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Programming.Unit2.Herencia.Animal.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Programming.Unit2.Herencia.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Programming.Unit2.Recursividad.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Programming.Unit2.Herencia.Animal.Main">
+}</component>
+  <component name="RunManager" selected="Application.Programming.Unit2.Herencia.Ejercicio4.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Programming.Unit2.ArrayList.Main" />
       <module name="1-DAM" />
@@ -105,6 +100,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Programming.Unit2.Herencia.Ejercicio4.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programming.Unit2.Herencia.Ejercicio4.Main" />
+      <module name="1-DAM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programming.Unit2.Herencia.Ejercicio4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Programming.Unit2.Recursividad.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Programming.Unit2.Recursividad.Main" />
       <module name="1-DAM" />
@@ -120,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Programming.Unit2.Herencia.Ejercicio4.Main" />
         <item itemvalue="Application.Programming.Unit2.Herencia.Animal.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Programming.Unit2.Recursividad.Main" />
@@ -156,7 +165,9 @@
       <workItem from="1736516203008" duration="318000" />
       <workItem from="1736765673798" duration="3474000" />
       <workItem from="1736925696328" duration="1704000" />
-      <workItem from="1736927634518" duration="353000" />
+      <workItem from="1736927634518" duration="8342000" />
+      <workItem from="1737012000980" duration="3312000" />
+      <workItem from="1737028209224" duration="2664000" />
     </task>
     <task id="LOCAL-00001" summary="changes">
       <option name="closed" value="true" />
@@ -222,7 +233,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736769164856</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Figuras">
+      <option name="closed" value="true" />
+      <created>1736934738782</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736934738782</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Ejercicio 4">
+      <option name="closed" value="true" />
+      <created>1736936059431</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736936059431</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Ejercicio 4">
+      <option name="closed" value="true" />
+      <created>1737015327234</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737015327234</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +266,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changes" />
     <MESSAGE value="Herencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Herencia" />
+    <MESSAGE value="Figuras" />
+    <MESSAGE value="Ejercicio 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicio 4" />
   </component>
 </project>

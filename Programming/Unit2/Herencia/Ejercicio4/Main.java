@@ -32,8 +32,10 @@ public class Main {
         listaObras.add(new Escultura("Reclining Figure", 13579, new Artista("Henry Moore", "Reino Unido", 1898, 1986), new Date(1962, 5, 10), "Bronce", 3.5));
         listaObras.add(new Escultura("Figura en movimiento", 24680, new Artista("Barbara Hepworth", "Reino Unido", 1903, 1975), new Date(1961, 4, 2), "Madera", 1.2));
 
+        //Lista de obras
         CatalogoMuseo catalogoMuseo = new CatalogoMuseo(listaObras);
 
+        //Métodos en funcionamiento de la clase Catálogo
         System.out.println("Escultura más alta = " + catalogoMuseo.buscarEsculturaMasAlta());
         System.out.println("Calcular superficie de todas las pinturas = " + catalogoMuseo.calcularSuperficiePinturas());
         System.out.println("Añadir una obra nueva = " + catalogoMuseo.sumarObras(new Pintura("Guernica", 12345, new Artista("Vincent van Gogh", "España", 1881, 1973), new Date(1504, 6, 1), new Dimensiones(120, 90), "Lienzo")));
