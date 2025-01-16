@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleApp1"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc8944bfb872bbe26da2b69b4228ad60b665d3f3"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+752c8e16bbee9bc77127ecdbb3133f1618221aee"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("ConsoleApp1"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("ConsoleApp1"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 

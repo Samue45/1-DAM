@@ -1,0 +1,15 @@
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.exe
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.deps.json
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.dll
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\bin\Debug\net8.0\ConsoleApp1.pdb
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfoInputs.cache
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.AssemblyInfo.vb
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.vbproj.CoreCompileInputs.cache
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.sourcelink.json
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.dll
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\refint\ConsoleApp1.dll
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.pdb
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ConsoleApp1.genruntimeconfig.cache
+C:\Users\xamue\source\repos\Samue45\1-DAM\ConsoleApp1\obj\Debug\net8.0\ref\ConsoleApp1.dll
