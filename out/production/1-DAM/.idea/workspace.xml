@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64a04295-5f15-40b2-be28-6888793594aa" name="Changes" comment="Ejercicio 4">
+      <change beforePath="$PROJECT_DIR$/.idea/1-DAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1-DAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Museo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Artista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Artista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/CatalogoMuseo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Obras.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Obras.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Objetos/Dimensiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/Programming/Unit2/Herencia/Ejercicio4/Secciones/Objetos/Dimensiones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1-DAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1-DAM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1-DAM/Markup language/Part 2/JS/Exercises/7/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1-DAM/Markup language/Part 2/JS/Exercises/7/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/CatalogoMuseo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/Secciones/Objetos/Dimensiones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/1-DAM/Programming/Unit2/Herencia/Ejercicio4/Secciones/Objetos/Dimensiones.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +58,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Programming.Unit2.Herencia.Animal.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Programming.Unit2.Herencia.Ejercicio4.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Programming.Unit2.Herencia.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Programming.Unit2.Recursividad.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -167,7 +172,10 @@
       <workItem from="1736925696328" duration="1704000" />
       <workItem from="1736927634518" duration="8342000" />
       <workItem from="1737012000980" duration="3312000" />
-      <workItem from="1737028209224" duration="2664000" />
+      <workItem from="1737028209224" duration="3299000" />
+      <workItem from="1737105579391" duration="1264000" />
+      <workItem from="1737107000216" duration="175000" />
+      <workItem from="1737107208023" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="changes">
       <option name="closed" value="true" />
@@ -257,7 +265,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737015327234</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Ejercicio 4">
+      <option name="closed" value="true" />
+      <created>1737031441909</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737031441909</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Ejercicio 4">
+      <option name="closed" value="true" />
+      <created>1737031518826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1737031518826</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

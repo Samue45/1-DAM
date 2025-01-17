@@ -5,6 +5,7 @@ import Programming.Unit2.Herencia.Ejercicio4.Secciones.Objetos.Pintura;
 import Programming.Unit2.Herencia.Ejercicio4.Secciones.Obras;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public  class CatalogoMuseo {
 
@@ -33,7 +34,7 @@ public  class CatalogoMuseo {
         String mensaje = "";
 
         for (int i = 0; i < listaObras.size(); i++) {
-            if (listaObras.get(i) == nuevaObra ){
+            if (listaObras.get(i).equals(nuevaObra)){
                 mensaje = "La obra (" + nuevaObra.getTitulo()  + ") ya existe";
             }else {
                 listaObras.add(nuevaObra);
@@ -49,10 +50,11 @@ public  class CatalogoMuseo {
         // 3º False = No se puede eliminar y mensaje de error
         String mensaje = "";
 
-        for (int i = listaObras.size() - 1; i > 0 ; i--) {
+        for (int i = 0; i < listaObras.size(); i++) {
             if (listaObras.get(i).equals(obra)){
                 listaObras.remove(i);
                 mensaje = "Se ha eliminado la obra (" + obra.getTitulo()  + ") con éxito";
+
             }else {
                 mensaje = "No existe la obra (" + obra.getTitulo()  + ")";
             }
@@ -62,16 +64,17 @@ public  class CatalogoMuseo {
     }
 
     public Obras buscarObra (int nuevoInventario){
+        Obras obras = null;
         for (int i = 0; i < listaObras.size() ; i++) {
             if (listaObras.get(i).getNumeroInventario() == nuevoInventario){
-                return listaObras.get(i);
+                obras = listaObras.get(i);
             }
         }
-        return null;
+        return obras;
     }
 
-    public int calcularSuperficiePinturas(){
-        int sumaSuperficie = 0;
+    public double calcularSuperficiePinturas(){
+        double sumaSuperficie = 0;
         for (Obras obra : listaObras){
             //Necesito acceder al método dimensiones de cada pintura del museo
             if(obra instanceof Pintura pintura){
@@ -83,19 +86,16 @@ public  class CatalogoMuseo {
 
     public int buscarEsculturaMasAlta(){
         int indentificador = 0;
+        double altura = 0;
 
         for (Obras obra : listaObras){
             //Necesito acceder a la altura de cada escultura
             if(obra instanceof Escultura escultura){
-                double altura = 0;
-                if (escultura.getAltura() > altura){
-                    //Se guarda la altura mayor
-                    altura = escultura.getAltura();
 
-                    if (escultura.getAltura() == altura){
-                        //Guardamos el identificador de la escultura más alta
-                        indentificador = escultura.getNumeroInventario();
-                    }
+                if (escultura.getAltura() > altura){
+                    indentificador = escultura.getNumeroInventario();
+                    altura = escultura.getAltura(); // Se guarda la altura más alta
+
                 }
             }
         }
@@ -103,5 +103,22 @@ public  class CatalogoMuseo {
 
     }
 
+    @Override
+    public String toString() {
+        return "CatalogoMuseo{" +
+                "listaObras=" + listaObras +
+                "}\n";
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        CatalogoMuseo that = (CatalogoMuseo) o;
+        return Objects.equals(listaObras, that.listaObras);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(listaObras);
+    }
 }

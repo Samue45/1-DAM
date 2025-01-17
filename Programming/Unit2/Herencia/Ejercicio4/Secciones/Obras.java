@@ -57,7 +57,7 @@ public  class Obras extends CatalogoMuseo {
 
     @Override
     public String toString() {
-        return "Obras{" +
+        return "\nObras{" +
                 "titulo='" + titulo + '\'' +
                 ", numeroInventario=" + numeroInventario +
                 ", artista=" + artista +
