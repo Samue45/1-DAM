@@ -47,7 +47,7 @@ public  class CatalogoMuseo {
     public String eliminarObra(Obras obra){
         //1º Verificar si la obra existe
         // 2º True = Se elimina y mensaje de éxito
-        // 3º False = No se puede eliminar y mensaje de error k
+        // 3º False = No se puede eliminar y mensaje de error kp
         String mensaje = "";
 
         for (int i = 0; i < listaObras.size(); i++) {
