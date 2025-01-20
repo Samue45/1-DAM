@@ -12,9 +12,7 @@ function main(){
 
     //Tabla
     table = document.createElement('table');
-    //Creamos la cabecera de la tabla y la añadimos a la tabla
-    crearCabecera();
-
+    
     //Mostramos la tabla
     mostrarTareas();
 }
