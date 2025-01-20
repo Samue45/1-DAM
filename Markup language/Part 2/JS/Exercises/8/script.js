@@ -9,6 +9,7 @@ function main(){
     //Botón
     document.querySelector('button').addEventListener('click', createTask);
 
+
     //Tabla
     table = document.createElement('table');
     //Creamos la cabecera de la tabla y la añadimos a la tabla
@@ -31,7 +32,7 @@ function createTask(){
         nombre : nombre,
         descripcion: descripcion,
         fecha : fecha,
-        estado : "No completada",
+        estado : false,
         button: null
     }
 
@@ -65,21 +66,27 @@ function crearCabecera(){
 }
 
 function crearFilas(){
+
+     // Limpiar la tabla antes de agregar nuevas filas
+     table.innerHTML = '';
+
+     // Volver a agregar la cabecera después de limpiar la tabla
+     crearCabecera();
     
-    arrayTareas.forEach((element => {
+    arrayTareas.forEach((element, index) => {
 
         //1º Por cada objeto literal creamos una fila
         let trTask = document.createElement('tr');
 
         //2º Por cada propiedad del objeto literal creamos una columna
-        crearColumnas(trTask,element);
+        crearColumnas(trTask,element,index);
 
         //3º Añadimos la fila a la tabla
         table.appendChild(trTask);
-     }))
+     })
 }
 
-function crearColumnas(trTask,element){
+function crearColumnas(trTask,element,index){
     
     Object.keys(element).forEach((propertie => {
 
@@ -89,11 +96,14 @@ function crearColumnas(trTask,element){
         tdTask.textContent = element[propertie];
         
         //Añadimos una checkbox
-        if(element[propertie] === "No completada"){
+        if(element[propertie] === false){
             tdTask.textContent = null;
 
+            // Estado: Checkbox para completar la tarea
             let input = document.createElement('input');
             input.type = "checkbox";
+            input.checked = element.estado; // Marca la tarea si está completada
+            input.addEventListener('change', (e) => actualizarEstadoTarea(index, e.target.checked));
             tdTask.appendChild(input);
         }
 
@@ -101,17 +111,34 @@ function crearColumnas(trTask,element){
         if(element[propertie] === null){
             let button = document.createElement('button');
             button.textContent = "Eliminar";
-            button.addEventListener('click', eliminarTarea)
+            button.addEventListener('click', () => eliminarTarea(index))
             tdTask.appendChild(button);
         }
         //Añadimos el elemento a la fila
         trTask.appendChild(tdTask);
 
+        // Si la tarea está completada, se aplica el estilo correspondiente
+        if (element.estado === true) {
+            trTask.classList.add("completada"); // Añadimos una clase CSS para las tareas completadas
+        }
+
     }))
 }
 
-function eliminarTarea(){
+function actualizarEstadoTarea(index, estadoCompletado) {
+    // Actualizamos el estado de la tarea en el array usando su índice
+    arrayTareas[index].estado = estadoCompletado ? true : false;
 
-    null
+    // Volver a renderizar la tabla
+    crearFilas();
+}
+
+function eliminarTarea(index){
+
+    // Eliminar la tarea del array
+    arrayTareas.splice(index, 1);
+
+    // Volver a renderizar la tabla
+    crearFilas();
 
 }
