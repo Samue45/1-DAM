@@ -49,4 +49,14 @@ public class Artista {
     public void setFallecimiento(int fallecimiento) {
         this.fallecimiento = fallecimiento;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "nombre='" + nombre + '\'' +
+                ", ciudadOrigen='" + ciudadOrigen + '\'' +
+                ", nacimiento=" + nacimiento +
+                ", fallecimiento=" + fallecimiento +
+                '}';
+    }
 }

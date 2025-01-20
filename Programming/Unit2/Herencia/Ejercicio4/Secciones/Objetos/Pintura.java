@@ -1,6 +1,7 @@
 package Programming.Unit2.Herencia.Ejercicio4.Secciones.Objetos;
 
 import Programming.Unit2.Herencia.Ejercicio4.Secciones.Artista;
+import Programming.Unit2.Herencia.Ejercicio4.Secciones.Fecha;
 import Programming.Unit2.Herencia.Ejercicio4.Secciones.Obras;
 
 import java.util.Date;
@@ -13,7 +14,7 @@ public class Pintura extends Obras {
     //Constructor
 
 
-    public Pintura(String titulo, int numeroInventario, Artista artista, Date fechaCreacion, Dimensiones dimensiones, String soporte) {
+    public Pintura(String titulo, int numeroInventario, Artista artista, Fecha fechaCreacion, Dimensiones dimensiones, String soporte) {
         super(titulo, numeroInventario, artista, fechaCreacion);
         this.dimensiones = dimensiones;
         this.soporte = soporte;

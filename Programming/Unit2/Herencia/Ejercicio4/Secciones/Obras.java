@@ -10,16 +10,16 @@ public  class Obras extends CatalogoMuseo {
     private String titulo;
     private int numeroInventario;
     private Artista artista;
-    private Date fechaCreacion;
+    private Fecha fecha;
 
     //Constructor
 
-    public Obras(String titulo, int numeroInventario, Artista artista, Date fechaCreacion) {
+    public Obras(String titulo, int numeroInventario, Artista artista, Fecha fecha) {
         super();
         this.titulo = titulo;
         this.numeroInventario = numeroInventario;
         this.artista = artista;
-        this.fechaCreacion = fechaCreacion;
+        this.fecha = fecha;
     }
 
     //GETTER and SETTER
@@ -47,21 +47,21 @@ public  class Obras extends CatalogoMuseo {
         this.artista = artista;
     }
 
-    public Date getFechaCreacion() {
-        return fechaCreacion;
+    public Fecha getFechaCreacion() {
+        return fecha;
     }
 
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
+    public void setFechaCreacion(Fecha fechaCreacion) {
+        this.fecha = fechaCreacion;
     }
 
     @Override
     public String toString() {
-        return "\nObras{" +
-                "titulo='" + titulo + '\'' +
-                ", numeroInventario=" + numeroInventario +
-                ", artista=" + artista +
-                ", fechaCreacion=" + fechaCreacion +
+        return "\nObra {" +
+                "Título ='" + titulo + '\'' +
+                ", NumeroInventario =" + numeroInventario +
+                ", Artista =" + artista +
+                ", Fecha de Creación =" + fecha +
                 '}';
     }
 
@@ -70,11 +70,11 @@ public  class Obras extends CatalogoMuseo {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Obras obras = (Obras) o;
-        return numeroInventario == obras.numeroInventario && Objects.equals(titulo, obras.titulo) && Objects.equals(artista, obras.artista) && Objects.equals(fechaCreacion, obras.fechaCreacion);
+        return numeroInventario == obras.numeroInventario && Objects.equals(titulo, obras.titulo) && Objects.equals(artista, obras.artista) && Objects.equals(fecha, obras.fecha);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), titulo, numeroInventario, artista, fechaCreacion);
+        return Objects.hash(super.hashCode(), titulo, numeroInventario, artista, fecha);
     }
 }
