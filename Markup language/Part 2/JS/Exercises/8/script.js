@@ -100,7 +100,6 @@ function crearColumnas(trTask,element,index){
             // Estado: Checkbox para completar la tarea
             let input = document.createElement('input');
             input.type = "checkbox";
-            input.checked = element.estado; // Marca la tarea si está completada
             input.addEventListener('change', (e) => actualizarEstadoTarea(index, e.target.checked));
             tdTask.appendChild(input);
         }
