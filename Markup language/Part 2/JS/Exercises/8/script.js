@@ -46,7 +46,7 @@ function mostrarTareas(){
 
 function crearCabecera(){
 
-    let tablaHeaders = ['Nombre', 'Descripción', 'Fecha', 'Estado'];
+    let tablaHeaders = ['Nombre', 'Descripción', 'Fecha', 'Estado','Borrar'];
 
     //1º Añadir encabezado a la tabla
     let trHeader = document.createElement('tr');
@@ -87,18 +87,17 @@ function crearColumnas(trTask,element,index){
 
         //Creamos el elemento para la columna
         let tdTask = document.createElement('td');
-        // Le asignamos el valor de la propiedad del objeto literal
-        tdTask.textContent = element[propertie];
         
-        //Añadimos una checkbox
-        if(element[propertie] === false){
-            tdTask.textContent = null;
-
-            // Estado: Checkbox para completar la tarea
-            let input = document.createElement('input');
-            input.type = "checkbox";
-            input.addEventListener('change', (e) => actualizarEstadoTarea(index, e.target.checked));
-            tdTask.appendChild(input);
+       // Si la propiedad es 'estado', creamos un checkbox en lugar de texto
+        if (propertie === 'estado') {
+        let input = document.createElement('input');
+        input.type = "checkbox";
+        input.checked = element[propertie];  // Marca el checkbox si el estado es 'true'
+        input.addEventListener('change', (e) => actualizarEstadoTarea(index, e.target.checked));
+        tdTask.appendChild(input);
+        } else {
+        // Para las otras propiedades, simplemente mostramos su valor
+        tdTask.textContent = element[propertie];
         }
 
         //Añadimos un botón para eliminar cada tarea
