@@ -1,0 +1,27 @@
+package Inmuebles.HijosInmuebles;
+
+import Inmuebles.Inmuebles;
+
+public abstract class Construccion extends Inmuebles {
+
+    private TiposConstrucciones tiposConstrucciones;
+
+
+    public Construccion(String ubicaion, double metrosCuadrados, TiposConstrucciones tiposConstrucciones) {
+        super(ubicaion, metrosCuadrados);
+        this.tiposConstrucciones = tiposConstrucciones;
+    }
+
+    public TiposConstrucciones getTiposConstrucciones() {
+        return tiposConstrucciones;
+    }
+
+    public void setTiposConstrucciones(TiposConstrucciones tiposConstrucciones) {
+        this.tiposConstrucciones = tiposConstrucciones;
+    }
+
+    @Override
+    public String muestra(){
+        return super.muestra() + "Construcción [" + "Tipo de Construcción = " + tiposConstrucciones + "]";
+    }
+}
