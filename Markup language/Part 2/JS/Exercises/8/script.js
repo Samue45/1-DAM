@@ -9,7 +9,6 @@ function main(){
     //Botón
     document.querySelector('button').addEventListener('click', createTask);
 
-
     //Tabla
     table = document.createElement('table');
     
@@ -26,16 +25,14 @@ function createTask(){
 
 
     //2º Crear un objeto literal con los datos obtenidos
-    let task = {
+    //3º Guardar los datos en el arrayTareas
+    arrayTareas.push({
         nombre : nombre,
         descripcion: descripcion,
         fecha : fecha,
         estado : false,
         button: null
-    }
-
-    //3º Guardar los datos en el arrayTareas
-    arrayTareas.push(task);
+    });
 
     //4º Creamos las filas y las añadimos a la tabla
     crearFilas();
