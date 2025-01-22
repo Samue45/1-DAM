@@ -3,6 +3,10 @@ package Inmuebles;
 import Inmuebles.HijosInmuebles.Construccion;
 import Inmuebles.HijosInmuebles.HijosConstrucciones.LocalesComerciales;
 import Inmuebles.HijosInmuebles.HijosConstrucciones.Vivienda;
+import Inmuebles.HijosInmuebles.HijosSuperficies.Solar;
+import Inmuebles.HijosInmuebles.HijosSuperficies.Zona;
+import Inmuebles.HijosInmuebles.Superficie;
+import Inmuebles.HijosInmuebles.TiposConstrucciones;
 
 import java.util.ArrayList;
 
@@ -11,6 +15,7 @@ public  class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
     //Propiedades
     private ArrayList<Inmuebles> listaVentaInmuebles;
     private ArrayList<Inmuebles> listaAlquilerInmuebles;
+
 
     //Constructor
     public AgenciaInmobiliaria() {
@@ -44,54 +49,95 @@ public  class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
         ArrayList<Inmuebles> inmueblesPrecioMenor = new ArrayList<>();
 
         for (Inmuebles inmuebles : listaVentaInmuebles){
-
-            if (inmuebles instanceof Construccion construccion){
-                addInmueblePrecioMenor(inmuebles,construccion,inmueblesPrecioMenor,precio);
-            }
+            addInmueblePrecioMenor(inmuebles,inmueblesPrecioMenor,precio);
         }
         return inmueblesPrecioMenor;
     }
 
-    private void addInmueblePrecioMenor(Inmuebles inmuebles,Construccion construccion, ArrayList<Inmuebles> inmueblesPrecioMenor, double precio){
-        if (construccion instanceof LocalesComerciales localesComerciales){
-
+    private void addInmueblePrecioMenor(Inmuebles inmuebles, ArrayList<Inmuebles> inmueblesPrecioMenor, double precio){
+        if (inmuebles instanceof LocalesComerciales localesComerciales) {
             if (localesComerciales.getPrecioMetrosCuadrados() < precio) inmueblesPrecioMenor.add(inmuebles);
-
-        } else if (construccion instanceof Vivienda vivienda) {
-
+        } else if (inmuebles instanceof Vivienda vivienda) {
             if (vivienda.getPrecio() < precio) inmueblesPrecioMenor.add(inmuebles);
         }
-    };
 
+    }
 
     //Añade un inmueble de venta a la lista de ventas
     @Override
     public String addVentaInmueble(Inmuebles inmueble) {
-        return "";
+        boolean existeVenta = listaVentaInmuebles.contains(inmueble);
+        String mensaje = "ERROR :(, ya existe el inmueble";
+        if (!existeVenta) {
+            listaVentaInmuebles.add(inmueble);
+            mensaje = "Se ha añadido el inmueble exitosamente a la lista de venta";
+        }
+
+        return mensaje;
     }
 
     //Devuelve el número de solares rústicos que están en venta
     @Override
     public int cacularSolaresRusticosEnVenta() {
-        return 0;
-    }
+        int contador = 0;
 
+        //Recorremos la lista de inmuebles en venta e incrementamos el contador
+        // cada ver que encontremos una instancia de Solar y sea una Zona Rústica
+        for (Inmuebles inmueble: listaVentaInmuebles){
+            if (inmueble instanceof Solar solar){
+                {if (solar.getZona() == Zona.RUSTICA) contador++;}
+            }
+        }
+        return contador;
+    }
 
     //Muestra todos los locales comerciales de segunda mano con una superficie superior a la pasada por parámetro
     @Override
     public ArrayList<Inmuebles> localesSegundaMano(double superficie) {
-        return null;
+       ArrayList<Inmuebles> listaLocalesSegundaMano = new ArrayList<>();
+
+       for (Inmuebles inmuebles: listaVentaInmuebles){
+           addLocalSegundaMano(inmuebles, listaLocalesSegundaMano, superficie);
+       }
+       for (Inmuebles inmuebles: listaAlquilerInmuebles){
+           addLocalSegundaMano(inmuebles, listaLocalesSegundaMano, superficie);
+        }
+
+        return listaLocalesSegundaMano;
     }
 
-    //Crea una agencia nueva fusionando el objeto Agencia que llama al método + la Agencia que se pasa por parámetro
-    @Override
-    public AgenciaInmobiliaria fusionarAgencias(AgenciaInmobiliaria agenciaInmobiliaria) {
-        return null;
+    private void addLocalSegundaMano(Inmuebles inmuebles, ArrayList<Inmuebles> listaLocalesSegundaMano, double superficie){
+
+        if (inmuebles instanceof LocalesComerciales localesComerciales){
+            if (localesComerciales.getTiposConstrucciones() == TiposConstrucciones.SEGUNDA_MANO && inmuebles.getMetrosCuadrados() > superficie){
+                    listaLocalesSegundaMano.add(inmuebles);
+            }
+        }
+
     }
 
     //Añade un inmueble de alquiler a la lista de alquileres
     @Override
     public String addAlquilerInmueble(Inmuebles inmueble) {
-        return "";
+        boolean existeVenta = listaAlquilerInmuebles.contains(inmueble);
+        String mensaje = "ERROR :(, ya existe el inmueble";
+        if (!existeVenta) {
+            listaAlquilerInmuebles.add(inmueble);
+            mensaje = "Se ha añadido el inmueble exitosamente a la lista de alquiler";
+        }
+
+        return mensaje;
+    }
+
+
+    //Crea una agencia nueva fusionando el objeto Agencia que llama al método + la Agencia que se pasa por parámetro
+    @Override
+    public AgenciaInmobiliaria fusionarAgencias(AgenciaInmobiliaria agenciaInmobiliaria) {
+        AgenciaInmobiliaria nuevaAgencia;
+        //Tenemos que obtener los valores de la agencia que llama al método,
+        //luego obtener los valores de la agencia pasada por parámetro
+        // y finalmente fusionar todos los valores obtenidos para luego asignarlos a la agencia nueva
+
+        return null;
     }
 }
