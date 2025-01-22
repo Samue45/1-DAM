@@ -10,8 +10,8 @@ public class Vivienda extends Construccion {
     private int nPisos;
 
 
-    public Vivienda(String ubicaion, double metrosCuadrados, TiposConstrucciones tiposConstrucciones, double precio, int nHabitaciones, int nPisos) {
-        super(ubicaion, metrosCuadrados, tiposConstrucciones);
+    public Vivienda(String ubicaion, double metrosCuadrados, int id, TiposConstrucciones tiposConstrucciones, double precio, int nHabitaciones, int nPisos) {
+        super(ubicaion, metrosCuadrados,id , tiposConstrucciones);
         this.precio = precio;
         this.nHabitaciones = nHabitaciones;
         this.nPisos = nPisos;

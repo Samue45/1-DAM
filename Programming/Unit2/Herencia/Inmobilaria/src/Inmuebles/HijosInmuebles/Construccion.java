@@ -7,8 +7,8 @@ public abstract class Construccion extends Inmuebles {
     private TiposConstrucciones tiposConstrucciones;
 
 
-    public Construccion(String ubicaion, double metrosCuadrados, TiposConstrucciones tiposConstrucciones) {
-        super(ubicaion, metrosCuadrados);
+    public Construccion(String ubicaion, double metrosCuadrados, int id, TiposConstrucciones tiposConstrucciones) {
+        super(ubicaion, metrosCuadrados, id);
         this.tiposConstrucciones = tiposConstrucciones;
     }
 

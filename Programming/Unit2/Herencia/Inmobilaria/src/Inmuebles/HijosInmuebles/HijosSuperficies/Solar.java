@@ -7,8 +7,8 @@ public class Solar extends Superficie {
     private Zona zona;
 
 
-    public Solar(String ubicaion, double metrosCuadrados, double precioMetroCuadrado, Zona zona) {
-        super(ubicaion, metrosCuadrados, precioMetroCuadrado);
+    public Solar(String ubicaion, double metrosCuadrados, int id, double precioMetroCuadrado, Zona zona) {
+        super(ubicaion, metrosCuadrados, id, precioMetroCuadrado);
         this.zona = zona;
     }
 

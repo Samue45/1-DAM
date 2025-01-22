@@ -8,8 +8,8 @@ public class LocalesComerciales extends Construccion {
     private double precioMetrosCuadrados;
 
 
-    public LocalesComerciales(String ubicaion, double metrosCuadrados, TiposConstrucciones tiposConstrucciones, double precioMetrosCuadrados) {
-        super(ubicaion, metrosCuadrados, tiposConstrucciones);
+    public LocalesComerciales(String ubicaion, double metrosCuadrados,int id, TiposConstrucciones tiposConstrucciones, double precioMetrosCuadrados) {
+        super(ubicaion, metrosCuadrados, id, tiposConstrucciones);
         this.precioMetrosCuadrados = precioMetrosCuadrados;
 
     }

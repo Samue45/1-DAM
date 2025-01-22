@@ -6,8 +6,9 @@ public abstract class Superficie extends Inmuebles {
 
     private double precioMetroCuadrado;
 
-    public Superficie(String ubicaion, double metrosCuadrados, double precioMetroCuadrado) {
-        super(ubicaion, metrosCuadrados);
+
+    public Superficie(String ubicaion, double metrosCuadrados,int id, double precioMetroCuadrado) {
+        super(ubicaion, metrosCuadrados,id);
         this.precioMetroCuadrado = precioMetroCuadrado;
     }
 
@@ -17,6 +18,11 @@ public abstract class Superficie extends Inmuebles {
 
     public void setPrecioMetroCuadrado(double precioMetroCuadrado) {
         this.precioMetroCuadrado = precioMetroCuadrado;
+    }
+
+    // Calcular cuanto vale una superficie por cada m2
+    double calcularPrecioSuperficie(){
+        return precioMetroCuadrado * precioMetroCuadrado;
     }
 
    @Override

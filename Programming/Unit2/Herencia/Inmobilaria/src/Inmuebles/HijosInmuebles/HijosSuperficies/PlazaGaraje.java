@@ -6,8 +6,8 @@ public class PlazaGaraje extends Superficie {
     private TipoGaraje tipoGaraje;
 
 
-    public PlazaGaraje(String ubicaion, double metrosCuadrados, double precioMetroCuadrado, TipoGaraje tipoGaraje) {
-        super(ubicaion, metrosCuadrados, precioMetroCuadrado);
+    public PlazaGaraje(String ubicaion, double metrosCuadrados, int id, double precioMetroCuadrado, TipoGaraje tipoGaraje) {
+        super(ubicaion, metrosCuadrados, id, precioMetroCuadrado);
         this.tipoGaraje = tipoGaraje;
     }
 
