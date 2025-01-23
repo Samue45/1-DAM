@@ -28,13 +28,14 @@ function anadirTarea(){
 
     //2.Crea además un nuevo li que añado a la lista.
     let nuevoLi = document.createElement('li');
-    nuevoLi.textContent = `${titulo}: ${descripcion}`;
-    nuevoLi.id = contador;
+    nuevoLi.textContent = `${inputTitulo.value}: ${inputDescripcion.value}`;
+    nuevoLi.classList.add('noCompletada');
+    nuevoLi.setAttribute('title',contador);
     nuevoLi.addEventListener('click',cambiarEstilo);
 
     let botonBorrar = document.createElement('button');
     botonBorrar.textContent = 'Borrar';
-    botonBorrar.id = contador;
+    botonBorrar.setAttribute('title',contador);
     botonBorrar.addEventListener('click', borrarTarea);
 
     nuevoLi.appendChild(botonBorrar);
@@ -53,11 +54,33 @@ function cambiarEstilo(e){
 
     //Sabiendo cuál es la tarea miro su booleano "completada" y hago un if-else
     //Si está a true le asigno asigno una clase de un color verde
-    e.target.classList.add()
-    //Si está a false se lo quito.
-    e.target.classList.remove()
+    let idTareaAsociada = e.target.getAttribute('title');
+    let tareaAsociada = arrayTareas.find((tarea) => {return tarea.id == idTareaAsociada});
+
+    tareaAsociada.completada = !tareaAsociada.completada;
+
+    if(tareaAsociada.completada){
+        e.target.classList.add('completada');
+        e.target.classList.remove('noCompletada');
+         
+    }
+    else{
+        e.target.classList.add('noCompletada');
+        e.target.classList.remove('completada');
+        
+    }
+
+    //e.target.classList.toggle('completada')
+   
 }
 
 function borrarTarea(e){
+    //De nuevo a través de e.target encuentro el li y la tarea asociada en el array.
+    let idTareaAsociada = e.target.getAttribute('title');
+    let tareaAsociada = arrayTareas.find((tarea) => {return tarea.id == idTareaAsociada});
+    //Ahora en lugar de cambiar los estilos quiero borrar tanto el li como la tarea.
+    e.target.parentElement.remove();
+    //podemos borrar un elemento del array de muchas formas: for, foreach o usar métodos de la API de array como filter
+    arrayTareas = arrayTareas.filter((tarea)=>{return tareaAsociada.id!=idTareaAsociada});
 
 }
