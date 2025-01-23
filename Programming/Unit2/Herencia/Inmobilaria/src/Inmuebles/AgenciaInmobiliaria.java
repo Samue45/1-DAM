@@ -1,11 +1,9 @@
 package Inmuebles;
 
-import Inmuebles.HijosInmuebles.Construccion;
 import Inmuebles.HijosInmuebles.HijosConstrucciones.LocalesComerciales;
 import Inmuebles.HijosInmuebles.HijosConstrucciones.Vivienda;
 import Inmuebles.HijosInmuebles.HijosSuperficies.Solar;
 import Inmuebles.HijosInmuebles.HijosSuperficies.Zona;
-import Inmuebles.HijosInmuebles.Superficie;
 import Inmuebles.HijosInmuebles.TiposConstrucciones;
 
 import java.util.ArrayList;
@@ -133,11 +131,9 @@ public  class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
     //Crea una agencia nueva fusionando el objeto Agencia que llama al método + la Agencia que se pasa por parámetro
     @Override
     public AgenciaInmobiliaria fusionarAgencias(AgenciaInmobiliaria agenciaInmobiliaria) {
-        AgenciaInmobiliaria nuevaAgencia;
-        //Tenemos que obtener los valores de la agencia que llama al método,
-        //luego obtener los valores de la agencia pasada por parámetro
-        // y finalmente fusionar todos los valores obtenidos para luego asignarlos a la agencia nueva
+        listaAlquilerInmuebles.addAll(agenciaInmobiliaria.getListaAlquilerInmuebles());
+        listaVentaInmuebles.addAll(agenciaInmobiliaria.getListaVentaInmuebles());
 
-        return null;
+        return this;
     }
 }
