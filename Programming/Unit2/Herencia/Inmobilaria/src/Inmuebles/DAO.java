@@ -24,14 +24,16 @@ public class DAO {
 
     }
 
-
-
-
-
-
     //Método para comprobar si existe ya una instancia de la clase DAO
     public static DAO getInstance(){
         if (dao == null) dao = new DAO();
         return dao;
+    }
+
+    //Métodos CRUD
+
+    //Obtener todos lo datos de la falsa base de datos
+    public ArrayList<Inmuebles> selectALL(){
+        return lista;
     }
 }
