@@ -8,7 +8,7 @@ import Inmuebles.HijosInmuebles.TiposConstrucciones;
 
 import java.util.ArrayList;
 
-public  class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
+public class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
 
     //Propiedades
     private ArrayList<Inmuebles> listaVentaInmuebles;
