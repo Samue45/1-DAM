@@ -7,6 +7,7 @@ import Inmuebles.HijosInmuebles.TiposConstrucciones;
 
 import java.util.ArrayList;
 
+//Simulación de una base de datos
 public class DAO {
 
     private static DAO dao = null;
@@ -21,6 +22,10 @@ public class DAO {
     public static DAO getInstance(){
         if (dao == null) dao = new DAO();
         return dao;
+    }
+    //Método para acceder a la lista
+    public ArrayList<Inmuebles> getLista(){
+        return lista;
     }
 
     //Método para rellenar lista
