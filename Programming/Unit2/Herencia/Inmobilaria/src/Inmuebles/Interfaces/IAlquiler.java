@@ -1,6 +1,6 @@
 package Inmuebles.Interfaces;
 
-import Inmuebles.Inmuebles;
+import Inmuebles.Interfaces.Cimientos.Inmuebles;
 
 public interface IAlquiler {
 

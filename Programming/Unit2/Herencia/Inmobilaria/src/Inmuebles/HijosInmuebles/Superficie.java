@@ -1,6 +1,6 @@
 package Inmuebles.HijosInmuebles;
 
-import Inmuebles.Inmuebles;
+import Inmuebles.Interfaces.Cimientos.Inmuebles;
 
 public abstract class Superficie extends Inmuebles {
 

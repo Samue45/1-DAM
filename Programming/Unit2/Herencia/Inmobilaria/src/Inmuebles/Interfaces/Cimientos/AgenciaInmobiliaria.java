@@ -1,4 +1,4 @@
-package Inmuebles;
+package Inmuebles.Interfaces.Cimientos;
 
 import Inmuebles.HijosInmuebles.HijosConstrucciones.LocalesComerciales;
 import Inmuebles.HijosInmuebles.HijosConstrucciones.Vivienda;

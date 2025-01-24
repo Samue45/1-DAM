@@ -1,6 +1,6 @@
 package Inmuebles.Controlador;
 
-import Inmuebles.AgenciaInmobiliaria;
+import Inmuebles.Interfaces.Cimientos.AgenciaInmobiliaria;
 
 public class Controlador {
     private AgenciaInmobiliaria agencia;

@@ -1,4 +1,4 @@
-package Inmuebles;
+package Inmuebles.Interfaces.Cimientos;
 
 public abstract class Inmuebles {
 
