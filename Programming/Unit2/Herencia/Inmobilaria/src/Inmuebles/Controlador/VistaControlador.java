@@ -12,9 +12,20 @@ public class VistaControlador {
         System.out.println(mensaje);
     }
 
-    public void introducirValor(){
-        System.out.println("Ingrese el valor");
+    public int menu(String  ...opciones){
+        int opcion;
 
-        String valor = input.nextLine();
+        do {
+            for (int i = 0; i < opciones.length ; i++) {
+                System.out.println(i + 1 + " - " + opciones[i]);
+            }
+
+            System.out.println("\n Elija la opción");
+            opcion = input.nextInt();
+
+
+        }while (opcion < 0 || opcion > opciones.length + 1);
+
+        return opcion;
     }
 }

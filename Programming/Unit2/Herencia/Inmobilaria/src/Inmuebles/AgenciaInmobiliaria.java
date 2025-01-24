@@ -13,13 +13,16 @@ public  class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
     //Propiedades
     private ArrayList<Inmuebles> listaVentaInmuebles;
     private ArrayList<Inmuebles> listaAlquilerInmuebles;
+    private DAO lista;
 
 
     //Constructor
     public AgenciaInmobiliaria() {
-        this.listaVentaInmuebles = DAO.getInstance().selectALL();
+        this.listaVentaInmuebles = new ArrayList<>();
         this.listaAlquilerInmuebles = new ArrayList<>();
+        this.lista = DAO.getInstance();
     }
+
 
 
     // GETTER and SETTER
