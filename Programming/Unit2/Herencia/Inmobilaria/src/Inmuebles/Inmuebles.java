@@ -1,13 +1,12 @@
 package Inmuebles;
 
-public abstract class Inmuebles extends AgenciaInmobiliaria {
+public abstract class Inmuebles {
 
     private String ubicaion;
     private double metrosCuadrados;
     private int id;
 
     public Inmuebles(String ubicaion, double metrosCuadrados, int id) {
-        super();
         this.ubicaion = ubicaion;
         this.metrosCuadrados = metrosCuadrados;
         this.id = id;
