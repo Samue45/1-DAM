@@ -5,6 +5,9 @@ import Inmuebles.HijosInmuebles.HijosConstrucciones.Vivienda;
 import Inmuebles.HijosInmuebles.HijosSuperficies.Solar;
 import Inmuebles.HijosInmuebles.HijosSuperficies.Zona;
 import Inmuebles.HijosInmuebles.TiposConstrucciones;
+import Inmuebles.Interfaces.IAgencia;
+import Inmuebles.Interfaces.IAlquiler;
+import Inmuebles.Interfaces.IVenta;
 
 import java.util.ArrayList;
 
@@ -135,7 +138,6 @@ public class AgenciaInmobiliaria implements IAgencia, IAlquiler, IVenta {
 
 
     //Crea una agencia nueva fusionando el objeto Agencia que llama al método + la Agencia que se pasa por parámetro
-    @Override
     public AgenciaInmobiliaria fusionarAgencias(AgenciaInmobiliaria agenciaInmobiliaria) {
         listaAlquilerInmuebles.addAll(agenciaInmobiliaria.getListaAlquilerInmuebles());
         listaVentaInmuebles.addAll(agenciaInmobiliaria.getListaVentaInmuebles());

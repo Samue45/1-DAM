@@ -1,4 +1,6 @@
-package Inmuebles;
+package Inmuebles.Interfaces;
+
+import Inmuebles.Inmuebles;
 
 import java.util.ArrayList;
 
