@@ -38,7 +38,7 @@ function main(){
     //3º Mostramos la tabla con todos los datos
     mostrarTabla();
 
-    //4º Eliminamos el coche al pulsar la el valor matrícula
+    //4º Eliminamos el coche al pulsar  el valor matrícula
     document.querySelector('table').addEventListener('click', eliminarCoche);
 }
 
@@ -95,13 +95,15 @@ function crearColumnas(coche, trBody){
 
      //1º Accedemos a las propiedades de dicho coche
      Object.keys(coche).forEach((propiedad => {
-        // 2º Creamos una columna para cada propiedad y le damos el valor guardado en el array
+        // 2º Creamos una columna para cada propiedad 
         let tdBody = document.createElement('td');
 
-        //Le damos una clase a la columna matrícula para luego poder eliminarla
+        // 3º Le damos una clase a la columna matrícula para luego poder eliminarla
         if(propiedad == "matricula"){
             tdBody.classList.add("nieto");
         }
+
+        // 4º Le damos el valor guardado en el array
         tdBody.textContent = coche[propiedad];
         //3º Añadimos cada columna a la fila
         trBody.appendChild(tdBody);
@@ -110,18 +112,23 @@ function crearColumnas(coche, trBody){
 }
 function mostrarTabla(){
 
+    // Creamos la tabla con todos los datos del arrayCoches
     crearTabla();
 
+    // Finalmente, la añadimos al DOM
     document.body.appendChild(table);
 }
 
 function eliminarCoche(e){
+    // Nos aseguramos que el evento ha ocurrido sobre la columna Matrícula
     if(e.target && e.target.classList.contains("nieto")){
 
-      // Eliminar la fila del DOM
+      // Eliminamos la fila del DOM
       e.target.closest('tr').remove(); // Usamos closest para obtener el tr que contiene al target
         
       // Eliminar de la lista de coches
+      // Al usar filter creamos un nuevo array pero no contiene el coche eliminado
+      // Finalmente, cambiamos el contenido de la lista de coches vieja por la nueva
       arrayCoches = arrayCoches.filter((coche) => coche.matricula !== e.target.textContent);
     }
 }
