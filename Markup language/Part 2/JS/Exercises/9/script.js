@@ -1,9 +1,8 @@
-
 let table;
 let arrayCoches = [];
 
 
-//1º Crear función main y añadir un manejador de ejento al objeto window
+//1º Crear función main y añadir un manejador de evento al objeto window
 window.addEventListener('load',main);
 
 function main(){
@@ -40,17 +39,8 @@ function main(){
     mostrarTabla();
 
     //4º Eliminamos el coche al pulsar la el valor matrícula
-    document.querySelector('table').addEventListener('click',(e) =>{
-
-
-
-
-
-    })
-
-
+    document.querySelector('table').addEventListener('click', eliminarCoche);
 }
-
 
 function crearTabla(){
     
@@ -107,6 +97,11 @@ function crearColumnas(coche, trBody){
      Object.keys(coche).forEach((propiedad => {
         // 2º Creamos una columna para cada propiedad y le damos el valor guardado en el array
         let tdBody = document.createElement('td');
+
+        //Le damos una clase a la columna matrícula para luego poder eliminarla
+        if(propiedad == "matricula"){
+            tdBody.classList.add("nieto");
+        }
         tdBody.textContent = coche[propiedad];
         //3º Añadimos cada columna a la fila
         trBody.appendChild(tdBody);
@@ -118,4 +113,15 @@ function mostrarTabla(){
     crearTabla();
 
     document.body.appendChild(table);
+}
+
+function eliminarCoche(e){
+    if(e.target && e.target.classList.contains("nieto")){
+
+      // Eliminar la fila del DOM
+      e.target.closest('tr').remove(); // Usamos closest para obtener el tr que contiene al target
+        
+      // Eliminar de la lista de coches
+      arrayCoches = arrayCoches.filter((coche) => coche.matricula !== e.target.textContent);
+    }
 }
