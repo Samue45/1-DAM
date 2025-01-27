@@ -127,7 +127,8 @@ function eliminarCoche(e){
       // La propiedad target nos devuelve el objeto sobre el que ha tenido lugar el evento, es decir, el td
       // Pero al usar el método closest le estamos pidiendo la (tr)fila y no la (td)columna. Sin embargo, funciona porque busca el familiar 
       // más cercano al td(Columna) donde ha ocurrido el evento
-      e.target.closest('tr').remove(); // Usamos closest para obtener el tr que contiene al target
+      e.target.closest('tr').remove();// Usamos closest para obtener el tr que contiene al target
+      e.stopPropagation(); // No se propaga hacia arriba una vez llega al origen
         
       // Eliminar de la lista de coches
       // Al usar filter creamos un nuevo array pero no contiene el coche eliminado
