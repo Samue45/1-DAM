@@ -1,4 +1,4 @@
-package Programming.Unit2.Lambda;
+package Programming.Unit2.Lambda.Interfaces;
 
 @FunctionalInterface
 public interface Mostrable {

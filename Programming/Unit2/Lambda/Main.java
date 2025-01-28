@@ -1,32 +1,36 @@
 package Programming.Unit2.Lambda;
 
-import java.util.Random;
-
 public class Main {
+    public static void main(String[] args) {
 
-    public static int main(String[] args) {
+        //Operaciones lambda
+        Operable suma = (a, b) -> a+b;
 
-        //Formas de usar una interfaz
+        Operable resta = (a, b) -> a-b;
 
-        //1º Forma = Crear una clase que implemente la interfaz
-        Pantalla pantalla = new Pantalla();
+        Operable multi = (a, b) -> a*b;
 
-        //2º Forma = Crear una clase anónima
-        //Clase anónima
-        Mostrable mostrable = new Mostrable() {
-            @Override
-            public void mostrar() {
+        Operable div = (a, b) -> a/b;
 
+        Operable mod = (a, b) -> a%b;
+
+        SuperOperable operable = (a) -> {
+            double sum = 0;
+            for (int i = 0; i < a.length; i++) {
+                sum += a[i];
             }
+
+            return sum;
         };
 
-        //3º Forma = Empleando Lambda
-        // Nota = Si tiene varios métodos no podríamos discriminar
-        Mostrable mostrable1 = () -> System.out.println("Hasta luego");
+        int a = 5;
+        int b = 10;
 
 
-        //Como el método solo tiene una línea no hace falta ponder return, ya que se sabe previamente que se trata de un return
-        RandomNumber randomNumber = () ->  new Random().nextInt(1,10);
-        return 0;
+
+        System.out.println("Suma = " + suma.operar(a,b) + "\nResta = "
+                + resta.operar(a,b)+ "\nMulti = " + multi.operar(a,b)+ "\nDiv = " + div.operar(a,b)+ "\nModulo = " + mod.operar(a,b));
+
+        System.out.println(operable.operar(1,2,3,4,5,6,7,8));
     }
 }
