@@ -98,14 +98,9 @@ function crearColumnas(coche, trBody){
         // 2º Creamos una columna para cada propiedad 
         let tdBody = document.createElement('td');
 
-        // 3º Le damos una clase a la columna matrícula para luego poder eliminarla
-        if(propiedad == "matricula"){
-            tdBody.classList.add("nieto");
-        }
-
-        // 4º Le damos el valor guardado en el array
+        // 3º Le damos el valor guardado en el array
         tdBody.textContent = coche[propiedad];
-        //3º Añadimos cada columna a la fila
+        //4º Añadimos cada columna a la fila
         trBody.appendChild(tdBody);
      }))
 
@@ -121,7 +116,7 @@ function mostrarTabla(){
 
 function eliminarCoche(e){
     // Nos aseguramos que el evento ha ocurrido sobre la columna Matrícula
-    if(e.target && e.target.classList.contains("nieto")){
+    if(e.target && e.target.cellIndex == 0){
 
       // Eliminamos la fila del DOM
       // La propiedad target nos devuelve el objeto sobre el que ha tenido lugar el evento, es decir, el td
