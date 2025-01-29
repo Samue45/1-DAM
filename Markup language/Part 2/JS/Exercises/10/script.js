@@ -81,11 +81,14 @@ function iniciarCronometro(circulo){
     //El método setInterval nos permite ejecutar un código cada cierto tiempo, en este caso cada 2 segundos se modifican las posiciones del círculo
     let intervalo = setInterval(() =>{
 
-        circulo.style.left = obtenerAleatorio(0,810) + 'px';
-        circulo.style.top = obtenerAleatorio(0,610) + 'px';
-        contador++;
+        circulo.style.left = obtenerAleatorio(0,800) + 'px';
+        circulo.style.top = obtenerAleatorio(0,600) + 'px';
+        cronometro++;
     },2000); 
+    
 
     //Cuando el contador sea = 10 se deja de cambiar la posición del circulo
     if(cronometro >= 10) clearInterval(intervalo);
+
+    //El método setTimeOut() ejecuta un código una sola vez tras esperar un tiempo determinado
 }
