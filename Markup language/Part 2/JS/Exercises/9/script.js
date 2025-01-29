@@ -98,14 +98,9 @@ function crearColumnas(coche, trBody){
         // 2º Creamos una columna para cada propiedad 
         let tdBody = document.createElement('td');
 
-        // 3º Le damos una clase a la columna matrícula para luego poder eliminarla
-        if(propiedad == "matricula"){
-            tdBody.classList.add("nieto");
-        }
-
-        // 4º Le damos el valor guardado en el array
+        // 3º Le damos el valor guardado en el array
         tdBody.textContent = coche[propiedad];
-        //3º Añadimos cada columna a la fila
+        //4º Añadimos cada columna a la fila
         trBody.appendChild(tdBody);
      }))
 
@@ -121,13 +116,14 @@ function mostrarTabla(){
 
 function eliminarCoche(e){
     // Nos aseguramos que el evento ha ocurrido sobre la columna Matrícula
-    if(e.target && e.target.classList.contains("nieto")){
+    if(e.target && e.target.cellIndex == 0){
 
       // Eliminamos la fila del DOM
       // La propiedad target nos devuelve el objeto sobre el que ha tenido lugar el evento, es decir, el td
       // Pero al usar el método closest le estamos pidiendo la (tr)fila y no la (td)columna. Sin embargo, funciona porque busca el familiar 
       // más cercano al td(Columna) donde ha ocurrido el evento
-      e.target.closest('tr').remove(); // Usamos closest para obtener el tr que contiene al target
+      e.target.closest('tr').remove();// Usamos closest para obtener el tr que contiene al target
+      e.stopPropagation(); // No se propaga hacia arriba una vez llega al origen
         
       // Eliminar de la lista de coches
       // Al usar filter creamos un nuevo array pero no contiene el coche eliminado
