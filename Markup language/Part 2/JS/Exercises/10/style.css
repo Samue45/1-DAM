@@ -1,0 +1,26 @@
+.circulo{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    border: 5px solid black;
+    border-radius: 60px;
+    top: 0px;   /* Posición Y */
+    left: 0px;   /* Posición X */  
+}
+
+.mapa{
+    position: absolute;
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    border: 5px solid greenyellow;
+    border-radius: 5px;
+    background-color: cornsilk;
+}
+
+.puntaje{
+    position: relative;
+    top: 900px;   /* Posición Y */
+    left: 250px;   /* Posición X */  
+}
