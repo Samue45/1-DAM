@@ -18,10 +18,11 @@ public class Main {
         //Guardamos la referencia en pantalla
         // IPantalla pantalla = p -> p.getX() + " , " + p.getY();
 
-        //Pasamos directamente la referencia
+        //Pasamos directamente la expresión lambda
         puntitos.forEach(p -> System.out.println(p.getX() + " , " + p.getY()));
 
 
+        //Le pasamos una variable que guarda la referencia del lambda
         IFiltro filtro = f -> f.getX() == f.getY();
         puntitos.select(filtro);
 

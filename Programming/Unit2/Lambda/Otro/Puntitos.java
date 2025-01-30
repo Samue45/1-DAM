@@ -18,12 +18,14 @@ public class Puntitos {
         this.listaPuntos = listaPuntos;
     }
 
+    //Pasamos la interfaz IPantalla como parámetro
     public void forEach(IPantalla pantalla){
         for (Punto punto: listaPuntos){
            pantalla.mostrarPunto(punto);
         }
     }
 
+    //Pasamos la interfaz IFiltro como parámetro
     public ArrayList<Punto> select (IFiltro filtro){
         ArrayList<Punto> listaFiltrada = new ArrayList<>();
 
