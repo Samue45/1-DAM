@@ -13,7 +13,10 @@ function main(){
 
 
     //2º Empiza el juego y vamos cambiando la posición del circulo de manera aleatoria
-    iniciarCronometro(circulo);
+    empezarJuego(circulo);
+
+    //3º Finalizamos el juego 
+    terminarJuego(circulo);
 
 }
 
@@ -23,6 +26,19 @@ function crearCirculo(){
     circulo = document.createElement('div');
     circulo.classList.add('circulo');
     mapa.appendChild(circulo);
+}
+
+function terminarJuego(){
+
+    circulo = document.querySelector('div');
+    mensajePuntos = document.querySelector('p');
+    setTimeout(() => {
+        circulo.remove();
+        mensajePuntos.classList.remove('puntajeInicial');
+        mensajePuntos.classList.add('puntajeFinal');
+        mensajePuntos.textContent = "Fin del juego y tu puntaje es = " + puntaje;
+        
+    }, 30000);
 }
 
 //Función hecha por ChatGPT
@@ -50,7 +66,7 @@ function crearPuntaje(){
 
     mensajePuntos = document.createElement('p');
     mensajePuntos.textContent = "Puntaje =" + puntaje;
-    mensajePuntos.classList.add('puntaje');
+    mensajePuntos.classList.add('puntajeInicial');
     document.body.appendChild(mensajePuntos)
 }
 
@@ -71,15 +87,12 @@ function iniciarElementosJuego(){
 
 function actualizarPuntaje() {
     // Seleccionamos el elemento con la clase 'puntaje' y actualizamos su texto
-    mensajePuntos = document.querySelector('.puntaje');
+    mensajePuntos = document.querySelector('.puntajeInicial');
     mensajePuntos.textContent = "Puntaje = " + puntaje;
 }
 
-function iniciarCronometro(circulo){
+function empezarJuego(circulo){
 
-    // Iniciamos el cronometro
-    let cronometro = 0;
-    
     //1º Necesito poder acceder a las posiciones del circulo
     //2º Generar valores aleatorios para las nuevas coordenadas(x,y)
     //3º Asginar esos valores a la clase del circulo
@@ -89,15 +102,8 @@ function iniciarCronometro(circulo){
 
     //El método setInterval nos permite ejecutar un código cada cierto tiempo, en este caso cada 2 segundos se modifican las posiciones del círculo
     let intervalo = setInterval(() =>{
-
-        circulo.style.left = obtenerAleatorio(0,800) + 'px';
-        circulo.style.top = obtenerAleatorio(0,600) + 'px';
+        circulo.style.left = obtenerAleatorio(0,600) + 'px';
+        circulo.style.top = obtenerAleatorio(0,400) + 'px';
         cronometro++;
-    },2000); 
-    
-
-    //Cuando el contador sea = 10 se deja de cambiar la posición del circulo
-    if(cronometro >= 10) clearInterval(intervalo);
-
-    //El método setTimeOut() ejecuta un código una sola vez tras esperar un tiempo determinado
+    },1000); 
 }

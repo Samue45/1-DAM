@@ -17,10 +17,19 @@
     border: 5px solid greenyellow;
     border-radius: 5px;
     background-color: cornsilk;
+    overflow: hidden;
 }
 
-.puntaje{
+.puntajeInicial{
     position: relative;
     top: 900px;   /* Posición Y */
     left: 250px;   /* Posición X */  
+}
+
+.puntajeFinal{
+    font-family: 'Courier New', Courier, monospace;
+    color: blueviolet;
+    margin-top: 30%;
+    text-align: center;
+    font-size: x-large;
 }
