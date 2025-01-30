@@ -30,13 +30,8 @@ function obtenerAleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-function iniciarElementosJuego(){
-
-    //Iniciamos el contador de puntos
-    puntaje = 0;
-
-    // Creamos el mapa , le aplicamos el estilo CSS, añadimos un manejador de eventos y lo añadimos al DOM
+function crearMapa(){
+    
     mapa = (document.createElement('div'));
     mapa.classList.add('mapa');
     mapa.addEventListener('click',(e) => {
@@ -49,15 +44,29 @@ function iniciarElementosJuego(){
     
     })
     document.body.appendChild(mapa);
+}
+
+function crearPuntaje(){
+
+    mensajePuntos = document.createElement('p');
+    mensajePuntos.textContent = "Puntaje =" + puntaje;
+    mensajePuntos.classList.add('puntaje');
+    document.body.appendChild(mensajePuntos)
+}
+
+function iniciarElementosJuego(){
+
+    //Iniciamos el contador de puntos
+    puntaje = 0;
+
+    // Creamos el mapa , le aplicamos el estilo CSS, añadimos un manejador de eventos y lo añadimos al DOM
+    crearMapa();
 
     //Creamos el circulo 1 vez
     crearCirculo();
 
     //Añadimos el puntaje al DOM cuando cargue la página
-    mensajePuntos = document.createElement('p');
-    mensajePuntos.textContent = "Puntaje =" + puntaje;
-    mensajePuntos.classList.add('puntaje');
-    document.body.appendChild(mensajePuntos)
+   crearPuntaje();
 }
 
 function actualizarPuntaje() {
