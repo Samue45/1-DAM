@@ -43,6 +43,7 @@ public class Tablero {
     }
 
     //Método que mueva una pieza del tablero, le pasamos el punto al que la queremos mover
+    //1º Saber si esa posición esta ocupada
     //Método que compruebe si ese punto está ocupado
 
 }
