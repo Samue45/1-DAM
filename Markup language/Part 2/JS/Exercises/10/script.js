@@ -30,10 +30,10 @@ function crearCirculo(){
 
 function terminarJuego(){
 
-    circulo = document.querySelector('div');
+    mapa = document.querySelector('div');
     mensajePuntos = document.querySelector('p');
     setTimeout(() => {
-        circulo.remove();
+        mapa.remove();
         mensajePuntos.classList.remove('puntajeInicial');
         mensajePuntos.classList.add('puntajeFinal');
         mensajePuntos.textContent = "Fin del juego y tu puntaje es = " + puntaje;
@@ -104,5 +104,5 @@ function empezarJuego(circulo){
     let intervalo = setInterval(() =>{
         circulo.style.left = obtenerAleatorio(0,600) + 'px';
         circulo.style.top = obtenerAleatorio(0,400) + 'px';
-    },1000); 
+    },700); 
 }
