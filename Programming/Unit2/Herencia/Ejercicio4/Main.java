@@ -27,6 +27,7 @@ public class Main {
 
         //Lista de obras
         CatalogoMuseo catalogoMuseo = new CatalogoMuseo(listaObras);
+        
 
         //Métodos en funcionamiento de la clase Catálogo
         System.out.println("Escultura más alta = Número de inventario(" + catalogoMuseo.buscarEsculturaMasAlta() +")");

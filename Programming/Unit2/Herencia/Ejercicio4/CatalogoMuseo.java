@@ -39,6 +39,7 @@ public  class CatalogoMuseo {
             }else {
                 listaObras.add(nuevaObra);
                 mensaje = "Se ha añadido la obra (" + nuevaObra.getTitulo()  +  ") con éxito";
+                //Me llamo paquito manos verdes unga unga
             }
         }
         return mensaje;

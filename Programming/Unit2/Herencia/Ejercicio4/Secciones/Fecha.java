@@ -1,6 +1,8 @@
 package Programming.Unit2.Herencia.Ejercicio4.Secciones;
 
-public class Fecha {
+import java.util.Date;
+
+public class Fecha extends Date {
 
     private int day;
     private int month;
