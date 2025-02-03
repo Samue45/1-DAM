@@ -80,7 +80,7 @@ function iniciarElementosJuego(){
 
     //Creamos el circulo 1 vez
     crearCirculo();
-
+    
     //Añadimos el puntaje al DOM cuando cargue la página
    crearPuntaje();
 }
@@ -104,6 +104,5 @@ function empezarJuego(circulo){
     let intervalo = setInterval(() =>{
         circulo.style.left = obtenerAleatorio(0,600) + 'px';
         circulo.style.top = obtenerAleatorio(0,400) + 'px';
-        cronometro++;
     },1000); 
 }
