@@ -40,8 +40,6 @@ calcularCalorias(gramosHidratos, gramosProte, gramosGrasa){
 getCalorias(){
     return this.calorias
 }
-    
-
 
 }
 
