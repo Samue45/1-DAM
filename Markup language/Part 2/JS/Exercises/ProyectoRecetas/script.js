@@ -1,11 +1,11 @@
 //Importamos las clases
-import Receta from "./receta";
-import Ingredientes from "./ingredientes";
+import Receta from './receta.js';
+import Ingredientes from './ingredientes.js';
 
 // Debemos crear un instancia de cada clase
 // Ejemplo 1: Crear ingredientes y receta
 let ingrediente1 = new Ingredientes('Arroz', '200g', 260, [
-    {PorcentajeHidratos: 90, PorcentajeProte: 7, PorcentajeGrasas: 3}
+    {PorcentajeHidratos: 90, PorcentajeProte: 9, PorcentajeGrasas: 2}
 ]);
 
 let receta1 = new Receta(
@@ -64,8 +64,8 @@ let receta5 = new Receta(
 );
 
 // Imprimir en consola las recetas y sus ingredientes
-console.log(receta1);
-console.log(receta2);
-console.log(receta3);
-console.log(receta4);
-console.log(receta5);
+console.log(receta1 + "Calorías de la receta = " + receta1.calcularCalorias());
+console.log(receta2 + "Calorías de la receta = " + receta2.calcularCalorias());
+console.log(receta3 + "Calorías de la receta = " + receta3.calcularCalorias());
+console.log(receta4 + "Calorías de la receta = " + receta4.calcularCalorias());
+console.log(receta5 + "Calorías de la receta = " + receta5.calcularCalorias());
