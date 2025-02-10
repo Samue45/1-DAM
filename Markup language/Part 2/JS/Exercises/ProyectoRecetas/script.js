@@ -1,6 +1,7 @@
 //Importamos las clases
 import Receta from './receta.js';
 import Ingredientes from './ingredientes.js';
+import Servicio from './servicio.js';
 
 // Debemos crear un instancia de cada clase
 // Ejemplo 1
