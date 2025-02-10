@@ -12,6 +12,7 @@ let ingrediente1_2 = new Ingredientes('Pollo', '200g', 260, [
 ]);
 
 let receta1 = new Receta(
+    1,
     'Arroz con Pollo',
     [ingrediente1, ingrediente1_2],
     'Un plato delicioso de arroz con pollo, perfecto para el almuerzo.',
@@ -24,6 +25,7 @@ let ingrediente2 = new Ingredientes('Pollo', '150g', 330, [
 ]);
 
 let receta2 = new Receta(
+    2,
     'Pollo Asado',
     [ingrediente2],
     'Pollo asado con un toque de hierbas y especias.',
@@ -42,6 +44,7 @@ let ingrediente3_3 = new Ingredientes('Cebolla', '80g', 18, [
 ]);
 
 let receta3 = new Receta(
+    3,
     'Ensalada de Tomate',
     [ingrediente3_1, ingrediente3_2,ingrediente3_3],
     'Una ensalada fresca de tomate, perfecta como acompañamiento.',
@@ -54,6 +57,7 @@ let ingrediente4 = new Ingredientes('Lechuga', '50g', 15, [
 ]);
 
 let receta4 = new Receta(
+    4,
     'Ensalada Verde',
     [ingrediente4],
     'Ensalada de lechuga con vinagreta, ligera y saludable.',
@@ -69,6 +73,7 @@ let ingrediente5_2 = new Ingredientes('Pan', '100g', 120, [
 ]);
 
 let receta5 = new Receta(
+    5,
     'Tostada de Aguacate',
     [ingrediente5_1, ingrediente5_2 ],
     'Tostada de pan integral con aguacate fresco, ideal para el desayuno.',
@@ -76,8 +81,8 @@ let receta5 = new Receta(
 );
 
 // Imprimir en consola las recetas y sus ingredientes
-console.log(receta1.nombre + " => Calorías de la receta = " + receta1.calcularCalorias());
-console.log(receta2.nombre + " => Calorías de la receta = " + receta2.calcularCalorias());
-console.log(receta3.nombre + " => Calorías de la receta = " + receta3.calcularCalorias());
-console.log(receta4.nombre + " => Calorías de la receta = " + receta4.calcularCalorias());
-console.log(receta5.nombre + " => Calorías de la receta = " + receta5.calcularCalorias());
+let arrayRecetas = [receta1,receta2,receta3,receta4,receta5];
+
+arrayRecetas.forEach(receta => {
+    console.log("Nombre = " + receta.nombre + "/ Calorías de la receta = " + receta.calcularCalorias());
+});
