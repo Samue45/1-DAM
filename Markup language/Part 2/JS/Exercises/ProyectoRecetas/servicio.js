@@ -106,7 +106,7 @@ class Servicio {
     }
 
     //Método DELETE para eliminar una receta por su id
-     obtenerRecetaId(recetaId){
+    obtenerRecetaId(recetaId){
         this.listaRecetas.forEach(receta => {
             if(receta.id === recetaId) {
                 console.log("Nombre receta = " + receta.nombre + " Ingredietes = " + receta.ingredientes );
