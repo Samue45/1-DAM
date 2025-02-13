@@ -26,7 +26,7 @@ calcularCalorias(){
     
 }
 
-//Desde receta debo obtener la cantidad de cada ingrediente y llamar al método calcular calorías
+//Desde receta debo obtener la cantidad de cada ingrediente y llamar al método calcular calorías IMPORTANTE
 obtenerCantidad(){
     let cantidadIngrediente = 0;
 
