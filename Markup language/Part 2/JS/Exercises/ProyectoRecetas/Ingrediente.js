@@ -10,15 +10,12 @@ class Ingredientes {
 
 //Métodos
 
-calcularCantidadMacros(){
+//Paso la cantidad de cada ingrediente
+calcularCantidadMacros(cantidad){
     // Cada ingrediente tiene un %Hidratos, %Proteína y %Grasa
     // El 100% = cantidad del ingrediente
     // Sabiendo el porcentaje de cada macro podemos calcular cuantos gramos de cada macro tiene
     // Para luego conocer el aporte calórico de cada macro y finalmente saber las calorís del ingrediente en base a la cantidad que se emplee de éste
-
-    //Necesito obtener la cantidad de cada ingrediente , que se encuentra en el array de objetos literales que hay en recetas 
-
-
 
     //1º Calculamos los gramos de cada macro
     gramosHidratos = (this.porcentajeMacros.porcentajeHidratos * this.cantidad) / 100;
