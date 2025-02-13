@@ -8,7 +8,7 @@
             "type": "node",
             "name": "Run Current File",
             "request": "launch",
-            "program": "${workspaceFolder}\\Markup language\\Part 2\\JS\\Exercises\\ProyectoRecetas\\script.js"
+            "program": "${workspaceFolder}\\Markup language\\Part 2\\JS\\Exercises\\ProyectoRecetas\\Controlador.js"
         }
     ]
 }

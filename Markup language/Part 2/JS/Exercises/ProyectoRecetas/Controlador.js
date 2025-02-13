@@ -1,5 +1,7 @@
 //Importamos las clases
-import Servicio from "./Servicio.js";
+import Receta from "./receta.js";
+import Ingrediente from "./Ingrediente.js";
+import Servicio from "./servicio.js";
 
 class Controlador{
 
@@ -23,13 +25,13 @@ class Controlador{
     }
 
     //Actualizar receta
-    actualizarReceta(id, nombre,ingredientes,descripcion,categoria){
-        this.servicio.actualizarReceta(id, nombre,ingredientes,descripcion,categoria);
+    actualizarReceta(receta){
+        this.servicio.actualizarReceta(recetaNueva);
     }
 
     //Crear receta
-    crearReceta(id, nombre,ingredientes,descripcion,categoria){
-        this.servicio.crearReceta(id, nombre,ingredientes,descripcion,categoria);
+    crearReceta(receta){
+        this.servicio.crearReceta(recetaNueva);
     }
 
 

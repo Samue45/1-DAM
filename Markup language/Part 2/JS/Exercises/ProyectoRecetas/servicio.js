@@ -1,4 +1,4 @@
-import Receta from "./Receta.js";
+import Receta from "./receta.js";
 import Ingrediente from "./Ingrediente.js";
 
 class Servicio {
@@ -119,15 +119,15 @@ class Servicio {
     }
 
     //Método UPDATE para actualizar una receta 
-    actualizarReceta(id, nombre,ingredientes,descripcion,categoria){
+    actualizarReceta(recetaNueva){
         
-        this.listaRecetas.forEach(receta => {
+        this.listaRecetas.forEach(recetaVieja => {
             if(receta.id === id) {
                 //Modificamos los valores viejos de la receta por los nuevos
-                receta.nombre = nombre;
-                receta.ingredientes = ingredientes;
-                receta.descripcion = descripcion;
-                receta.categoria = categoria
+                recetaVieja.nombre = recetaNueva.nombre;
+                recetaVieja.ingredientes = recetaNueva.ingredientes;
+                recetaVieja.descripcion = recetaNueva.descripcion;
+                recetaVieja.categoria = recetaNueva.categoria
 
                 //Mensaje de éxito
                 console.log("Receta actualizada con éxito :)");
@@ -138,18 +138,18 @@ class Servicio {
     }
 
     //Método CREATE para crear una receta 
-    crearReceta(id, nombre,ingredientes,descripcion,categoria){
+    crearReceta(recetaNueva){
         
         this.listaRecetas.forEach(receta => {
             if(receta.id === id) {
                 console.log("ERROR, ya existe una receta con el mismo id :/");
             }else {
                 let nuevaReceta = new Receta(
-                    id,
-                    nombre,
-                    ingredientes,
-                    descripcion,
-                    categoria
+                    recetaNueva.id,
+                    recetaNueva.nombre,
+                    recetaNueva.ingredientes,
+                    recetaNueva.descripcion,
+                    recetaNueva.categoria
                     );
                     this.listaRecetas.push(nuevaReceta);
 
