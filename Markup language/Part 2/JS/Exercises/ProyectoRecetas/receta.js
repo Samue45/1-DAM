@@ -9,32 +9,23 @@ constructor (id, nombre,{ingredientes,cantidad},descripcion,categoria){
 }
 
 //El aporte calórico de la receta sería la suma del aporte calórico de cada ingrediente
-calcularCalorias(){
-
-    //Como ingredientes es un array, podemos recorrerolo y obtener las calorias de cada ingrediente
-    // Para luego sumarlos todos y saber el aporte calórico de la receta
-    let caloriasTotales = 0;
-
-    //Debo obtener cada ingrediente del objeto literal
-    this.ingredientes.forEach(ingrediente => {
-        caloriasTotales += ingrediente.calorias;
-        Object.keys(ingrediente).forEach(elemento => {
-                //Debo 
-        })
-    });
-    return caloriasTotales;
-    
-}
 
 //Desde receta debo obtener la cantidad de cada ingrediente y llamar al método calcular calorías IMPORTANTE
-obtenerCantidad(){
-    let cantidadIngrediente = 0;
+calcularCalorias(){
+    //Tengo que acceder a las cantidades de cada ingrediente y calcular sus calorías
+    //Finalmente devolver la suma total de todas las calorías de cada ingrediente, que sería igual a las calorías de la receta
+    let caloriasReceta = 0;
 
-    this.ingredientes.forEach(ingrediente => {
-        caloriasTotales += ingrediente.calorias;
+    this.ingredientes.forEach( elemento => {
+        
+        //Obtenemos las calorias de cada ingrediente
+        calcularCantidadMacros(elemento.cantidad)
+
+        //Vamos sumando las calorías de cada ingrediente
+        caloriasReceta += elemento.ingrediente.getCalorias();
     });
-    return caloriasTotales;
 
+    return caloriasReceta;
 }
 
 }

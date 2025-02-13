@@ -18,15 +18,15 @@ calcularCantidadMacros(cantidad){
     // Para luego conocer el aporte calórico de cada macro y finalmente saber las calorís del ingrediente en base a la cantidad que se emplee de éste
 
     //1º Calculamos los gramos de cada macro
-    gramosHidratos = (this.porcentajeMacros.porcentajeHidratos * this.cantidad) / 100;
-    gramosProte = (this.porcentajeMacros.porcentajeProte * this.cantidad) / 100;
-    gramosGrasa = (this.porcentajeMacros.porcentajeGrasa  * this.cantidad) / 100;
+    gramosHidratos = (this.porcentajeMacros.porcentajeHidratos * cantidad) / 100;
+    gramosProte = (this.porcentajeMacros.porcentajeProte * cantidad) / 100;
+    gramosGrasa = (this.porcentajeMacros.porcentajeGrasa  * cantidad) / 100;
 
     // 2º Calculamos las calorías de cada macro
-    this.calcularCalorias(gramosHidratos,gramosProte,gramosGrasa);
+    this.calcularCaloriasIngredientes(gramosHidratos,gramosProte,gramosGrasa);
 }
 
-calcularCalorias(gramosHidratos, gramosProte, gramosGrasa){
+calcularCaloriasIngredientes(gramosHidratos, gramosProte, gramosGrasa){
 
     //1º Cada gramo de un macro aporta unas calorías
     // 1g de carbos = 4 cal
