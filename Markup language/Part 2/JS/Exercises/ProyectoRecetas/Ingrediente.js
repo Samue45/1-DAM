@@ -1,7 +1,7 @@
 class Ingredientes {
 
     
-    constructor(nombre,cantidad, calorias, porcentajeMacros){
+    constructor(nombre, calorias, porcentajeMacros){
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.calorias = calorias;
@@ -15,6 +15,10 @@ calcularCantidadMacros(){
     // El 100% = cantidad del ingrediente
     // Sabiendo el porcentaje de cada macro podemos calcular cuantos gramos de cada macro tiene
     // Para luego conocer el aporte calórico de cada macro y finalmente saber las calorís del ingrediente en base a la cantidad que se emplee de éste
+
+    //Necesito obtener la cantidad de cada ingrediente , que se encuentra en el array de objetos literales que hay en recetas 
+
+
 
     //1º Calculamos los gramos de cada macro
     gramosHidratos = (this.porcentajeMacros.porcentajeHidratos * this.cantidad) / 100;

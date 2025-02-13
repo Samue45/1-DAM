@@ -1,9 +1,9 @@
 class Receta {
 //Constructor
-constructor (id, nombre,ingredientes,descripcion,categoria){
+constructor (id, nombre,{ingredientes,cantidad},descripcion,categoria){
     this.id = id
     this.nombre = nombre;
-    this.ingredientes = ingredientes;
+    this.ingredientes = ingredientes,cantidad;
     this.descripcion = descripcion;
     this.categoria = categoria;
 }
@@ -15,11 +15,26 @@ calcularCalorias(){
     // Para luego sumarlos todos y saber el aporte calórico de la receta
     let caloriasTotales = 0;
 
+    //Debo obtener cada ingrediente del objeto literal
+    this.ingredientes.forEach(ingrediente => {
+        caloriasTotales += ingrediente.calorias;
+        Object.keys(ingrediente).forEach(elemento => {
+                //Debo 
+        })
+    });
+    return caloriasTotales;
+    
+}
+
+//Desde receta debo obtener la cantidad de cada ingrediente y llamar al método calcular calorías
+obtenerCantidad(){
+    let cantidadIngrediente = 0;
+
     this.ingredientes.forEach(ingrediente => {
         caloriasTotales += ingrediente.calorias;
     });
     return caloriasTotales;
-    
+
 }
 
 }
