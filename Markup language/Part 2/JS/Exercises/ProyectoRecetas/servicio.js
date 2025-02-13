@@ -8,6 +8,7 @@ class Servicio {
         this.rellenarLista();
     }
 
+    //Simulación del modelo(BASE DE DATOS)
     rellenarLista(){
         
        //Ejemplo 1
