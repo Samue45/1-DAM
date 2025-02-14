@@ -4,7 +4,7 @@ import Ingrediente from "./Ingrediente.js";
 class Servicio {
 
     constructor(){
-        listaRecetas = [];
+        this.listaRecetas = [];
         this.rellenarLista();
     }
 
@@ -62,7 +62,7 @@ class Servicio {
     //Método GET para ver todas las recetas
     obtenerListaRecetas(){
         this.listaRecetas.forEach(receta => {
-            console.log("Nombre receta = " + receta.nombre + " Ingredietes = " + receta.ingredientes );
+            console.log(`Nombre receta = ${receta.nombre}, Ingredientes = ${receta.ingredientes.map(i => i.ingrediente.nombre).join(", ")}`);
         })
     }
 
@@ -76,7 +76,7 @@ class Servicio {
     }
 
     //Método DELETE para eliminar una receta por su id
-    obtenerRecetaId(recetaId){
+    deleteRecetaId(recetaId){
         this.listaRecetas.forEach(receta => {
             if(receta.id === recetaId) {
                 console.log("Nombre receta = " + receta.nombre + " Ingredietes = " + receta.ingredientes );
@@ -92,7 +92,7 @@ class Servicio {
     actualizarReceta(recetaNueva){
         
         this.listaRecetas.forEach(recetaVieja => {
-            if(receta.id === id) {
+            if(recetaVieja.id === recetaNueva.id) {
                 //Modificamos los valores viejos de la receta por los nuevos
                 recetaVieja.nombre = recetaNueva.nombre;
                 recetaVieja.ingredientes = recetaNueva.ingredientes;

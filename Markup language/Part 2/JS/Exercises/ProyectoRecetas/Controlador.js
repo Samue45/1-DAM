@@ -1,6 +1,4 @@
 //Importamos las clases
-import Receta from "./receta.js";
-import Ingrediente from "./Ingrediente.js";
 import Servicio from "./servicio.js";
 
 class Controlador{

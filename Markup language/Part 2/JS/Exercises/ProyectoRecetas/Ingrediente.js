@@ -3,7 +3,6 @@ class Ingredientes {
     
     constructor(nombre, calorias, porcentajeMacros){
         this.nombre = nombre;
-        this.cantidad = cantidad;
         this.calorias = calorias;
         this.porcentajeMacros = porcentajeMacros // Es un array de objetos literales => {PorcentajeHidratos : 0,PorcenajeProte : 0,PorcenajeGrasas : 0 }
     }
@@ -17,13 +16,15 @@ calcularCantidadMacros(cantidad){
     // Sabiendo el porcentaje de cada macro podemos calcular cuantos gramos de cada macro tiene
     // Para luego conocer el aporte calórico de cada macro y finalmente saber las calorís del ingrediente en base a la cantidad que se emplee de éste
 
+    let gramosHidratos, gramosGrasa, gramosProte = 0;
+
     //1º Calculamos los gramos de cada macro
     gramosHidratos = (this.porcentajeMacros.porcentajeHidratos * cantidad) / 100;
     gramosProte = (this.porcentajeMacros.porcentajeProte * cantidad) / 100;
     gramosGrasa = (this.porcentajeMacros.porcentajeGrasa  * cantidad) / 100;
 
     // 2º Calculamos las calorías de cada macro
-    this.calcularCaloriasIngredientes(gramosHidratos,gramosProte,gramosGrasa);
+    this.calorias = calcularCaloriasIngredientes(gramosHidratos,gramosProte,gramosGrasa);
 }
 
 calcularCaloriasIngredientes(gramosHidratos, gramosProte, gramosGrasa){

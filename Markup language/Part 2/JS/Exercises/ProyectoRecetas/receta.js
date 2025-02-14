@@ -1,9 +1,9 @@
 class Receta {
 //Constructor
-constructor (id, nombre,{ingredientes,cantidad},descripcion,categoria){
+constructor (id, nombre,ingredientes,descripcion,categoria){
     this.id = id
     this.nombre = nombre;
-    this.ingredientes = ingredientes,cantidad;
+    this.ingredientes = ingredientes;
     this.descripcion = descripcion;
     this.categoria = categoria;
 }
@@ -19,7 +19,7 @@ calcularCalorias(){
     this.ingredientes.forEach( elemento => {
         
         //Obtenemos las calorias de cada ingrediente
-        calcularCantidadMacros(elemento.cantidad)
+        elemento.ingrediente.calcularCantidadMacros(elemento.cantidad);
 
         //Vamos sumando las calorías de cada ingrediente
         caloriasReceta += elemento.ingrediente.getCalorias();
