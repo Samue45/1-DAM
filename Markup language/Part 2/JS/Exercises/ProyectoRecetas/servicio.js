@@ -1,6 +1,7 @@
 import Receta from "./receta.js";
 import Ingrediente from "./Ingrediente.js";
 
+//Los mensajes por consola no deberían estar en el servidor a no ser que sean informativos sobre si la operación falla o es exitosa
 class Servicio {
 
     constructor(){
@@ -86,6 +87,12 @@ class Servicio {
         })
 
     
+    }
+
+    //Método DELETE para eliminar todas las recetas
+    deleteAllRecetas(){
+        this.listaRecetas.splice(0, this.listaRecetas.length);
+        console.log("Todas las recetas han sido eliminadas.");
     }
 
     //Método UPDATE para actualizar una receta 

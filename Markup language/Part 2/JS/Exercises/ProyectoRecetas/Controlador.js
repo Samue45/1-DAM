@@ -22,6 +22,11 @@ class Controlador{
         this.servicio.eliminarReceta(recetaId);
     }
 
+    //Eliminar todas la recetas
+    eliminarAllReceta(){
+        this.servicio.eliminarAllReceta();
+    }
+
     //Actualizar receta
     actualizarReceta(receta){
         this.servicio.actualizarReceta(recetaNueva);
