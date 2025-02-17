@@ -1,11 +1,15 @@
 class Receta {
+//Identificador de la receta
+static contador = 0;
+
 //Constructor
-constructor (id, nombre,ingredientes,descripcion,categoria){
-    this.id = id
+constructor ( nombre,ingredientes,descripcion,categoria){
+    this.id = contador;
     this.nombre = nombre;
     this.ingredientes = ingredientes;
     this.descripcion = descripcion;
     this.categoria = categoria;
+    contador++;
 }
 
 //El aporte calórico de la receta sería la suma del aporte calórico de cada ingrediente

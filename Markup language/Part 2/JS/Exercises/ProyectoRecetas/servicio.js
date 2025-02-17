@@ -20,7 +20,7 @@ class Servicio {
         const aceiteOliva = new Ingredientes('Aceite de oliva', 0, { porcentajeHidratos: 0, porcentajeProte: 0, porcentajeGrasa: 100 });
 
         // Crear receta
-        const receta1 = new Receta(1, 'Ensalada de Pollo', [
+        const receta1 = new Receta('Ensalada de Pollo', [
         { ingrediente: pollo, cantidad: 200 },
         { ingrediente: lechuga, cantidad: 50 },
         { ingrediente: tomate, cantidad: 50 },
@@ -35,7 +35,7 @@ class Servicio {
         const avena = new Ingredientes('Avena', 0, { porcentajeHidratos: 66, porcentajeProte: 16, porcentajeGrasa: 7 });
 
         // Crear receta
-        const receta2 = new Receta(2, 'Batido de Proteínas', [
+        const receta2 = new Receta('Batido de Proteínas', [
         { ingrediente: leche, cantidad: 250 },
         { ingrediente: proteina, cantidad: 30 },
         { ingrediente: plátano, cantidad: 100 },
@@ -50,7 +50,7 @@ class Servicio {
         const aceiteCoco = new Ingredientes('Aceite de coco', 0, { porcentajeHidratos: 0, porcentajeProte: 0, porcentajeGrasa: 100 });
 
         // Crear receta
-        const receta3 = new Receta(3, 'Tortilla de Espinacas', [
+        const receta3 = new Receta('Tortilla de Espinacas', [
         { ingrediente: huevo, cantidad: 3 },
         { ingrediente: espinaca, cantidad: 100 },
         { ingrediente: aceiteCoco, cantidad: 10 }
