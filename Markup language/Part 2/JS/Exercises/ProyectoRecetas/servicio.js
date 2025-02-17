@@ -4,6 +4,9 @@ import Ingrediente from "./Ingrediente.js";
 //Los mensajes por consola no deberían estar en el servidor a no ser que sean informativos sobre si la operación falla o es exitosa
 class Servicio {
 
+    //Sirve para crear propiedades privadas
+    #listaRecetas
+
     constructor(){
         this.listaRecetas = [];
         this.rellenarLista();
@@ -80,7 +83,8 @@ class Servicio {
     deleteRecetaId(recetaId){
         this.listaRecetas.forEach(receta => {
             if(receta.id === recetaId) {
-                console.log("Nombre receta = " + receta.nombre + " Ingredietes = " + receta.ingredientes );
+                //Se actuliza el array y solo se guardan aquellos cuyo id no se quiere eliminar
+                this.listaRecetas = this.listaRecetas.filter(receta => receta.id !== recetaId)
             }else {
                 console.log("Lo sentimos :(, pero esa receta no existe");
             }
@@ -97,6 +101,10 @@ class Servicio {
 
     //Método UPDATE para actualizar una receta 
     actualizarReceta(recetaNueva){
+        /*
+        index = this.listaRecetas.findIndex( r => r.id == recetaNueva.id)
+        */
+
         
         this.listaRecetas.forEach(recetaVieja => {
             if(recetaVieja.id === recetaNueva.id) {
