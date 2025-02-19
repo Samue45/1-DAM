@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
   res.send(getNumber());
 });
 
+//Ejercicio 1
 function getNumber(){
   let randomNumber = Math.floor(Math.random() * 100); // Random number between 0 and 99
   let mensaje = "";
