@@ -8,7 +8,7 @@
             "type": "node",
             "name": "Run Current File",
             "request": "launch",
-            "program": "${workspaceFolder}\\Markup language\\Part 3\\Node\\app.js"
+            "program": "${workspaceFolder}\\Markup language"
         }
     ]
 }

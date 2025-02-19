@@ -13,7 +13,7 @@ app.get('/saludo', (req, res) => {
 });
 
 app.post('/despedida', (req, res) => {
-  res.send('Adiós');
+  res._write('Adiós');
 });
 
 
