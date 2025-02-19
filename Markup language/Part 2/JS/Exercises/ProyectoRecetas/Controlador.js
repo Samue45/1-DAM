@@ -28,12 +28,12 @@ class Controlador{
     }
 
     //Actualizar receta
-    actualizarReceta(receta){
+    actualizarReceta(recetaNueva){
         this.servicio.actualizarReceta(recetaNueva);
     }
 
     //Crear receta
-    crearReceta(receta){
+    crearReceta(recetaNueva){
         this.servicio.crearReceta(recetaNueva);
     }
 
