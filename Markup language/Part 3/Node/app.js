@@ -9,8 +9,21 @@ const port = 3000;
 
 // Ruta básica de prueba
 app.get('/', (req, res) => {
-  res.send('¡Hola, mundo!');
+  res.send(getNumber());
 });
+
+function getNumber(){
+  let randomNumber = Math.floor(Math.random() * 100); // Random number between 0 and 99
+  let mensaje = "";
+
+  if((randomNumber % 2) == 0){
+    mensaje = 'El número es par ' + randomNumber;
+  }else{
+    mensaje = 'El número es impar ' + randomNumber;
+  }
+
+  return mensaje;
+}
 
 // Iniciar el servidor
 app.listen(port, () => {
