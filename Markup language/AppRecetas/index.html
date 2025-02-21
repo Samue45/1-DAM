@@ -7,39 +7,14 @@
     <script src="src/app.js"></script>
 </head>
 <body>
+    <!-- index.html -->
+    <iframe id="home" src="index.html"></iframe>
 
-    <div class="contenedor">
-        
-        <h1>Crea tu receta</h1>
-         <!-- Necesito crear un formulario para añadir las recetas -->
-        <form action="">
-            <p>Nombre</p>
-            <input type="text" placeholder="Nombre">
 
-            <p>Descripción</p>
-            <input type="text" placeholder="Descripción">
+    <h1>Recetas</h1>
 
-            <p>Categoría</p>
-            <select id="Categoria">
-                <option value="desayuno">Desayuno</option>
-                <option value="postres">Postres</option>
-                <option value="almuerzo">Almuerzo</option>
-                <option value="cena">Cena</option>
-            </select>
-           
-
-            <p>Ingredientes</p>
-            <button id="newIgrediente">Añadir ingrediente</button>
-            <br>
-            <ul>
-                <li><input type="text" class="ingrediente" placeholder="Tomate:100g,cal:89"> <button id="removeIngrediente">Eliminar</button></li>
-            </ul>
-            
-
-        </form>
-
-    <!-- La parte del listado se creará dinámicamente en app.js (controlador) -->
-    </div>
+    <h2>Lista de recetas</h2>
+    
    
 </body>
 </html>
