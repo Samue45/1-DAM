@@ -1,44 +1,12 @@
-import { ServicioRecetas } from "./servicioRecetas";
-//Comienzo el controlador
-//instancio el servicio
-class Controlador {
-
-    constructor (){
-        this.servicio = new ServicioRecetas();
-    }
-
-    //GET(/recetas)
-    obtenerRecetas(){
-        return this.servicio.obtenerRecetas();
-    }
-    //GET(/receta{id})
-    obtenerReceta(id){
-        return this.servicio.obtenerRecetaPorId(id)
-    }
-    //POST(/receta)
-    agregarReceta(nombre, descripcion, categoria, ingredientes) {
-        this.servicio.agregarReceta(nombre, descripcion, categoria, ingredientes);
-    }
-    //UPDATE(/receta{id})
-    agregarReceta(id, nuevosDatos) {
-        this.servicio.actualizarReceta(id, nuevosDatos);
-    }
-    //DELETE(/receta{id})
-    eliminarReceta(id) {
-        this.servicio.eliminarReceta(id);
-    }
-
-}
-
-//Para diferenciar los DOMS de los 2 archivos html
-const home = document.getElementById('home');
-const newReceta = document.getElementById('new-receta');
-
+import { Controlador } from "./controlador.js";
 
 //Creamos una instancia de Controlador
 let controlador = new Controlador();
 //Array global con todas las recetas
 let arrayRecetas = controlador.obtenerRecetas();
+//Cuerpo tabla
+let cuerpo;
+
 
 
 //1.Espero que la página cargue.
@@ -49,7 +17,15 @@ window.addEventListener('load',main);
 //Recordad que cada item (li) tiene un botón borrar al que asociaremos un manejador.
 function main (){
 
-    crearTabla();
+     //Método para crear la tabla
+     crearTabla();
+
+    //Bóton para crear una nueva receta
+    document.getElementById('new-receta').addEventListener('click',crearReceta)
+
+   
+    
+
     
 }
 
@@ -58,63 +34,109 @@ function crearTabla(){
     let tabla = document.createElement('table');
 
     //Creamos la cabecera de la tabla
-    crearCabeceraTabla();
+    crearCabeceraTabla(tabla);
 
     //Creamos el cuerpo de la tabla
-    crearCuerpoTabla();
+    crearCuerpoTabla(tabla);
 
     //Añadimos la tabla al DOM, tengo que especificar que es el DOM de index.html 
-    home.appendChild(tabla);
+    document.getElementById('lista-recetas').appendChild(tabla);
 
 }
 function crearCabeceraTabla(tabla){
 
-    //Creamos un tr
-    let cabecera = document.createElement('tr');
+    //Creamos un thead
+    let cabecera = document.createElement('thead');
 
-    //Dentro de la fila th, creamos una columna(td) por cada propiedad de la receta
-    arrayRecetas.forEach(receta =>{
+    //Creamos una fila para la cabecera
+    let filaHead = document.createElement('tr');
+    
 
-        // Obtener los nombres de las propiedades de la receta
-        let nombresPropiedades = Object.keys(receta);
+    
+    // Obtenemos las propiedades de la primera receta para usarlas como cabeceras
+    if (arrayRecetas.length > 0) {
+        let nombresPropiedades = Object.keys(arrayRecetas[0]);
 
-        // Añadir los nombres de las propiedades como cabeceras de columna
+        // Añadimos los nombres de las propiedades como cabeceras de columna
         nombresPropiedades.forEach(propiedad => {
-        let columna = document.createElement('th');
-        columna.textContent = propiedad;
-        cabecera.appendChild(columna);
+
+            if(propiedad !== 'id'){
+                let columna = document.createElement('th');
+                columna.textContent = propiedad; // Ponemos el nombre de la propiedad
+                filaHead.appendChild(columna);
+            }
+            
         });
-        
-    })
+    }
+
+    //Añadimos la fila al thead
+    cabecera.appendChild(filaHead);
 
     //Añadimos la cabecera a la tabla
     tabla.appendChild(cabecera);
 }
 
 function crearCuerpoTabla(tabla){
-    //Creamos un tr
-    let cuerpo = document.createElement('tr');
+    //Creamos un tbody
+    cuerpo = document.createElement('tbody');
 
-    //Dentro de la fila tr, creamos una columna(td) por cada propiedad de la receta
     arrayRecetas.forEach(receta =>{
 
-        //Recerremos cada receta como si fuera un array
-        Object.keys(receta).forEach(propiedad => {
-            let columna = document.createElement('td');
-            columna.textContent = propiedad.value
+        //Por cada receta creamos un a nueva fila
+        let filaBody = document.createElement('tr');
 
-            //Añadimos cada columna al cuerpo
-            cuerpo.appendChild(columna);
+        //Obtenemos los datos de cada receta
+        Object.keys(receta).forEach(propiedad => {
+
+            if(typeof receta[propiedad] !== 'number' ){
+            let columna = document.createElement('td');
+            columna.textContent = receta[propiedad]; // Accedemos al valor de la propiedad
+
+
+            //Añadimos cada columna a la fila
+            filaBody.appendChild(columna);
+            }
         })
+
+        //Creamos filas nuevas
+
         
+        //Añadimos la fila al cuerpo
+        cuerpo.appendChild(filaBody);
     })
 
-    //Añadimos la cabecera a la tabla
+    //Añadimos el cuerpo a la tabla
     tabla.appendChild(cuerpo);
 
 }
 //3.Manejador de evento del botón +.
 //Cojo los datos del formulario y llamo al método del servicio añadirReceta
+function crearReceta(){
+
+    // 1º Obtenemos los elementos del DOM
+    let nombre = document.getElementById('nombre');
+    let descripcion = document.getElementById('descripcion');
+    let categoria = document.getElementById('categoria');
+    // Lista de ingrdientes
+
+    // 2º Llamamos al método agregarRecetas de muestro Controlador y le pasamos los valores de cada elemento
+    controlador.agregarReceta(nombre.value, descripcion.value, categoria.value, null);
+
+    //Receta nueva en la tabla
+    let filaBody = document.createElement('tr');
+    let receta = [nombre.value, descripcion.value, categoria.value, null];
+
+    receta.forEach(propiedad => {
+        
+        let columna = document.createElement('td');
+        columna.textContent = propiedad; 
+
+        filaBody.appendChild(columna);
+    })
+
+    cuerpo.appendChild(filaBody);
+    
+}
 
 //4.Manejador de los botones -.
 //Tengo que distingir (e.target) de qué receta se trata y llamar método del servicio borrar.
