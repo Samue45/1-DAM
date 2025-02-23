@@ -4,8 +4,8 @@ import { Controlador } from "./controlador.js";
 let controlador = new Controlador();
 //Array global con todas las recetas
 let arrayRecetas = controlador.obtenerRecetas();
-//Cuerpo tabla
-let cuerpo;
+//Tabla
+let cuerpo = document.createElement('tbody');
 
 
 
@@ -23,10 +23,10 @@ function main (){
     //Bóton para crear una nueva receta
     document.getElementById('new-receta').addEventListener('click',crearReceta)
 
-   
-    
-
-    
+    //Botón para crear un nuevo ingrediente
+    document.getElementById('newIgrediente').addEventListener('click',crearIgrediente)
+    //Botón para eliminar un  ingrediente
+    document.getElementById('removeIngrediente').addEventListener('click',eliminarIgrediente)
 }
 
 function crearTabla(){
@@ -77,30 +77,34 @@ function crearCabeceraTabla(tabla){
 }
 
 function crearCuerpoTabla(tabla){
-    //Creamos un tbody
-    cuerpo = document.createElement('tbody');
+    //El cuerpo es global, para poder añadir una nueva fila cuando se cree una nueva receta
 
     arrayRecetas.forEach(receta =>{
 
-        //Por cada receta creamos un a nueva fila
+        //Por cada receta creamos un a nueva fila y una lista para los diferentes ingredientes
         let filaBody = document.createElement('tr');
 
-        //Obtenemos los datos de cada receta
+        // Recorremos las propiedades de la receta
         Object.keys(receta).forEach(propiedad => {
-
-            if(typeof receta[propiedad] !== 'number' ){
             let columna = document.createElement('td');
-            columna.textContent = receta[propiedad]; // Accedemos al valor de la propiedad
+    
+            if (typeof receta[propiedad] !== 'number' && !Array.isArray(receta[propiedad])) {
+                // Si no es un número ni un array, mostramos el valor simple
+                columna.textContent = receta[propiedad]; // Accedemos al valor de la propiedad
+                filaBody.appendChild(columna);
+            } else if (Array.isArray(receta[propiedad])) {
+             // Si la propiedad es un array 
+                let ulIngredientes = document.createElement('ul'); // Lista para los ingredientes
+                    receta[propiedad].forEach(ingrediente => {
+                        let liIngrediente = document.createElement('li');
+                        liIngrediente.textContent = `${ingrediente.ingrediente.nombre}: ${ingrediente.cantidad}g`; // Mostramos nombre y cantidad
+                        ulIngredientes.appendChild(liIngrediente);
+                    });
 
-
-            //Añadimos cada columna a la fila
-            filaBody.appendChild(columna);
+                columna.appendChild(ulIngredientes);
+                filaBody.appendChild(columna);
             }
-        })
-
-        //Creamos filas nuevas
-
-        
+        });
         //Añadimos la fila al cuerpo
         cuerpo.appendChild(filaBody);
     })
@@ -111,35 +115,73 @@ function crearCuerpoTabla(tabla){
 }
 //3.Manejador de evento del botón +.
 //Cojo los datos del formulario y llamo al método del servicio añadirReceta
-function crearReceta(){
+function crearReceta(event){
 
-    // 1º Obtenemos los elementos del DOM
-    let nombre = document.getElementById('nombre');
-    let descripcion = document.getElementById('descripcion');
-    let categoria = document.getElementById('categoria');
-    // Lista de ingrdientes
+     // 1º Prevenir el comportamiento por defecto del formulario (recarga de la página)
+     event.preventDefault();
 
-    // 2º Llamamos al método agregarRecetas de muestro Controlador y le pasamos los valores de cada elemento
-    controlador.agregarReceta(nombre.value, descripcion.value, categoria.value, null);
-
-    //Receta nueva en la tabla
-    let filaBody = document.createElement('tr');
-    let receta = [nombre.value, descripcion.value, categoria.value, null];
-
-    receta.forEach(propiedad => {
-        
-        let columna = document.createElement('td');
-        columna.textContent = propiedad; 
-
-        filaBody.appendChild(columna);
-    })
-
-    cuerpo.appendChild(filaBody);
+     // 1º Obtenemos los elementos del DOM
+     let nombre = document.getElementById('nombre');
+     let descripcion = document.getElementById('descripcion');
+     let categoria = document.getElementById('categoria');
+ 
+     // 2º Llamamos al método agregarReceta de nuestro Controlador y le pasamos los valores de cada elemento
+     controlador.agregarReceta(nombre.value, descripcion.value, categoria.value, []);  // Aquí deberías agregar la receta al servicio
+ 
+     // 3º Actualizamos la lista de recetas
+     arrayRecetas = controlador.obtenerRecetas();  // Actualizamos el arrayRecetas con las recetas más recientes
+ 
+     // 4º Creamos una nueva fila para la receta y la añadimos al cuerpo de nuestra tabla
+     let filaBody = document.createElement('tr');
+     let arrayPropiedades = [nombre.value, descripcion.value, categoria.value, {}];
+ 
+     arrayPropiedades.forEach(propiedad => {
+         let columna = document.createElement('td');
+         columna.textContent = propiedad; 
+         filaBody.appendChild(columna);
+     })
+ 
+     cuerpo.appendChild(filaBody);
     
 }
 
 //4.Manejador de los botones -.
 //Tengo que distingir (e.target) de qué receta se trata y llamar método del servicio borrar.
+function crearIgrediente(event){
+     // 1º Prevenir el comportamiento por defecto del formulario (recarga de la página)
+     event.preventDefault();
 
+    //1º Obtenemos el ul del DOM
+    let listaIngredientes = document.getElementById('lista-ingredientes');
+    //2º Creamos un nuevo li, dentro de este creamos un nuevo input y un button
+    let ingrediente = document.createElement('li');
+    // Input con los valores del ingrediente    
+    let valores = document.createElement('input');
+        valores.type ='text';
+        valores.placeholder = 'Tomate:100g,cal:89';
+        valores.classList.add('form', 'input');
+    // Botón para eliminar el ingrediente   
+    let button = document.createElement('button');
+    button.textContent ='Eliminar';
+    button.classList.add('form', 'button')
+
+    ingrediente.appendChild(valores);
+    ingrediente.appendChild(button);
+    // 3º Añadimos el nuevo li al ul del DOM
+    listaIngredientes.appendChild(ingrediente);
+}
+
+
+function eliminarIgrediente(event, listaIngredientes){
+    // 1º Prevenir el comportamiento por defecto del formulario (recarga de la página)
+    event.preventDefault();
+
+    //Conocer que botón dentro del li de una lista(ul) ha sido pulsado
+    
+}
 //Notas: Cada vez que borro o añado una receta deo actualizar la lista de receta. Es mejor tener una
 //función de apoyo para llamarla cada vez que quiera volver a crear la vista.
+
+//Cosas por hacer
+// Terminar función para eliminar un ingrediente
+// Pasar los datos de ingredientes a un array[ingrediente, cantidad] cuando creamos una nueva receta

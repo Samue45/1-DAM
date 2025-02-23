@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="module" src="src/app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <h1>Recetas</h1>
 
-    <h2>Lista de recetas</h2>
-    <div id="lista-recetas"></div>
-    <br>
     <div class="contenedor">
         
         <h1>Crea tu receta</h1>
@@ -25,7 +23,7 @@
             <input id="descripcion" type="text" placeholder="Descripción">
 
             <p>Categoría</p>
-            <select id="Categoria">
+            <select id="categoria">
                 <option value="desayuno">Desayuno</option>
                 <option value="postres">Postres</option>
                 <option value="almuerzo">Almuerzo</option>
@@ -36,7 +34,7 @@
             <p>Ingredientes</p>
             <button id="newIgrediente">Añadir ingrediente</button>
             <br>
-            <ul>
+            <ul id="lista-ingredientes">
                 <li><input type="text" class="ingrediente" placeholder="Tomate:100g,cal:89"> <button id="removeIngrediente">Eliminar</button></li>
             </ul>
             
@@ -45,5 +43,9 @@
         </form>
 
     </div>
+
+    
+    <h2>Lista de recetas</h2>
+    <div id="lista-recetas"></div>
 </body>
 </html>
