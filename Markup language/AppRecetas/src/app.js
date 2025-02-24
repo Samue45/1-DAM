@@ -25,8 +25,8 @@ function main (){
 
     //Botón para crear un nuevo ingrediente
     document.getElementById('newIgrediente').addEventListener('click',crearIgrediente)
-    //Botón para eliminar un  ingrediente
-    document.getElementById('removeIngrediente').addEventListener('click',eliminarIgrediente)
+    //Botón para eliminar una receta
+
 }
 
 function crearTabla(){
@@ -103,6 +103,15 @@ function crearCuerpoTabla(tabla){
 
                 columna.appendChild(ulIngredientes);
                 filaBody.appendChild(columna);
+
+                let columnaEliminar = document.createElement('td');
+
+                let button = document.createElement('button');
+                button.textContent = 'Eliminar';
+
+                columnaEliminar.appendChild(button);
+
+                filaBody.appendChild(columnaEliminar)
             }
         });
         //Añadimos la fila al cuerpo
@@ -151,37 +160,14 @@ function crearIgrediente(event){
      // 1º Prevenir el comportamiento por defecto del formulario (recarga de la página)
      event.preventDefault();
 
-    //1º Obtenemos el ul del DOM
-    let listaIngredientes = document.getElementById('lista-ingredientes');
-    //2º Creamos un nuevo li, dentro de este creamos un nuevo input y un button
-    let ingrediente = document.createElement('li');
-    // Input con los valores del ingrediente    
-    let valores = document.createElement('input');
-        valores.type ='text';
-        valores.placeholder = 'Tomate:100g,cal:89';
-        valores.classList.add('form', 'input');
-    // Botón para eliminar el ingrediente   
-    let button = document.createElement('button');
-    button.textContent ='Eliminar';
-    button.classList.add('form', 'button')
-
-    ingrediente.appendChild(valores);
-    ingrediente.appendChild(button);
-    // 3º Añadimos el nuevo li al ul del DOM
-    listaIngredientes.appendChild(ingrediente);
+    //Mejora
+    // Cuando se añade un nuevo ingrediente guardamos los datos anteriores en un array y limpiamos los inputs
 }
 
-
-function eliminarIgrediente(event, listaIngredientes){
-    // 1º Prevenir el comportamiento por defecto del formulario (recarga de la página)
-    event.preventDefault();
-
-    //Conocer que botón dentro del li de una lista(ul) ha sido pulsado
-    
-}
 //Notas: Cada vez que borro o añado una receta deo actualizar la lista de receta. Es mejor tener una
 //función de apoyo para llamarla cada vez que quiera volver a crear la vista.
 
 //Cosas por hacer
-// Terminar función para eliminar un ingrediente
+// Añadir botón para eliminar receta
+// Terminar función para eliminar una receta
 // Pasar los datos de ingredientes a un array[ingrediente, cantidad] cuando creamos una nueva receta
