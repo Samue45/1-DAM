@@ -177,6 +177,7 @@ function crearIgrediente(event){
 //función de apoyo para llamarla cada vez que quiera volver a crear la vista.
 
 //Cosas por hacer
-// Añadir botón para eliminar receta
+
 // Terminar función para eliminar una receta
 // Pasar los datos de ingredientes a un array[ingrediente, cantidad] cuando creamos una nueva receta
+// Modificar función añadir ingrediente
