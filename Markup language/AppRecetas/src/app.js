@@ -149,6 +149,15 @@ function crearReceta(event){
          columna.textContent = propiedad; 
          filaBody.appendChild(columna);
      })
+
+     let columnaEliminar = document.createElement('td');
+
+                let button = document.createElement('button');
+                button.textContent = 'Eliminar';
+
+                columnaEliminar.appendChild(button);
+
+                filaBody.appendChild(columnaEliminar)
  
      cuerpo.appendChild(filaBody);
     
