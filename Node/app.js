@@ -36,8 +36,8 @@ app.listen(port, () => {
 });
 
 // Ruta para obtener todos los usuarios
-app.get('/usuarios', (req, res) => {
-  const sql = 'SELECT * FROM usuarios'; // Consulta SQL
+app.get('/usuario', (req, res) => {
+  const sql = 'SELECT * FROM usuario'; // Consulta SQL
 
   connection.query(sql, (err, results) => {
     if (err) {
