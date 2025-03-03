@@ -382,3 +382,18 @@ app.delete('/cursos/:id', (req, res) => {
     });
   });
 });
+
+//Endpoints para la tabla inscripciones
+
+// POST /inscripciones → Inscribir un estudiante en un curso
+app.post('/inscripciones', (req, res) => {
+});
+
+
+// GET /inscripciones → Listar todos los cursos
+app.get('/inscripciones', (req, res) => {
+});
+
+// DELETE /inscripciones/:id → Eliminar una inscripción
+app.delete('/inscripciones/:id', (req, res) => {
+});
