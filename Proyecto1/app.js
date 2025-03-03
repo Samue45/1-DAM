@@ -1,4 +1,5 @@
 // Importa las dependencias
+const e = require('express');
 const express = require('express');
 const mysql = require('mysql2');
 
@@ -18,6 +19,7 @@ const connection = mysql.createConnection({
   host: 'localhost', // Dirección del servidor de base de datos
   user: 'root',      // Tu usuario de MySQL
   password: '',      // Tu contraseña de MySQL
+  database: 'escuela'
 });
 
 // Conecta a la base de datos
@@ -95,10 +97,30 @@ app.listen(port, () => {
 
 
 //Endpoints para la tabla estudiante
-app.post('/estudiante', (req,res) => {
-  // 1º Conocer los datos que me ha enviado el usuario y guardarlos en variables por seperado
-  const {nombre, email, edad} = req;
 
-  const crearEstudiante = 'INSERT INTO estudiante(nombre, email, edad) VALUES ()';
+// Crear un estudiante
+app.post('/estudiante', (req, res) => {
+  // Conocer los datos que me ha enviado el usuario y guardarlos en variables
+  const { nombre, email, edad } = req.body;
 
-})
+
+  // Log los datos recibidos
+  console.log("Datos recibidos:", { nombre, email, edad });
+
+  // Validar que los datos no sean nulos o vacíos
+  if (!nombre || !email || !edad) {
+    return res.status(400).json({ error: 'Todos los campos (nombre, email, edad) son obligatorios' });
+  }
+
+  // Consulta SQL para insertar el estudiante
+  const crearEstudiante = 'INSERT INTO estudiantes (nombre, email, edad) VALUES (?, ?, ?)';
+
+  // Realizamos la consulta sobre la base de datos
+  connection.query(crearEstudiante, [nombre, email, edad], (err, results) => {
+    if (err) {
+      console.error("Error al crear el estudiante:", err);
+      return res.status(500).json({ error: 'Error al crear estudiante' });
+    }
+    res.status(200).json({ message: 'Estudiante creado con éxito' });
+  });
+});
