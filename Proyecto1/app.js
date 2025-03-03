@@ -30,117 +30,75 @@ connection.connect((err) => {
   }
 });
 
-// Ruta para crear la base de datos
-app.post('/crear-base-de-datos', (req, res) => {
+// Ruta para crear la base de datos y las tablas
+app.post('/crear-base-de-datos-y-tablas', (req, res) => {
+  // Primero creamos la base de datos (si no existe)
   const crearBaseDeDatosQuery = 'CREATE DATABASE IF NOT EXISTS escuela';
 
-  // Ejecuta la consulta para crear la base de datos
   connection.query(crearBaseDeDatosQuery, (err, results) => {
     if (err) {
       console.error('Error al crear la base de datos:', err);
       return res.status(500).json({ error: 'Error al crear la base de datos' });
     }
-    res.status(200).json({ message: 'Base de datos creada con éxito' });
-  });
-});
 
-
-//--------------------------------------------------Creación de las Tablas de la Base de Datos-------------------------------------
-
-// Ruta para crear la tabla de estudiantes
-app.post('/crear-tabla', (req, res) => {
-  // Cambia la conexión a la base de datos 'escuela'
-  connection.changeUser({ database: 'escuela' }, (err) => {
-    if (err) {
-      console.error('Error al cambiar la base de datos:', err);
-      return res.status(500).json({ error: 'Error al cambiar la base de datos' });
-    }
-
-    // Consulta SQL para crear la tabla de estudiantes
-    const crearTablaQuery = `
-      CREATE TABLE IF NOT EXISTS estudiantes (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nombre VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL UNIQUE,
-        edad INT
-      );
-    `;
-
-    // Ejecuta la consulta para crear la tabla
-    connection.query(crearTablaQuery, (err, results) => {
+    // Ahora cambiamos a la base de datos 'escuela'
+    connection.changeUser({ database: 'escuela' }, (err) => {
       if (err) {
-        console.error('Error al crear la tabla:', err);
-        return res.status(500).json({ error: 'Error al crear la tabla' });
+        console.error('Error al cambiar a la base de datos escuela:', err);
+        return res.status(500).json({ error: 'Error al cambiar a la base de datos escuela' });
       }
-      res.status(200).json({ message: 'Tabla de estudiantes creada con éxito' });
+
+      // Creamos las tablas en la base de datos 'escuela'
+      const crearTablasQuery = `
+        CREATE TABLE IF NOT EXISTS estudiantes (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          nombre VARCHAR(255) NOT NULL,
+          email VARCHAR(255) NOT NULL UNIQUE,
+          edad INT
+        );
+        
+        CREATE TABLE IF NOT EXISTS cursos (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          nombre VARCHAR(255) NOT NULL,
+          descripcion TEXT,
+          duracion INT NOT NULL
+        );
+
+        CREATE TABLE IF NOT EXISTS inscripciones (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          estudianteId INT,
+          cursoId INT,
+          fechaInscripcion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          FOREIGN KEY (estudianteId) REFERENCES estudiantes(id) ON DELETE CASCADE,
+          FOREIGN KEY (cursoId) REFERENCES cursos(id) ON DELETE CASCADE
+        );
+      `;
+
+      // Ejecutamos la consulta para crear las tablas
+      connection.query(crearTablasQuery, (err, results) => {
+        if (err) {
+          console.error('Error al crear las tablas:', err);
+          return res.status(500).json({ error: 'Error al crear las tablas' });
+        }
+        res.status(200).json({ message: 'Base de datos y tablas creadas con éxito' });
+      });
     });
   });
 });
 
-// Ruta para crear la tabla de cursos
-app.post('/crear-tabla-cursos', (req, res) => {
-  // Cambia la conexión a la base de datos 'escuela'
-  connection.changeUser({ database: 'escuela' }, (err) => {
-    if (err) {
-      console.error('Error al cambiar la base de datos:', err);
-      return res.status(500).json({ error: 'Error al cambiar la base de datos' });
-    }
-
-    // Consulta SQL para crear la tabla de cursos
-    const crearTablaCursosQuery = `
-      CREATE TABLE IF NOT EXISTS cursos (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nombre VARCHAR(255) NOT NULL,
-        descripcion TEXT,
-        duracion INT NOT NULL
-      );
-    `;
-
-    // Ejecuta la consulta para crear la tabla
-    connection.query(crearTablaCursosQuery, (err, results) => {
-      if (err) {
-        console.error('Error al crear la tabla de cursos:', err);
-        return res.status(500).json({ error: 'Error al crear la tabla de cursos' });
-      }
-      res.status(200).json({ message: 'Tabla de cursos creada con éxito' });
-    });
-  });
-});
-
-// Ruta para crear la tabla de inscripciones (relación N:M entre estudiantes y cursos)
-app.post('/crear-tabla-inscripciones', (req, res) => {
-  // Cambia la conexión a la base de datos 'escuela'
-  connection.changeUser({ database: 'escuela' }, (err) => {
-    if (err) {
-      console.error('Error al cambiar la base de datos:', err);
-      return res.status(500).json({ error: 'Error al cambiar la base de datos' });
-    }
-
-    // Consulta SQL para crear la tabla de inscripciones
-    const crearTablaInscripcionesQuery = `
-      CREATE TABLE IF NOT EXISTS inscripciones (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        estudianteId INT,
-        cursoId INT,
-        fechaInscripcion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        FOREIGN KEY (estudianteId) REFERENCES estudiantes(id) ON DELETE CASCADE,
-        FOREIGN KEY (cursoId) REFERENCES cursos(id) ON DELETE CASCADE
-      );
-    `;
-
-    // Ejecuta la consulta para crear la tabla
-    connection.query(crearTablaInscripcionesQuery, (err, results) => {
-      if (err) {
-        console.error('Error al crear la tabla de inscripciones:', err);
-        return res.status(500).json({ error: 'Error al crear la tabla de inscripciones' });
-      }
-      res.status(200).json({ message: 'Tabla de inscripciones creada con éxito' });
-    });
-  });
-});
-
-// ------------------------------ Inicio del Servidor------------------------
 // Inicia el servidor
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });
+
+// --------------------------- Endpoints del Backend ------------------
+
+
+//Endpoints para la tabla estudiante
+app.post('/estudiante', (req,res) => {
+  // 1º Conocer los datos que me ha enviado el usuario y guardarlos en variables por seperado
+  const {nombre, email, edad} = req;
+
+  const crearEstudiante = 'INSERT INTO estudiante(nombre, email, edad) VALUES ()';
+
+})
