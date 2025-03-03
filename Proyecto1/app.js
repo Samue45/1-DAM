@@ -98,14 +98,10 @@ app.listen(port, () => {
 
 //Endpoints para la tabla estudiante
 
-// Crear un estudiante
+// POST /estudiantes → Crear un estudiante
 app.post('/estudiante', (req, res) => {
-  // Conocer los datos que me ha enviado el usuario y guardarlos en variables
+  // Extraemos los datos que se envían en formato JSON desde req.body
   const { nombre, email, edad } = req.body;
-
-
-  // Log los datos recibidos
-  console.log("Datos recibidos:", { nombre, email, edad });
 
   // Validar que los datos no sean nulos o vacíos
   if (!nombre || !email || !edad) {
@@ -122,5 +118,137 @@ app.post('/estudiante', (req, res) => {
       return res.status(500).json({ error: 'Error al crear estudiante' });
     }
     res.status(200).json({ message: 'Estudiante creado con éxito' });
+  });
+});
+
+// GET /estudiantes → Listar todos los estudiantes
+app.get('/estudiantes', (req,res) => {
+
+  //No recibimos ningún dato a tener en cuenta de parte del frontend
+
+  //Creamos la consulta SQL
+  const obtenerTodosEstudiantes = 'SELECT * FROM estudiantes';
+
+  // Realizamos la consulta
+  connection.query(obtenerTodosEstudiantes, (err,results) => {
+    if(err){
+      console.error("Error al buscar a los estudaintes ", err);
+      return res.status(500).json({ error : "Error al encontrar a los estudiantes"});
+    }
+
+    
+    // 4º Verificamos si encontramos al estudiante
+    if (results.length === 0) {
+      return res.status(404).json({ error: 'Estudiantes no encontrados' });
+    }
+
+    // 5º Enviamos los datos del estudiante si es encontrado
+    res.status(200).json({
+      message: 'Estudiantes encontrados con éxito',
+      estudiante: results // Devolvemos el primer estudiante encontrado
+    });
+  });
+});
+
+// GET /estudiantes/:id → Obtener un estudiante por ID
+app.get('/estudiante/:id', (req, res) => {
+  // 1º Extraemos el id pasado en la URL
+  const id = req.params.id;
+
+  // 2º Creamos la consulta SQL
+  const buscarEstudiante = 'SELECT * FROM estudiantes WHERE id = ?';
+
+  // 3º Realizamos la consulta a la base de datos
+  connection.query(buscarEstudiante, [id], (err, results) => {
+    if (err) {
+      console.error("Error al buscar el estudiante:", err);
+      return res.status(500).json({ error: 'Error al buscar estudiante' });
+    }
+
+    // 4º Verificamos si encontramos al estudiante
+    if (results.length === 0) {
+      return res.status(404).json({ error: 'Estudiante no encontrado' });
+    }
+
+    // 5º Enviamos los datos del estudiante si es encontrado
+    res.status(200).json({
+      message: 'Estudiante encontrado con éxito',
+      estudiante: results[0] // Devolvemos el primer estudiante encontrado
+    });
+  });
+});
+
+
+// PUT /estudiante/:id → Actualizar un estudiante
+app.put('/estudiante/:id', (req, res) => {
+  // 1º Extraemos los datos enviados en el cuerpo de la solicitud
+  const { nombre, email, edad } = req.body;
+  
+  // 2º Extraemos el id pasado en la URL
+  const id = req.params.id;
+
+  // 3º Validamos que los campos necesarios hayan sido proporcionados
+  if (!nombre || !email || !edad) {
+    return res.status(400).json({ error: 'Todos los campos (nombre, email, edad) son obligatorios' });
+  }
+
+  // 4º Creamos la consulta SQL
+  const actualizarEstudiante = 'UPDATE estudiantes SET nombre = ?, email = ?, edad = ? WHERE id = ?';
+
+  // 5º Realizamos la consulta a la base de datos
+  connection.query(actualizarEstudiante, [nombre, email, edad, id], (err, results) => {
+    if (err) {
+      console.log("Error al actualizar el estudiante:", err);
+      return res.status(500).json({ error: 'Error al actualizar el estudiante' });
+    }
+
+    // 6º Comprobamos si se actualizó el estudiante
+    if (results.affectedRows === 0) {
+      return res.status(404).json({ error: 'Estudiante no encontrado' });
+    }
+
+    // 7º Enviamos un mensaje de éxito
+    res.status(200).json({
+      message: 'Estudiante actualizado con éxito',
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+// DELETE /estudiante/:id → Eliminar un estudiante
+app.delete('/estudiante/:id', (req, res) => {
+  // 1º Guardamos el id en una constante
+  const id = req.params.id;
+
+  // 2º Creamos la consulta SQL
+  const eliminarEstudiante = 'DELETE FROM estudiantes WHERE id = ?';
+
+  // 3º Realizamos la consulta
+  connection.query(eliminarEstudiante, [id], (err, results) => {
+    
+    // 4º Manejamos errores en la consulta SQL
+    if (err) {
+      console.log("Error al eliminar el estudiante:", err);
+      return res.status(500).json({ error: 'Error al eliminar el estudiante' });
+    }
+
+    // 5º Comprobamos si se eliminó algún estudiante
+    if (results.affectedRows === 0) {
+      return res.status(404).json({ error: 'Estudiante no encontrado' });
+    }
+
+    // 6º Enviamos un mensaje de confirmación
+    res.status(200).json({
+      message: 'Estudiante eliminado con éxito',
+    });
   });
 });
