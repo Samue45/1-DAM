@@ -19,11 +19,12 @@ export class Servicio{
 
     // Cuando instanciamos el servicio se determina el nivel de dificultad del juego para
     // definir el tamaño de cada Array y el número de intentos
-    constructor(nivelDificultad){
-        this.ininializacionDatos = this.setDificultad(nivelDificultad);
+    constructor(){
+        this.ininializacionDatos = {};
     }
 
-    //Método de devuelve un objeto literal con los datos del juego ya definidos
+    //Método para establecer el nivel de dificultad del juego
+    // Devuelve un objeto literal con los datos del juego ya inicializados
     // Los niveles de dificultad son 3 y están representados por números
     // 0 = Fácil, 1 = Medio, 2 = Difícil 
     setDificultad(nivelDificultad){
@@ -33,25 +34,28 @@ export class Servicio{
         switch(nivelDificultad){
             case 0:
                 ininializacionDatos = {
-                    solucion : arraySolucion[3],
-                    pistas : arrayPistas[3],
-                    historial : arrayRespuestas[3],
+                    solucion : new arraySolucion(3),
+                    pistas : new arraySolucion(3),
+                    historial : new arraySolucion(3),
+                    colores : new arrayColores(3),
                     numberIntentos : 15
                 }
                 break;
             case 1:
                 ininializacionDatos = {
-                    solucion : arraySolucion[5],
-                    pistas : arrayPistas[5],
-                    historial : arrayRespuestas[5],
+                    solucion : new arraySolucion(5),
+                    pistas : new arraySolucion(5),
+                    historial : new arraySolucion(5),
+                    colores : new arrayColores(5),
                     numberIntentos : 10
                 }
                 break;
             case 2:
                 ininializacionDatos = {
-                    solucion : arraySolucion[7],
-                    pistas : arrayPistas[7],
-                    historial : arrayRespuestas[7],
+                    solucion : new arraySolucion(7),
+                    pistas : new arraySolucion(7),
+                    historial : new arraySolucion(7),
+                    colores : new arrayColores(10),
                     numberIntentos : 6
                 }
                 break;
@@ -63,7 +67,7 @@ export class Servicio{
         return ininializacionDatos;
     }
 
-    // Método que genera una combinación de colores aleatoria y la guarada en el arrayRespuesta inicializado en el constructor
+    // Método que genera una combinación de colores aleatoria y la guarda en el arrayRespuesta inicializado en el constructor
     crearSolucion(){
 
         // 1º Obtenemos el arrayRespuesta que va a guardar la combiinación de colores generada
@@ -76,6 +80,8 @@ export class Servicio{
             //Guardamos cada número aleatorio en el arrayRespuesta
             arraySolucion.push(randomNumber);
         }
+
+        return arraySolucion;
     }
 
     //Método que permite comprobar la respuesta del usuario con la solución
@@ -126,23 +132,24 @@ export class Servicio{
     // El número 4 significa que ha ahbido un error , ya que el número de intentos no puede ser menos a 0
     finJuego(arrayPistas){
 
+        let respuesta = 0;
         // Si el jugador ha acertado significa que el array de pista solo contiene 0
         // Si el jugador no ha acertado significa que el array de pista contiene 1 o 2
         // Si no ha acertado pueden darse 2 casos : 1º No ha acertado pero sigue tiendo más intentos o 2º No ha acertado y se ha quedado sin intentos
         if(!arrayPistas.contains(0)){
             // Comprobamos el número de intentos
             // Que debe ir disminuyendo por cada respuesta que envie el usuario
-            this.continua(this.ininializacionDatos.numberIntentos);
+            respuesta = this.continua(this.ininializacionDatos.numberIntentos);
 
             this.ininializacionDatos.numberIntentos - 1;
         }
 
         //Se sale del bucle que inicia el juego
-        return 0;
+        return respuesta;
 
     }
 
-    // Método que determna si el jugador puede continuar jugando
+    // Método privado que determina si el jugador puede continuar jugando
     continua(number){
 
         if(number === 0) {
@@ -153,6 +160,30 @@ export class Servicio{
             return 4;
         }
 
+    }
+
+    // Método para obtener el número de intentos que tiene el usuario
+    getNumberIntentos(){
+        return this.ininializacionDatos.numberIntentos;
+    }
+
+    // Método que devuelve los colores que debe usar el usuario para jugar
+    getPaletaColores(){
+
+        let arrayColores = this.ininializacionDatos.colores;
+        //Según el tamaño del array de colores generado al iniciar el servicio, el usuario tendrá mayor o menor variedad de colores para elegir
+        arrayColores.forEach(espacio => {
+            // Por cada espacio disponible en el array de Colores, añadimos un color
+            // Si el array de colores de de tamaño 3 , sólo meteremos los colores del 0 al 2
+
+            // Recorremos el objeto literal Color y obtenemos el número asociado a cada color para luego guardarlo en 
+            // el array de colores en base al tamaño de éste
+            Object.keys(this.Color).forEach(color => {
+                espacio.push(this.Color.value);
+            })
+        })
+
+        return arrayColores;
     }
 
 
