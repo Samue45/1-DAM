@@ -1,14 +1,9 @@
-import { Servicio } from "./Servicio";
+import { Servicio } from "./Servicio.js";
 export class Controlador{
 
-    constructor(){
-        this.Servicio = new Servicio();
-    }
-
-    //Método para determinar la dificultad el juego
-    // POST(juego/{dificultad})
-    setDificultad(nivelDificultad){
-        this.Servicio.setDificultad(nivelDificultad);
+    // Para poder iniciar el servicio hay que establecer un nivel de dificultad
+    constructor(nivelDificultad){
+        this.Servicio = new Servicio(nivelDificultad);
     }
 
     // Método para obtener la combinación ganadora del juego
@@ -41,8 +36,15 @@ export class Controlador{
     // GET(juego/paletaColores)
     getPaletaColores(){
         return this.Servicio.getPaletaColores();
+    } 
+
+    // Método para obtener el historial de respuestas que ha dado el usuario
+    getHistorialRespuestas(){
+        return this.Servicio.getHistorialRespuestas();
     }
 
-
-    
+    // Método para obtener el hisotorial de las pistas del usuario
+    getHistorialPistas(){
+        return this.Servicio.getHistorialPistas();
+    }
 }

@@ -1,8 +1,6 @@
 
 export class Servicio{
 
-    //Se debería seguir el patrón Singleton
-
     //Como en JS no exiten el tipo de dato Enum, voy a crear un objeto literal que contenga cada color y su número asociado
     Color = {
         ROJO : 0,
@@ -19,53 +17,67 @@ export class Servicio{
 
     // Cuando instanciamos el servicio se determina el nivel de dificultad del juego para
     // definir el tamaño de cada Array y el número de intentos
-    constructor(){
-        this.ininializacionDatos = {};
+
+    // Patron Singleton
+    static instancia;
+
+    constructor(nivelDificultad) {
+        if (Servicio.instancia) {
+            return Servicio.instancia;
+        }
+        this.ininializacionDatos = this.setDificultad(nivelDificultad);
+        Servicio.instancia = this;  // Guardar la instancia
     }
 
     //Método para establecer el nivel de dificultad del juego
     // Devuelve un objeto literal con los datos del juego ya inicializados
     // Los niveles de dificultad son 3 y están representados por números
     // 0 = Fácil, 1 = Medio, 2 = Difícil 
-    setDificultad(nivelDificultad){
-
+    setDificultad(nivelDificultad) {
         let ininializacionDatos;
-
-        switch(nivelDificultad){
+    
+        switch(nivelDificultad) {
             case 0:
                 ininializacionDatos = {
-                    solucion : new arraySolucion(3),
-                    pistas : new arraySolucion(3),
-                    historial : new arraySolucion(3),
-                    colores : new arrayColores(3),
-                    numberIntentos : 15
-                }
+                    solucion: new Array(3),
+                    pistas: new Array(3),
+                    historialRespuestas: new Array(3),
+                    historialPistas: new Array(3),
+                    colores: [0, 1, 2],
+                    numberIntentos: 15
+                };
                 break;
+    
             case 1:
                 ininializacionDatos = {
-                    solucion : new arraySolucion(5),
-                    pistas : new arraySolucion(5),
-                    historial : new arraySolucion(5),
-                    colores : new arrayColores(5),
-                    numberIntentos : 10
-                }
+                    solucion: new Array(5), // 5 colores para la combinación
+                    pistas: new Array(5),
+                    historialRespuestas: new Array(5),
+                    historialPistas: new Array(5),
+                    colores: [0, 1, 2, 3, 4], // Colores para el nivel medio
+                    numberIntentos: 10
+                };
                 break;
+    
             case 2:
                 ininializacionDatos = {
-                    solucion : new arraySolucion(7),
-                    pistas : new arraySolucion(7),
-                    historial : new arraySolucion(7),
-                    colores : new arrayColores(10),
-                    numberIntentos : 6
-                }
+                    solucion: new Array(7), // 7 colores para la combinación
+                    pistas: new Array(7),
+                    historialRespuestas: new Array(7),
+                    historialPistas: new Array(7),
+                    colores: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Colores para el nivel difícil
+                    numberIntentos: 6
+                };
                 break;
+    
             default:
                 console.log("Error :(, no existe el nivel de dificultad, debe ser \n 0 = Fácil, 1 = Medio, 2 = Difícil  ");
                 break;
         }
-
+    
         return ininializacionDatos;
     }
+    
 
     // Método que genera una combinación de colores aleatoria y la guarda en el arrayRespuesta inicializado en el constructor
     crearSolucion(){
@@ -74,7 +86,7 @@ export class Servicio{
         let arraySolucion = this.ininializacionDatos.solucion;
 
         // 2º Rellenamos el array con números aleatorios
-        for(i=0; i < arraySolucion.length ; i++){
+        for(let i=0; i < arraySolucion.length ; i++){
             let randomNumber = Math.random() * 10; // Devuelve números entre 0 y 1 , por eso multiplicamos por 10
 
             //Guardamos cada número aleatorio en el arrayRespuesta
@@ -95,7 +107,8 @@ export class Servicio{
         let arraySolucion = this.ininializacionDatos.solucion;
         let arrayRespuesta = arrayColores;
         let arrayPistas = this.ininializacionDatos.pistas;
-        let arrayRespuestas = this.ininializacionDatos.historial;
+        let arrayHistorialRespuestas = this.ininializacionDatos.historialRespuestas;
+        let arrayHistorialPistas = this.ininializacionDatos.arrayHistorialPistas;
 
         // Recorremos ambos arrays y comprobamos los colores que hay en cada uno y sus posiciones para determinar el tipo de pista
         arraySolucion.forEach((color, index) => {
@@ -110,7 +123,7 @@ export class Servicio{
 
                 if(colorSolucion === colorRespuesta && indexSolucion === indexSRespuesta){
                     arrayPistas.push(0);
-                }else if (arraySolucion.contains(colorRespuesta)){
+                }else if (arraySolucion.includes(colorRespuesta)){
                     arrayPistas.push(1);
                 }else {
                     arrayPistas.push(2);
@@ -121,7 +134,8 @@ export class Servicio{
         });
 
         // Guardamos el array generado por el usuario para tener un historial
-        arrayRespuestas.push(arrayRespuesta);
+        arrayHistorialRespuestas.push(arrayRespuesta);
+        arrayHistorialPistas.push(arrayPistas);
 
         return arrayPistas;
     }
@@ -136,12 +150,12 @@ export class Servicio{
         // Si el jugador ha acertado significa que el array de pista solo contiene 0
         // Si el jugador no ha acertado significa que el array de pista contiene 1 o 2
         // Si no ha acertado pueden darse 2 casos : 1º No ha acertado pero sigue tiendo más intentos o 2º No ha acertado y se ha quedado sin intentos
-        if(!arrayPistas.contains(0)){
+        if(!arrayPistas.includes(0)){
             // Comprobamos el número de intentos
             // Que debe ir disminuyendo por cada respuesta que envie el usuario
             respuesta = this.continua(this.ininializacionDatos.numberIntentos);
 
-            this.ininializacionDatos.numberIntentos - 1;
+            this.ininializacionDatos.numberIntentos--;
         }
 
         //Se sale del bucle que inicia el juego
@@ -171,21 +185,25 @@ export class Servicio{
     getPaletaColores(){
 
         let arrayColores = this.ininializacionDatos.colores;
-        //Según el tamaño del array de colores generado al iniciar el servicio, el usuario tendrá mayor o menor variedad de colores para elegir
-        arrayColores.forEach(espacio => {
-            // Por cada espacio disponible en el array de Colores, añadimos un color
-            // Si el array de colores de de tamaño 3 , sólo meteremos los colores del 0 al 2
 
-            // Recorremos el objeto literal Color y obtenemos el número asociado a cada color para luego guardarlo en 
-            // el array de colores en base al tamaño de éste
-            Object.keys(this.Color).forEach(color => {
-                espacio.push(this.Color.value);
-            })
-        })
+        
+        // Rellenar el array con los colores disponibles según el tamaño
+        Object.keys(this.Color).forEach((color, index) => {
+            if (index < arrayColores.length) {
+             arrayColores.push(this.Color[color]);  // Añadir los valores de los colores
+            }
+        });
 
         return arrayColores;
     }
 
+    // Método para obtener el hisotorial de las respuestas del usuario
+    getHistorialRespuestas(){
+        return this.ininializacionDatos.historialRespuestas;
+    }
 
-
+    // Método para obtener el hisotorial de las pistas del usuario
+    getHistorialPistas(){
+        return this.ininializacionDatos.historialPistas;
+    }
 }
