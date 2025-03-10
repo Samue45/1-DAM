@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMind</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="src/app.js" ></script>
+</head>
+<body>
+
+    <div class="game-header">
+        <label for="dificultad">Dificultad:</label>
+        <select id="dificultad">
+            <option value="" selected disabled>Seleccione dificultad</option>
+            <option value="facil">Fácil</option>
+            <option value="medio">Medio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+
+        <button id="start-game">Jugar</button>
+    </div>
+
+    <div class="game-container">
+        <!-- Colores disponibles -->
+        <div class="color-palette">
+            <div class="color red" draggable="true" data-color="red"></div>
+            <div class="color yellow" draggable="true" data-color="yellow"></div>
+            <div class="color green" draggable="true" data-color="green"></div>
+            <div class="color blue" draggable="true" data-color="blue"></div>
+            <div class="color orange" draggable="true" data-color="orange"></div>
+            <div class="color purple" draggable="true" data-color="purple"></div>
+        </div>
+
+        <!-- Tablero del juego -->
+        <div class="game-board">
+            <!-- Filas generadas dinámicamente en JavaScript -->
+        </div>
+    </div>
+
+</body>
+</html>
+
